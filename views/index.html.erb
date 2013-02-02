@@ -1,0 +1,135 @@
+<%= render "/partials/vars" %>
+<div class="grid-50 hide-on-mobile">
+  <p>
+    <a class="button-big" href="https://github.com/nathansmith/unsemantic/archive/master.zip">Download Here</a>
+  </p>
+</div>
+<div class="grid-50">
+  <p>
+    <a class="button-big" href="http://github.com/nathansmith/unsemantic">GitHub Repo</a>
+  </p>
+</div>
+<hr class="hide-on-mobile" />
+<div class="grid-60">
+  <h2>
+    What is it?
+  </h2>
+  <dl class="definition equal-block">
+    <dt>
+      <abbr title="Unsemantic">Un&bull;se&bull;man&bull;tic</abbr> <span class="mute">['ənsə'mantik]</span>
+    </dt>
+    <dd>
+      <i>adjective</i>
+      <b>1.</b> A nonexistent word that developers use to tear down the work of their peers.
+    </dd>
+    <dd>
+      <i>noun</i>
+      <b>2.</b> Now, it's also a CSS framework. I mean hey&hellip; "If the shoe fits, wear it." <abbr title="Smile">&#9786;</abbr>
+    </dd>
+  </dl>
+</div>
+<div class="grid-40">
+  <h2>
+    Example Usage
+  </h2>
+  <pre class="equal-block">&lt;div class="grid-container"&gt;
+  &lt;div class="grid-25"&gt;
+    I am 25% wide.
+  &lt;/div&gt;
+  &lt;div class="grid-50"&gt;
+    I am 50% wide.
+  &lt;/div&gt;
+  &lt;div class="grid-25"&gt;
+    I am 25% wide.
+  &lt;/div&gt;
+&lt;/div&gt;</pre>
+</div>
+<hr class="hide-on-mobile" />
+<div class="grid-33">
+  <h3>
+    Successor to 960.gs
+  </h3>
+  <p>
+    Unsemantic is a fluid grid system that is the successor to the <a href="http://960.gs/">960 Grid System</a>. It works in a similar way, but instead of being a set number of columns, it's entirely based on percentages.
+  </p>
+  <p>
+    For instance, if you want a 50% wide column, simply use <code>class="grid-50"</code>. There are grid classes for multiples of five: 5, 10, 15 &hellip; 95, 100. There are also grid classes for dividing a page into thirds: <code>grid-33</code> and <code>grid-66</code>.
+  </p>
+</div>
+<div class="grid-33">
+  <hr class="hide-on-desktop" />
+  <h3>
+    SE-Oh?
+  </h3>
+  <p>
+    By using <code>push-x</code> and <code>pull-x</code> classes, you can rearrange the visual layout of page, without affecting its source order. While <abbr title="Search Engine Optimization">SEO</abbr> is a bit of a "moving target," this has been known to help search engines determine the most relevant content on a page.
+  </p>
+  <p>
+    Typically, code at the top of a page is what search engines tend to focus on the most, and Unsemantic can help to ensure your source code is geared towards that goal.
+  </p>
+</div>
+<div class="grid-33">
+  <hr class="hide-on-desktop" />
+  <h3>
+    Built with Sass
+  </h3>
+  <p>
+    Unsemantic was built with extensibility in mind, using <a href="http://sass-lang.com/">Sass</a> and <a href="http://compass-style.org/">Compass</a>. While you can use the CSS as is, some developers prefer to use their own class names, and want <i>only</i> the bare minimum CSS required for a particular page.
+  </p>
+  <p>
+    To that end, you can use a "silent" Sass approach, and write your own Sass code to use Unsemantic's base styles. For instance, there's a placeholder named <code>%grid-container</code>.
+  </p>
+</div>
+<hr />
+<div class="grid-33">
+  <h4>
+    Responsive Demo
+  </h4>
+  <p>
+    These demos use <code>@media</code> queries.
+  </p>
+  <ul>
+    <li>
+      <a href="./demo-responsive<%=html%>">Responsive Demo</a>
+    </li>
+    <li>
+      <a href="./demo-responsive-rtl<%=html%>">Responsive Demo</a> &ndash; <abbr title="Right To Left">RTL</abbr> text
+    </li>
+  </ul>
+</div>
+<div class="grid-33">
+  <hr class="hide-on-desktop" />
+  <h4>
+    Adapt.js Demo
+  </h4>
+  <p>
+    These demos use <a href="http://adapt.960.gs/">Adapt.js</a>.
+  </p>
+  <ul>
+    <li>
+      <a href="./demo-adapt<%=html%>">Adapt.js Demo</a>
+    </li>
+    <li>
+      <a href="./demo-adapt-rtl<%=html%>">Adapt.js Demo</a> &ndash; <abbr title="Right To Left">RTL</abbr> text
+    </li>
+  </ul>
+</div>
+<div class="grid-33">
+  <hr class="hide-on-desktop" />
+  <h4>
+    Browser Support
+  </h4>
+  <p>
+    Unsemantic supports all major browsers: Chrome, Firefox, Internet Explorer (7+), Opera, and Safari.
+  </p>
+  <p>
+    If you think you've found a bug, and can verify that it is reproducable, file a ticket on <a href="https://github.com/nathansmith/unsemantic/issues/new">GitHub</a>
+  </p>
+</div>
+<hr />
+<div class="grid-100">
+  <p class="mute align-center">
+    <br />
+    Note: If you reached this site by mistake, perhaps you are seeking Unsemantic's arch nemesis&hellip; <a href="http://semantic.com/">Semantic.com</a>
+  </p>
+</div>

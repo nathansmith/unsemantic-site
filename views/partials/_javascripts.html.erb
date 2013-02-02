@@ -1,0 +1,17 @@
+<script src="./javascripts/jquery.js"></script>
+<script src="./javascripts/application.js"></script>
+<%
+  # Page-specific JavaScript.
+  #
+  # Used like this...
+  #
+  #   content_for :javascripts do
+  #     alert('TESTING');
+  #   end
+
+  if content_for? :javascripts
+%>
+<script>
+<%= yield :javascripts %>
+</script>
+<% end %>

@@ -1,0 +1,24 @@
+<%= render "/partials/vars" %>
+<nav role="navigation">
+  <ul>
+    <li<% if @page.blank? %> class="on"<% end %>>
+      <% if @flat_html.blank? %>
+        <a href="./">Home</a>
+      <% elsif @flat_html == true %>
+        <a href="./index.html">Home</a>
+      <% end %>
+    </li>
+    <li<% if @page && @page == "about" %> class="on"<% end %>>
+      <a href="./about<%=html%>">About</a>
+    </li>
+    <li<% if @page && @page.match(/responsive_|adapt_/) %> class="on"<% end %>>
+      <a href="./demo-responsive<%=html%>">Demo</a>
+    </li>
+    <li<% if @page == "css_documentation" %> class="on"<% end %>>
+      <a href="./css-documentation<%=html%>">CSS Documentation</a>
+    </li>
+    <li<% if @page == "sass_documentation" %> class="on"<% end %>>
+      <a href="./sass-documentation<%=html%>">Sass Documentation</a>
+    </li>
+  </ul>
+</nav>

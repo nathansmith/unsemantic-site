@@ -1,0 +1,33 @@
+<!--[if lt IE 9]>
+<script src="./javascripts/html5.js?<%= Time.now.to_i %>"></script>
+<![endif]-->
+<% if @adapt_js == true %>
+  <% if @right_to_left == true %>
+    <%= render "/partials/stylesheets_adapt_rtl" %>
+  <% else %>
+    <%= render "/partials/stylesheets_adapt" %>
+  <% end %>
+<% else %>
+  <% if @right_to_left == true %>
+    <%= render "/partials/stylesheets_responsive_rtl" %>
+  <% else %>
+    <%= render "/partials/stylesheets_responsive" %>
+  <% end %>
+<% end %>
+<%
+  # Page-specific styles, if need be.
+  #
+  # Used like this...
+  #
+  #   content_for :stylesheets do
+  #     body {
+  #       background: red;
+  #     }
+  #   end
+
+  if content_for? :stylesheets
+%>
+  <style>
+    <%= yield :stylesheets %>
+  </style>
+<% end %>

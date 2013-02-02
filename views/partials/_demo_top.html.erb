@@ -1,0 +1,24 @@
+<%= render "/partials/vars" %>
+<h1>
+  <span class="hide-on-mobile">
+    Desktop Grid
+  </span>
+  <span class="hide-on-desktop">
+    Mobile Grid
+  </span>
+</h1>
+<ul class="list-inline">
+  <li<% if @page === "responsive_ltr" %> class="on"<% end %>>
+    <a href="./demo-responsive<%=html%>" class="pill">Responsive - <abbr title="Left To Right">LTR</abbr></a>
+  </li>
+  <li<% if @page === "responsive_rtl" %> class="on"<% end %>>
+    <a href="./demo-responsive-rtl<%=html%>" class="pill">Responsive - <abbr title="Right To Left">RTL</abbr></a>
+  </li>
+  <li<% if @page === "adapt_ltr" %> class="on"<% end %>>
+    <a href="./demo-adapt<%=html%>" class="pill">Adapt.js - <abbr title="Left To Right">LTR</abbr></a>
+  </li>
+  <li<% if @page === "adapt_rtl" %> class="on"<% end %>>
+    <a href="./demo-adapt-rtl<%=html%>" class="pill">Adapt.js - <abbr title="Right To Left">RTL</abbr></a>
+  </li>
+</ul>
+<hr />

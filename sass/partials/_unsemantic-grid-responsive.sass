@@ -1,0 +1,10 @@
+$media-query-breakpoint: 767px !default
+
+@media screen
+  @import "unsemantic-grid-base"
+
+@media screen and (max-width: $media-query-breakpoint)
+  @import "unsemantic-grid-mobile"
+
+@media screen and (min-width: $media-query-breakpoint)
+  @import "unsemantic-grid-desktop"

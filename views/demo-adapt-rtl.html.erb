@@ -1,0 +1,24 @@
+<%= render "/partials/vars" %>
+<%
+  @right_to_left = true
+  @adapt_js = true
+  @page = "adapt_rtl"
+%>
+<div class="grid-100 align-center">
+  <%= render "/partials/demo_top" %>
+  <p>
+    <b>View grid CSS&hellip;</b>
+  </p>
+  <ul class="list-inline">
+    <li>
+      <a href="./stylesheets/unsemantic-grid-base-rtl.css">unsemantic-grid-base-rtl.css</a>
+    </li>
+    <li>
+      <a href="./stylesheets/unsemantic-grid-desktop-rtl.css">unsemantic-grid-desktop-rtl.css</a>
+    </li>
+    <li>
+      <a href="./stylesheets/unsemantic-grid-mobile-rtl.css">unsemantic-grid-mobile-rtl.css</a>
+    </li>
+  </ul>
+</div>
+<%= render "/partials/demo_grid" %>

@@ -1,0 +1,16 @@
+// `Slight tweaks, for desktop
+//----------------------------------------------------------------------------------------------------
+
+header[role="banner"] li
+  border: 0
+  float: left
+
+header[role="banner"] li a
+  border-right: 1px solid rgba(#fff, 0.25)
+
+header[role="banner"] li:first-child a,
+header[role="banner"] li:last-child a
+  +round-none
+
+header[role="banner"] li:first-child a
+  +round-left

@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<%= render "/partials/head" %>
+<body>
+<div id="wrapper">
+  <header role="banner" class="grid-container">
+    <div class="grid-100">
+      <span id="brand">
+        <% if @flat_html.blank? %>
+          <a href="./"><img src="./images/logo.png" alt="Unsemantic" /></a>
+        <% elsif @flat_html == true %>
+          <a href="./index.html"><img src="./images/logo.png" alt="Unsemantic" /></a>
+        <% end %>
+      </span>
+      <%= render "/partials/nav" %>
+    </div>
+  </header>
+  <div role="main" class="grid-container">
+    <%= yield %>
+  </div>
+</div>
+<%= render "/partials/footer" %>
+<%= render "/partials/javascripts" %>
+</body>
+</html>

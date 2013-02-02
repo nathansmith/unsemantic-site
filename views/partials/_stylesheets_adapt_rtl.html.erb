@@ -1,0 +1,12 @@
+<link rel="stylesheet" href="./stylesheets/adapt-base-rtl.css?<%= Time.now.to_i %>" />
+<script>
+  var ADAPT_CONFIG = {
+    path: './stylesheets/',
+    dynamic: true,
+    range: [
+      '0 to 767px = adapt-mobile-rtl.css?<%= Time.now.to_i %>',
+      '767px = adapt-desktop-rtl.css?<%= Time.now.to_i %>'
+    ]
+  };
+</script>
+<script src="./javascripts/adapt.min.js"></script>

@@ -1,0 +1,396 @@
+<%= render "/partials/vars" %>
+<h1>
+  Sass Documentation
+</h1>
+<p>
+  If you want to use your own naming conventions, or if you're just curious to see how the Sass for Unsemantic works "under the hood," this page covers how <a href="http://sass-lang.com/">Sass</a> and <a href="http://compass-style.org/">Compass</a> have been used to build the CSS output.
+</p>
+<hr />
+<h2>
+  Breakpoint
+</h2>
+<p>
+  Within the <i>_unsemantic-grid-responsive.sass</i> file, three other Sass partials are assembled within media queries, to create a responsive CSS file. These partials can also be compiled together without a <code>@media</code> query (or compiled separately), for handling older IE versions.
+</p>
+<pre>$media-query-breakpoint: 767px !default
+
+@media screen
+  @import "unsemantic-grid-base"
+
+@media screen and (max-width: $media-query-breakpoint)
+  @import "unsemantic-grid-mobile"
+
+@media screen and (min-width: $media-query-breakpoint)
+  @import "unsemantic-grid-desktop"</pre>
+<p>
+  The <code>$media-query-breakpoint</code> variable is set to a default of 767px, and is the point at which the Unsemantic grid will pivot between a "mobile" or "desktop" layout. This is one pixel less than an iPad (arguably the most popular tablet) in portait orientation, allowing it to have a "desktop" layout. Whereas, anything below that width gets a "mobile" layout, which can be tailored to smaller screens.
+</p>
+<hr />
+<h2>
+  Other Variables
+</h2>
+<p>
+  At the top of the <i>_unsemantic-vars.sass</i> file, there are several variables upon which some of the other Sass files depend. These are provided with initial values, in lieu of a specific value being defined. This is done via the <code>!default</code> keyword.
+</p>
+<pre>$container-max-width: 1200px !default
+
+$gutter-half: 10px !default
+
+$lang-forward: left !default
+
+$lang-reverse: right !default</pre>
+<p>
+  Since all of these values are set <i>only</i> if the variables are not already defined, to override them simply create your own <i>_vars.sass</i> partial, and <code>@import</code> it before the any of Unsemantic's Sass files. Anything you set will take precedence, and anything you leave undefined will get a default value. Here is an example&hellip;
+</p>
+<pre>// Example application.sass file
+
+@import "compass/css3"
+@import "partials/vars"
+@import "partials/reset"
+@import "partials/unsemantic-grid-responsive"
+@import "partials/text"
+@import "partials/site"</pre>
+<p>
+  The following is an explanation of what each variable pertains to&hellip;
+</p>
+<p>
+  If you think this a gross over-generalization, feel free to make edits to suit your needs. Bear in mind, because this is all open source, you could always define multiple breakpoints and accompanying class names (such as <code>tablet-grid-x</code>, which could be between 768px and 1024px).
+</p>
+<h3>
+  $container-max-width
+</h3>
+<p>
+  This is the widest that <code>grid-container</code> will go, after which it will remain at a "fixed" width. Setting a <code>max-width</code> ensures that line lengths stay within a readable range. If you'd rather this be narrower or wider, you can just create a variable with the same name, in your own <i>_vars.sass</i> file.
+</p>
+<h3>
+  $gutter-half
+</h3>
+<p>
+  This value controls how much padding each <code>grid-x</code> unit recieves on the left/right. It defaults to 10px.
+</p>
+<h3>
+  $lang-*
+</h3>
+<p>
+  The <code>$lang-forward</code> and <code>$lang-reverse</code> variables are to aid in writing one codebase that can be "flipped" to support either left-to-right or right-to-left languages. They default to <code>left</code> and <code>right</code> respectively (for languages like English and Spanish), but can be defined ahead of time to support right-to-left languages such as Hebrew or Arabic.
+</p>
+<pre>//
+// For right-to-left languages.
+// (Hebrew, Arabic, etc.)
+//
+$lang-forward: right
+$lang-reverse: left
+
+@import "partials/unsemantic-grid-responsive"</pre>
+<p>
+  Depicted above are the contents of the <i>unsemantic-grid-base-rtl.sass</i> file. This causes all <code>grid-x</code> units to float to the right, instead of to the left. It also reverses the direction of all <code>prefix-x</code>, <code>suffix-x</code>, <code>push-x</code>, and <code>pull-x</code> classes.
+</p>
+<hr />
+<h2>
+  Placeholders
+</h2>
+<p>
+  Everything revolves around the concept of Sass placeholder selectors (sometimes referred to as <a href="https://speakerdeck.com/anotheruiguy/sass-32-silent-classes">silent classes</a>) contained in the <i>_unsemantic-vars.sass</i> file.
+</p>
+<h3>
+  %grid-container
+</h3>
+<p>
+  This is used by the <code>grid-container</code> class, and keeps the grid layout centered within the browser viewport if the browser is wider than the <code>$container-max-width</code>. It also has 10px of padding on the left/right by default.
+</p>
+<pre>%grid-container
+margin-left: auto
+margin-right: auto
+padding-left: $gutter-half
+padding-right: $gutter-half
+max-width: $container-max-width</pre>
+<h3>
+  %grid-columns-all
+</h3>
+<p>
+  This is the placeholder extended to add left/right padding to all <code>grid-x</code> units, as well as changing their <code>box-sizing</code> to <code>border-box</code>, allowing us to have a fluid, percentage based width coupled with additional padding on each side (without increasing the overall width). There is also some trickery to wrangle IE7, since it doesn't support <code>box-sizing</code>. If you don't need to support IE7, you can safely delete that code.
+</p>
+<pre>%grid-columns-all
+  +box-sizing(border-box)
+  padding-left: $gutter-half
+  padding-right: $gutter-half
+
+  // &lt;Begin IE7 tweaks&gt;
+  //
+  // [1] Remove padding, since IE7 doesn't
+  //     support "box-sizing: border-box".
+  *padding-left: 0
+  *padding-right: 0
+  //
+  // [2] Adjust for possible rounding errors,
+  //     pulling the adjacent sibling closer.
+  *margin-#{$lang-forward}: -1px
+  //
+  // [3] Fake what would normally be padding,
+  //     for browsers that support box-sizing.
+  *:first-child + html & &gt; *
+    margin-left: expression(!this.className.match(/grid-\d/) &amp;&amp; "#{$gutter-half}")
+    margin-right: expression(!this.className.match(/grid-\d/) &amp;&amp; "#{$gutter-half}")
+  //
+  // &lt;/End IE7 tweaks&gt;</pre>
+<h3>
+  %grid-parent
+</h3>
+<p>
+  This is used by the <code>grid-parent</code> class, to zero out left/right padding on a <code>grid-x</code> unit that also contains <code>grid-x</code> children, since the child elements have their own padding already.
+</p>
+<pre>// Remove padding, if it's being used
+// as a parent for other grid columns.
+%grid-parent
+  padding-left: 0
+  padding-right: 0</pre>
+  <h3>
+    %grid-columns-push-pull
+  </h3>
+  <p>
+    This is used by all <code>push-x</code> and <code>pull-x</code> classes, which need to be relatively positioned in order for <code>left</code> and <code>right</code> offsets to have any effect. By default, all <code>grid-x</code> units inherit the browser native <code>static</code> positioning.
+  </p>
+  <pre>// Allows columns to be offset +/- left.
+%grid-columns-push-pull
+  position: relative</pre>
+<h3>
+  %grid-columns
+</h3>
+<p>
+  This handles float direction for all <code>grid-x</code> units, which are floated left by default.
+</p>
+<pre>%grid-columns
+  float: $lang-forward</pre>
+<hr />
+<h2>
+  Sass Loops
+</h2>
+<p>
+  The folowing code loops through and generates placeholders for <code>%grid-x</code>, <code>%prefix-x</code>, <code>%suffix-x</code>, <code>%push-x</code>, and <code>%pull-x</code> for multiples of 5 up to 100. These placeholders are used in the <i>_unsemantic-grid-desktop.sass</i> and <i>_unsemantic-grid-desktop.sass</i> files, where their styles are paired with classes by the same name.
+</p>
+<pre>//
+// For 5 through 95 percent.
+//
+
+@for $i from 1 through 19
+  $num: $i * 5
+  $percent: $num * 1%
+
+  %grid-#{$num}
+    @extend %grid-columns
+    width: $percent
+
+  %prefix-#{$num}
+    margin-#{$lang-forward}: $percent
+
+  %suffix-#{$num}
+    margin-#{$lang-reverse}: $percent
+
+  %push-#{$num}
+    #{$lang-forward}: $percent
+
+  %pull-#{$num}
+    #{$lang-forward}: $percent * -1</pre>
+<p>
+  This next loop does essentially the same thing as the preceeding code, except it applies to <code>%grid-33</code>, <code>%grid-66</code>, <code>%prefix-33</code>, etc.
+</p>
+<pre>//
+// For one-third and two-thirds.
+//
+
+@for $i from 1 through 2
+  $num: $i * 33
+  $one-third: 1/3
+  $decimal: $i * $one-third
+  $percent: ($num + $decimal) * 1%
+
+  // Percentage based widths.
+  %grid-#{$num}
+    @extend %grid-columns
+    width: $percent
+
+  // Prefix, to add extra columns before.
+  %prefix-#{$num}
+    margin-#{$lang-forward}: $percent
+
+  // Suffix, to add extra columns after.
+  %suffix-#{$num}
+    margin-#{$lang-reverse}: $percent
+
+  // Push &amp; Pull, to rearrange column order (for potential "SEO").
+  %push-#{$num}
+    #{$lang-forward}: $percent
+
+  %pull-#{$num}
+    #{$lang-forward}: $percent * -1</pre>
+<hr />
+<h2>
+  Extending
+</h2>
+<p>
+  For these placeholders to be used, they must be called with <code>@extend</code>. If they are not used, then no code for them is ever generated. While the Unsemantic codebase itself of course makes use of all the placeholders, you could easily mix and match, generating only the CSS you need.
+</p>
+<p>
+  Here's an example of how Unsemantic's class names make use of the various placeholders, in the <i>_unsemantic-grid-mobile.sass</i> file.
+</p>
+<pre>//
+// For 5 through 95 percent.
+//
+
+@for $i from 1 through 19
+  $num: $i * 5
+
+  .mobile-grid-#{$num}
+    @extend %grid-#{$num}
+
+  .mobile-prefix-#{$num}
+    @extend %prefix-#{$num}
+
+  .mobile-suffix-#{$num}
+    @extend %suffix-#{$num}
+
+  .mobile-push-#{$num}
+    @extend %push-#{$num}
+
+  .mobile-pull-#{$num}
+    @extend %pull-#{$num}</pre>
+<h3>
+  Roll Your Own
+</h3>
+<p>
+  However, let's say you had a simple two column layout, with a main content area and a sidebar, contained by a parent element. Presupposing this HTML&hellip;
+</p>
+<pre>&lt;div class="layout"&gt;
+  &lt;div class="main"&gt;
+    This is my main content
+  &lt;/div&gt;
+  &lt;div class="sidebar"&gt;
+    This is my sidebar
+  &lt;/div&gt;
+&lt;/div&gt;</pre>
+<p>
+  You could generate some custom CSS by putting this in your own Sass file&hellip;
+</p>
+<pre>@import "compass/css3"
+
+$media-query-breakpoint: 767px
+
+@media screen
+  @import "partials/unsemantic-vars"
+
+  .layout
+    @extend %grid-container
+
+@media screen and (max-width: $media-query-breakpoint)
+  @import "partials/unsemantic-vars"
+
+  .main,
+  .sidebar
+    @extend %grid-100
+
+@media screen and (min-width: $media-query-breakpoint)
+  @import "partials/unsemantic-vars"
+
+  .main
+    @extend %grid-75
+
+  .sidebar
+    @extend %grid-25</pre>
+<p>
+  That would generate just enough CSS for a mini responsive page layout&hellip;
+</p>
+<pre>@media screen {
+  .layout:before,
+  .layout:after {
+    content: ".";
+    display: block;
+    overflow: hidden;
+    visibility: hidden;
+    font-size: 0;
+    line-height: 0;
+    width: 0;
+    height: 0;
+  }
+
+  .layout:after {
+    clear: both;
+  }
+
+  .layout {
+    zoom: 1;
+  }
+
+  .layout {
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 10px;
+    padding-right: 10px;
+    max-width: 1200px;
+  }
+
+  .main,
+  .sidebar {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    padding-left: 10px;
+    padding-right: 10px;
+    *padding-left: 0;
+    *padding-right: 0;
+    *margin-left: -1px;
+  }
+
+  *:first-child + html .main > *,
+  *:first-child + html .sidebar > * {
+    margin-left: expression(!this.className.match(/grid-\d/) &amp;&amp; "10px");
+    margin-right: expression(!this.className.match(/grid-\d/) &amp;&amp; "10px");
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .main:before,
+  .sidebar:before,
+  .main:after,
+  .sidebar:after {
+    content: ".";
+    display: block;
+    overflow: hidden;
+    visibility: hidden;
+    font-size: 0;
+    line-height: 0;
+    width: 0;
+    height: 0;
+  }
+
+  .main:after,
+  .sidebar:after {
+    clear: both;
+  }
+
+  .main,
+  .sidebar {
+    zoom: 1;
+  }
+
+  .main,
+  .sidebar {
+    clear: both;
+    width: 100%;
+  }
+}
+
+@media screen and (min-width: 767px) {
+  .sidebar,
+  .main {
+    float: left;
+  }
+
+  .sidebar {
+    width: 25%;
+  }
+
+  .main {
+    width: 75%;
+  }
+}
+</pre>

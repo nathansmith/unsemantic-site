@@ -1,0 +1,264 @@
+<%= render "/partials/vars" %>
+<h1>
+  CSS Documentation
+</h1>
+<p>
+  This page describes how to use the default CSS, assuming that you are using it "out of the box." If you want to roll your own class names using Unsemantic's mixins, check out the Sass documentation.
+</p>
+<hr />
+<p>
+  You can see the compiled, responsive CSS file here:
+</p>
+<p>
+  <a href="./stylesheets/unsemantic-grid-responsive.css">unsemantic-grid-responsive.css</a>
+</p>
+<p>
+  If you're using Unsemantic with <a href="https://github.com/nathansmith/adapt">Adapt.js</a>, there are three CSS files. Essentially, they're comprised of code from the responsive CSS file, but are split out separately without <code>@media</code> queries.
+</p>
+<ul>
+  <li>
+    <a href="./stylesheets/unsemantic-grid-base.css">unsemantic-grid-base.css</a>
+  </li>
+  <li>
+    <a href="./stylesheets/unsemantic-grid-desktop.css">unsemantic-grid-desktop.css</a>
+  </li>
+  <li>
+    <a href="./stylesheets/unsemantic-grid-mobile.css">unsemantic-grid-mobile.css</a>
+  </li>
+</ul>
+<hr />
+<h2>
+  Viewport
+</h2>
+<p>
+  In order to force the page to scale to the viewport width, HTML files that accompany Unsemantic use a <code>&lt;meta&gt;</code> tag&hellip;
+</p>
+<pre>&lt;head&gt;
+  &lt;!--
+    Formatted for readability
+  --&gt;
+  &lt;meta
+    name="viewport"
+    content="
+      width=device-width,
+      initial-scale=1,
+      minimum-scale=1,
+      maximum-scale=1
+    "
+  /&gt;
+&lt;/head&gt;</pre>
+<p>
+  While necessary to keep the page sized correctly when changing the orientation of a phone/tablet from landscape to portrait, a drawback to this method is that the user cannot use pinch-to-zoom functionality. So you need to make sure your text is legible, and links big enough to be used via touch, etc.
+</p>
+<p>
+  An alternative method would be to use JavaScript to dynamically account for potential page sizing weirdness&hellip;
+</p>
+<p>
+  <a href="http://adactio.com/journal/4470/">http://adactio.com/journal/4470/</a>
+</p>
+<p>
+  While it's a perfectly valid approach, this is not built into Unsemantic, as to not introduce dependency on JS for CSS to work correctly.
+</p>
+<hr />
+<h2>
+  Grid Classes
+</h2>
+<p>
+  All grid units are contained within a top level element, with the class name <code>grid-container</code>. This has a built in "clearfix" so it does not require a clearing element at the end. It also handles centering the grid layout within the page. By default, it has a max width of 1200px.
+</p>
+<p>
+  Here is an example of a simple use case.
+</p>
+  <pre>&lt;div class="grid-container"&gt;
+  &lt;div class="grid-50"&gt;
+    I am 50% wide.
+  &lt;/div&gt;
+  &lt;div class="grid-25"&gt;
+    I am 25% wide.
+  &lt;/div&gt;
+  &lt;div class="grid-25"&gt;
+    I am 25% wide.
+  &lt;/div&gt;
+&lt;/div&gt;</pre>
+<p>
+  There are grid classes named <code>grid-x</code> where "x" is a number that represents the percentage width of each grid unit. These cover multiples of 5, up to 100 &mdash; <code>grid-5</code>, <code>grid-10</code> &hellip; <code>grid-95</code>, <code>grid-100</code>. There are also classes for dividing a page into thirds: <code>grid-33</code> and <code>grid-66</code> which are 33.3333% and 66.6667% wide, respectively.
+</p>
+<p>
+  Each <code>grid-x</code> unit has 10px of padding on the right and left side white, when coupled with the padding from an adjacent <code>grid-x</code> unit (or the <code>grid-container</code> itself), creates a 20px gutter. The reason for this symmetry, versus having 20px spacing on <i>only</i> the left/right is that it allows for <code>push-x</code> and <code>pull-x</code> classes to rearrange grid units, regardless of whether they are at the beginning/end of a row.
+</p>
+<h3>
+  Mobile &amp; Hidden Classes
+</h3>
+<p>
+  There are also <code>mobile-grid-x</code> classes that can be applied, to create a separate visual grid for devices that have a screen width lower than 767px. (Note: 768px is width of an iPad in portrait orientation, so that gets a "desktop" grid.) This allows you to mix class names, for a different layout on desktop and mobile.
+</p>
+  <pre>&lt;div class="grid-container"&gt;
+  &lt;div class="grid-50 mobile-grid-100"&gt;
+    I am 50% wide on desktop.
+    I am 100% wide on mobile.
+  &lt;/div&gt;
+  &lt;div class="grid-25 mobile-grid-50"&gt;
+    I am 25% wide on desktop.
+    I am 50% wide on mobile.
+  &lt;/div&gt;
+  &lt;div class="grid-25 mobile-grid-50"&gt;
+    &lt;span class="hide-on-desktop"&gt;
+      I am hidden on desktop.
+    &lt;/span&gt;
+    &lt;span class="hide-on-mobile"&gt;
+      I am hidden on mobile.
+    &lt;/span&gt;
+  &lt;/div&gt;
+&lt;/div&gt;</pre>
+<p>
+  If you want to hide/show content based on mobile or desktop widths, you can use <code>hide-on-mobile</code> and <code>hide-on-desktop</code>.
+</p>
+<hr />
+<h2>
+  Push &amp; Pull Classes
+</h2>
+<p>
+  If you want to swap the visual arrangement of columns, but not affect source order, you can use <code>push-x</code> and <code>pull-x</code> classes, and/or their mobile counterparts &mdash; <code>mobile-push-x</code> and <code>mobile-pull-x</code>. You can combine them too, of course.
+</p>
+<pre>&lt;!--
+  Basic Example
+--&gt;
+
+&lt;div class="grid-container"&gt;
+  &lt;div class="grid-50 push-50"&gt;
+    I am second on desktop.
+  &lt;/div&gt;
+  &lt;div class="grid-50 pull-50"&gt;
+    I am first on desktop.
+  &lt;/div&gt;
+&lt;/div&gt;</pre>
+
+<pre>&lt;!--
+  Complicated Example
+--&gt;
+
+&lt;div class="grid-container"&gt;
+  &lt;div class="grid-50 push-50 mobile-grid-50 mobile-push-50"&gt;
+    I am third, on desktkop.
+    I am second, on mobile.
+  &lt;/div&gt;
+  &lt;div class="grid-25 pull-50 mobile-grid-50 mobile-pull-50"&gt;
+    I am first, on desktop.
+    I am first, on mobile.
+  &lt;/div&gt;
+  &lt;div class="grid-25 pull-50 mobile-grid-100"&gt;
+    I am second, on desktop.
+    I am 100% wide on mobile.
+  &lt;/div&gt;
+&lt;/div&gt;</pre>
+<hr />
+<h2>
+  Prefix &amp; Suffix Classes
+</h2>
+<p>
+  If you just want to create some "dead space," the visual equivalent of an empty column, you can use the <code>prefix-x</code> and <code>suffix-x</code> classes, and/or <code>mobile-prefix-x</code> and <code>mobile-suffix-x</code>.
+</p>
+<pre>&lt;div class="grid-container"&gt;
+  &lt;div class="grid-30 suffix-20"&gt;
+    I'm 30% wide, followed by...
+  &lt;/div&gt;
+  &lt;div class="grid-30 prefix-20"&gt;
+    Another 30% column, with
+    40% empty space between.
+  &lt;/div&gt;
+&lt;/div&gt;</pre>
+<hr />
+<h2>
+  Clearfix
+</h2>
+<p>
+  There is a <code>clearfix</code> class, should you need to use it. You won't have to for elements with a <code>grid-x</code> class applied, because these are all floated (and therefore clear their child elements automatically).
+</p>
+<pre>.clearfix:before,
+.clearfix:after,
+.grid-container:before,
+.grid-container:after,
+.grid-100:before,
+.grid-100:after,
+.mobile-grid-100:before,
+.mobile-grid-100:after {
+  content: ".";
+  display: block;
+  overflow: hidden;
+  visibility: hidden;
+  font-size: 0;
+  line-height: 0;
+  width: 0;
+  height: 0;
+}
+
+.clearfix:after,
+.grid-container:after,
+.grid-100:after,
+.mobile-grid-100:after {
+  clear: both;
+}
+
+.clearfix,
+.grid-container,
+.grid-100,
+.mobile-grid-100 {
+  zoom: 1;
+}</pre>
+<p>
+  Note: Though not floated itself, <code>grid-100</code> has a clearfix applied already.
+</p>
+<h3>
+  class="clear"
+</h3>
+<p>
+  There is also a <code>clear</code> class that you can use, on an empty <code>&lt;span&gt;</code> or <code>&lt;div&gt;</code>, if you want to force a break between rows of grid units (or really, anything that is floated).
+</p>
+<pre>.clear {
+  clear: both;
+  display: block;
+  overflow: hidden;
+  visibility: hidden;
+  width: 0;
+  height: 0;
+}</pre>
+<p>
+  Here's an example of how you might use <code>class="clear"</code> to force a new row.
+</p>
+<pre>&lt;div class="grid-container"&gt;
+  &lt;div class="grid-25"&gt;
+    I am in row 1
+  &lt;/div&gt;
+  &lt;div class="clear"&gt;&lt;/div&gt;
+  &lt;div class="grid-50"&gt;
+    I am in row 2
+  &lt;/div&gt;
+&lt;/div&gt;</pre>
+<p>
+  Note: This approach is best used for clearing floats when there is still more content to follow. If you just want to make sure a parent element keeps its children elements cleared correctly, add <code>class="clearfix"</code> to the parent. In other words, <code>&lt;div class="clear"&gt;&lt;/div&gt;</code> needn't be the last child within any given parent element.
+</p>
+<hr />
+<h2>
+  Tweaks for IE
+</h2>
+<p>
+  Because of how Internet Explorer 10 works in Windows 8, when the browser is "pinned" to the right/left of the screen, there is a small snippet of code that forces the page width to behave correctly.
+</p>
+<pre>@-ms-viewport {
+  width: device-width;
+}</pre>
+<p>
+  In order to support Internet Explorer 7, which does not recognize <code>box-sizing</code>, there is some code that zeros out padding on <code>grid-x</code> elements, and instead adds margins to the left/right of their immediate children. This is called a <a href="http://msdn.microsoft.com/en-us/library/ms537634(v=vs.85).aspx">CSS expression</a> and is basically embedded JavaScript that works only in older versions of IE. Normally, this is a pretty <a href="http://robertnyman.com/2007/11/13/stop-using-poor-performance-css-expressions-use-javascript-instead/">terrible</a> thing to do, but hey&hellip; It's IE7.
+</p>
+<pre>/* For .grid-5 to .grid-100 */
+
+*:first-child + html .grid-5 > * {
+  margin-left: expression(!this.className.match(/grid-/) &amp;&amp; "10px");
+  margin-right: expression(!this.className.match(/grid-/) &amp;&amp; "10px");
+}</pre>
+<p>
+  Don't be worried about this causing performance issues in modern browsers (or other versions of IE). The <code>*:first-child</code> CSS filter (okay, it's a hack) keeps other browsers from caring about the selector, so they never evaluate the CSS expression.
+</p>
+<p>
+  Note: If you don't want to support IE7, just delete that chunk of code to clear your conscience!
+</p>

@@ -1,0 +1,305 @@
+// `Basic HTML
+//----------------------------------------------------------------------------------------------------
+
+body
+  background: #fff
+  color: $body-text-color
+  overflow-y: scroll
+
+img
+  max-width: 100%
+
+a
+  color: #06c
+
+a:hover
+  color: #c96
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6
+  position: relative
+
+// `Misc
+//----------------------------------------------------------------------------------------------------
+
+.align-center
+  text-align: center
+
+.mute,
+.mute a
+  color: #999
+
+.mute a:hover
+  color: #666
+
+.grid-container > hr,
+div[role="main"] > hr
+  margin-left: 10px
+  margin-right: 10px
+
+.gutter-top
+  margin-top: 20px
+
+.permalink
+  +round
+  +absolute
+  +text-replace
+  background: #999
+  top: 50%
+  left: -20px
+  width: 10px
+  height: 10px
+  margin-top: -5px
+
+  &:hover
+    background: orange
+
+// `Wrapper
+//----------------------------------------------------------------------------------------------------
+
+#wrapper
+  min-height: 100%
+
+// `Header
+//----------------------------------------------------------------------------------------------------
+
+#brand
+  display: block
+  padding-bottom: 30px
+  text-align: center
+
+header[role="banner"]
+  padding-top: 20px
+
+header[role="banner"] ul
+  +gradient(#999, #666)
+  +round
+  line-height: 35px
+  overflow: hidden
+  text-shadow: rgba(#000, 0.5) 0 -1px 0
+
+header[role="banner"] li
+  border-top: 1px solid #fff
+  list-style: none
+  margin: 0
+  text-align: center
+
+  &:first-child
+    border: 0
+
+header[role="banner"] li a
+  color: #fff
+  display: block
+  padding: 0 20px
+  text-decoration: none
+
+  &:hover
+    text-decoration: underline
+
+header[role="banner"] .on > a
+  background: #555
+
+header[role="banner"] li:first-child a
+  +round-top
+
+header[role="banner"] li:last-child a
+  +round-bottom
+
+// `Main
+//----------------------------------------------------------------------------------------------------
+
+div[role="main"]
+  padding-bottom: $footer-height + 10px
+
+// `Top Bar
+//----------------------------------------------------------------------------------------------------
+
+.button-big
+  +border-radius(4px)
+  +gradient(#eee, #ccc)
+  +box-shadow(inset #fff 0 1px 2px 0)
+  border: 1px solid
+  border-color: #ddd #ccc #bbb
+  color: $body-text-color
+  display: block
+  font-size: 16px
+  font-weight: bold
+  padding: 10px 20px
+  text-align: center
+  text-decoration: none
+  text-shadow: #fff 0 1px 0
+
+  &:hover
+    +gradient(#eee, #bbb)
+    color: #000
+
+  &:active
+    +gradient(#bbb, #ddd)
+    +box-shadow(inset rgba(#000, 0.25) 0 1px 2px 0)
+    border-color: #aaa #bbb #ccc
+
+// `Code
+//----------------------------------------------------------------------------------------------------
+
+code
+  background: #ffe
+
+pre
+  overflow: auto
+  padding: 20px
+
+pre code
+  background: none
+  display: block
+  padding: 0 0 20px
+
+// `Definition
+//----------------------------------------------------------------------------------------------------
+
+pre,
+.definition
+  // +border-radius(4px)
+  background: #ffe
+  border: 1px solid
+  border-color: #eee #ddd #ccc
+
+.definition
+  font-size: 16px
+  font-family: Georgia, "Times New Roman", serif
+  padding: 20px
+
+.definition dt
+  font-size: 180%
+
+.definition dd
+  padding-top: 20px
+
+.definition dd i
+  display: block
+  margin-bottom: 10px
+
+.equal-block
+  min-height: 215px
+
+// `Lists
+//----------------------------------------------------------------------------------------------------
+
+.list-inline
+  font-size: 0
+  margin-left: -15px
+
+.list-inline li
+  display: inline-block
+  font-size: 13px
+  list-style: none
+  margin: 0
+  padding-left: 15px
+
+  // IE7
+  *display: inline
+  *zoom: 1
+
+.list-spacing
+  margin: 0
+
+.list-spacing li
+  padding-bottom: 20px
+
+// `Pill Links
+//----------------------------------------------------------------------------------------------------
+
+.pill
+  +border-radius(15px)
+  display: block
+  padding: 5px 15px
+
+  .list-inline &
+    margin-left: -15px
+
+.on > .pill
+  background: #777
+  color: #fff
+  text-decoration: none
+
+// `Demo
+//----------------------------------------------------------------------------------------------------
+
+.example-block
+  background: #eee
+  font-size: 10px
+  overflow: hidden
+  margin-bottom: 20px
+  padding: 10px 0
+  text-align: center
+
+  div[class*="push-"] &
+    background: #dec
+
+  div[class*="pull-"] &
+    background: #fcd
+
+.dynamic-px-width
+  display: block
+
+// `Footer
+//----------------------------------------------------------------------------------------------------
+
+footer[role="contentinfo"]
+  background: #eee
+  font-size: 11px
+  margin-top: $footer-height * -1
+  line-height: $footer-height
+  text-align: center
+
+// `Table of Contents
+//----------------------------------------------------------------------------------------------------
+
+#table-of-contents
+  +round
+  background: #eee
+  border: 1px solid
+  border-color: #eee #ddd #ccc
+  display: none
+  overflow: hidden
+  text-shadow: #fff 0 1px 0
+  white-space: nowrap
+
+#table-of-contents a,
+#table-of-contents dt
+  display: block
+  padding: 5px 10px
+
+#table-of-contents dt
+  +round-top
+  +gradient(#fff, #ccc)
+  font-weight: bold
+
+#table-of-contents a
+  border-top: 1px solid #fff
+  color: $body-text-color
+  text-decoration: none
+
+  &:hover
+    background: #ddd
+
+#table-of-contents dd:last-child a
+  +round-bottom
+
+#table-of-contents .h2 a
+  padding-left: 20px
+
+#table-of-contents .h3 a
+  padding-left: 30px
+
+#table-of-contents .h4 a
+  padding-left: 40px
+
+#table-of-contents .h5 a
+  padding-left: 50px
+
+#table-of-contents .h6 a
+  padding-left: 60px
