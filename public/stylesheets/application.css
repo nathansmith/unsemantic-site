@@ -181,6 +181,77 @@ svg {
   overflow: hidden;
 }
 
+body {
+  font: 13px/1.5 "Helvetica Neue", Arial, "Liberation Sans", FreeSans, sans-serif;
+}
+
+pre,
+code {
+  font-family: "DejaVu Sans Mono", Monaco, Consolas, monospace;
+}
+
+hr {
+  border: 0 #cccccc solid;
+  border-top-width: 1px;
+  clear: both;
+  height: 0;
+}
+
+h1 {
+  font-size: 25px;
+}
+
+h2 {
+  font-size: 23px;
+}
+
+h3 {
+  font-size: 21px;
+}
+
+h4 {
+  font-size: 19px;
+}
+
+h5 {
+  font-size: 17px;
+}
+
+h6 {
+  font-size: 15px;
+}
+
+ol {
+  list-style: decimal;
+}
+
+ul {
+  list-style: disc;
+}
+
+li {
+  margin-left: 30px;
+}
+
+p,
+dl,
+hr,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+ol,
+ul,
+pre,
+table,
+address,
+fieldset,
+figure {
+  margin-bottom: 20px;
+}
+
 @media screen {
   .clear {
     clear: both;
@@ -209,7 +280,7 @@ svg {
   }
 
   .grid-container, .clearfix {
-    zoom: 1;
+    *zoom: 1;
   }
 
   .grid-container {
@@ -231,8 +302,8 @@ svg {
     *margin-left: -1px;
   }
   *:first-child + html .grid-5 > *, *:first-child + html .mobile-grid-5 > *, *:first-child + html .grid-10 > *, *:first-child + html .mobile-grid-10 > *, *:first-child + html .grid-15 > *, *:first-child + html .mobile-grid-15 > *, *:first-child + html .grid-20 > *, *:first-child + html .mobile-grid-20 > *, *:first-child + html .grid-25 > *, *:first-child + html .mobile-grid-25 > *, *:first-child + html .grid-30 > *, *:first-child + html .mobile-grid-30 > *, *:first-child + html .grid-35 > *, *:first-child + html .mobile-grid-35 > *, *:first-child + html .grid-40 > *, *:first-child + html .mobile-grid-40 > *, *:first-child + html .grid-45 > *, *:first-child + html .mobile-grid-45 > *, *:first-child + html .grid-50 > *, *:first-child + html .mobile-grid-50 > *, *:first-child + html .grid-55 > *, *:first-child + html .mobile-grid-55 > *, *:first-child + html .grid-60 > *, *:first-child + html .mobile-grid-60 > *, *:first-child + html .grid-65 > *, *:first-child + html .mobile-grid-65 > *, *:first-child + html .grid-70 > *, *:first-child + html .mobile-grid-70 > *, *:first-child + html .grid-75 > *, *:first-child + html .mobile-grid-75 > *, *:first-child + html .grid-80 > *, *:first-child + html .mobile-grid-80 > *, *:first-child + html .grid-85 > *, *:first-child + html .mobile-grid-85 > *, *:first-child + html .grid-90 > *, *:first-child + html .mobile-grid-90 > *, *:first-child + html .grid-95 > *, *:first-child + html .mobile-grid-95 > *, *:first-child + html .grid-100 > *, *:first-child + html .mobile-grid-100 > *, *:first-child + html .grid-33 > *, *:first-child + html .mobile-grid-33 > *, *:first-child + html .grid-66 > *, *:first-child + html .mobile-grid-66 > * {
-    margin-left: expression(!this.className.match(/grid-\d/) && "10px");
-    margin-right: expression(!this.className.match(/grid-\d/) && "10px");
+    margin-left: expression((!this.className.match(/grid-[1-9]/) && this.currentStyle.display === "block") && "10px");
+    margin-right: expression((!this.className.match(/grid-[1-9]/) && this.currentStyle.display === "block") && "10px");
   }
 
   .grid-parent {
@@ -266,7 +337,7 @@ svg {
   }
 
   .mobile-grid-100 {
-    zoom: 1;
+    *zoom: 1;
   }
 
   .mobile-push-5,
@@ -745,7 +816,7 @@ svg {
   }
 
   .grid-100 {
-    zoom: 1;
+    *zoom: 1;
   }
 
   .push-5,
@@ -1206,81 +1277,13 @@ svg {
     width: 100%;
   }
 }
-body {
-  font: 13px/1.5 "Helvetica Neue", Arial, "Liberation Sans", FreeSans, sans-serif;
-}
-
-pre,
-code {
-  font-family: "DejaVu Sans Mono", Monaco, Consolas, monospace;
-}
-
-hr {
-  border: 0 #cccccc solid;
-  border-top-width: 1px;
-  clear: both;
-  height: 0;
-}
-
-h1 {
-  font-size: 25px;
-}
-
-h2 {
-  font-size: 23px;
-}
-
-h3 {
-  font-size: 21px;
-}
-
-h4 {
-  font-size: 19px;
-}
-
-h5 {
-  font-size: 17px;
-}
-
-h6 {
-  font-size: 15px;
-}
-
-ol {
-  list-style: decimal;
-}
-
-ul {
-  list-style: disc;
-}
-
-li {
-  margin-left: 30px;
-}
-
-p,
-dl,
-hr,
-h1,
-h2,
-h3,
-h4,
-h5,
-h6,
-ol,
-ul,
-pre,
-table,
-address,
-fieldset,
-figure {
-  margin-bottom: 20px;
+html {
+  overflow-y: scroll;
 }
 
 body {
   background: white;
   color: #333333;
-  overflow-y: scroll;
 }
 
 img {
@@ -1695,7 +1698,7 @@ footer[role="contentinfo"] {
   }
 
   header[role="banner"] li a {
-    border-right: 1px solid rgba(255, 255, 255, 0.25);
+    border-right: 1px solid #999999;
   }
 
   header[role="banner"] li:first-child a,

@@ -99,11 +99,11 @@ $lang-reverse: left
   This is used by the <code>grid-container</code> class, and keeps the grid layout centered within the browser viewport if the browser is wider than the <code>$container-max-width</code>. It also has 10px of padding on the left/right by default.
 </p>
 <pre>%grid-container
-margin-left: auto
-margin-right: auto
-padding-left: $gutter-half
-padding-right: $gutter-half
-max-width: $container-max-width</pre>
+  margin-left: auto
+  margin-right: auto
+  padding-left: $gutter-half
+  padding-right: $gutter-half
+  max-width: $container-max-width</pre>
 <h3>
   %grid-columns-all
 </h3>
@@ -129,8 +129,8 @@ max-width: $container-max-width</pre>
   // [3] Fake what would normally be padding,
   //     for browsers that support box-sizing.
   *:first-child + html & &gt; *
-    margin-left: expression(!this.className.match(/grid-\d/) &amp;&amp; "#{$gutter-half}")
-    margin-right: expression(!this.className.match(/grid-\d/) &amp;&amp; "#{$gutter-half}")
+    margin-left: expression((!this.className.match(/grid-[1-9]/) &amp;&amp; this.currentStyle.display === "block") &amp;&amp; "#{$gutter-half}")
+    margin-right: expression((!this.className.match(/grid-[1-9]/) &amp;&amp; this.currentStyle.display === "block") &amp;&amp; "#{$gutter-half}")
   //
   // &lt;/End IE7 tweaks&gt;</pre>
 <h3>
@@ -342,8 +342,8 @@ $media-query-breakpoint: 767px
 
   *:first-child + html .main > *,
   *:first-child + html .sidebar > * {
-    margin-left: expression(!this.className.match(/grid-\d/) &amp;&amp; "10px");
-    margin-right: expression(!this.className.match(/grid-\d/) &amp;&amp; "10px");
+    margin-left: expression((!this.className.match(/grid-[1-9]/) &amp;&amp; this.currentStyle.display === "block") &amp;&amp; "10px");
+    margin-right: expression((!this.className.match(/grid-[1-9]/) &amp;&amp; this.currentStyle.display === "block") &amp;&amp; "10px");
   }
 }
 

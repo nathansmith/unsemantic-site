@@ -15,7 +15,7 @@
 }
 
 .grid-100 {
-  zoom: 1;
+  *zoom: 1;
 }
 
 .push-5,
@@ -482,7 +482,7 @@ header[role="banner"] li {
 }
 
 header[role="banner"] li a {
-  border-right: 1px solid rgba(255, 255, 255, 0.25);
+  border-right: 1px solid #999999;
 }
 
 header[role="banner"] li:first-child a,

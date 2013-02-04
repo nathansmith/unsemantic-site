@@ -253,8 +253,8 @@
 <pre>/* For .grid-5 to .grid-100 */
 
 *:first-child + html .grid-5 > * {
-  margin-left: expression(!this.className.match(/grid-/) &amp;&amp; "10px");
-  margin-right: expression(!this.className.match(/grid-/) &amp;&amp; "10px");
+  margin-left: expression((!this.className.match(/grid-[1-9]/) &amp;&amp; this.currentStyle.display === "block") &amp;&amp; "10px");
+  margin-right: expression((!this.className.match(/grid-[1-9]/) &amp;&amp; this.currentStyle.display === "block") &amp;&amp; "10px");
 }</pre>
 <p>
   Don't be worried about this causing performance issues in modern browsers (or other versions of IE). The <code>*:first-child</code> CSS filter (okay, it's a hack) keeps other browsers from caring about the selector, so they never evaluate the CSS expression.
