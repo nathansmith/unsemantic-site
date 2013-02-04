@@ -252,6 +252,11 @@ figure {
   margin-bottom: 20px;
 }
 
+@media screen and (max-width: 400px) {
+  @-ms-viewport {
+    width: 320px;
+}
+}
 @media screen {
   .clear {
     clear: both;
@@ -310,10 +315,6 @@ figure {
     padding-left: 0;
     padding-right: 0;
   }
-
-  @-ms-viewport {
-    width: device-width;
-}
 
   body {
     min-width: 320px;
