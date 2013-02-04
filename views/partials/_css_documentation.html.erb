@@ -242,10 +242,15 @@
   Tweaks for IE
 </h2>
 <p>
-  Because of how Internet Explorer 10 works in Windows 8, when the browser is "pinned" to the right/left of the screen, there is a small snippet of code that forces the page width to behave correctly.
+  Because of how Internet Explorer 10 works in Windows 8, when the browser is "pinned" to the right/left of the screen, there is a small snippet of code that forces the page width to behave correctly. You can read more about this fix here&hellip;
 </p>
-<pre>@-ms-viewport {
-  width: device-width;
+<p>
+  <a href="http://timkadlec.com/2013/01/windows-phone-8-and-device-width">http://timkadlec.com/2013/01/windows-phone-8-and-device-width</a>
+</p>
+<pre>@media screen and (max-width: 400px) {
+  @-ms-viewport {
+    width: device-width;
+  }
 }</pre>
 <p>
   In order to support Internet Explorer 7, which does not recognize <code>box-sizing</code>, there is some code that zeros out padding on <code>grid-x</code> elements, and instead adds margins to the left/right of their immediate children. This is called a <a href="http://msdn.microsoft.com/en-us/library/ms537634(v=vs.85).aspx">CSS expression</a> and is basically embedded JavaScript that works only in older versions of IE. Normally, this is a pretty <a href="http://robertnyman.com/2007/11/13/stop-using-poor-performance-css-expressions-use-javascript-instead/">terrible</a> thing to do, but hey&hellip; It's IE7.
