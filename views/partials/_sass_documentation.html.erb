@@ -271,9 +271,10 @@ $lang-reverse: left
 <p>
   You could generate some custom CSS by putting this in your own Sass file&hellip;
 </p>
-<pre>@import "compass/css3"
+<pre>$media-query-breakpoint: 767px
 
-$media-query-breakpoint: 767px
+@import "compass/css3"
+@import "partials/unsemantic-ie-snap"
 
 @media screen
   @import "partials/unsemantic-vars"
@@ -299,7 +300,13 @@ $media-query-breakpoint: 767px
 <p>
   That would generate just enough CSS for a mini responsive page layout&hellip;
 </p>
-<pre>@media screen {
+<pre>@media screen and (max-width: 400px) {
+  @-ms-viewport {
+    width: 320px;
+  }
+}
+
+@media screen {
   .layout:before,
   .layout:after {
     content: ".";
