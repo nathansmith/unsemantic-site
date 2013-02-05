@@ -9,6 +9,8 @@
 */
 
 var APP = (function($, window, document, undefined) {
+  'use strict';
+
   $(document).ready(function() {
     APP.go();
   });
@@ -52,9 +54,9 @@ var APP = (function($, window, document, undefined) {
           clearTimeout(timer);
 
           block.each(function() {
-            var el = $(this).find('.dynamic-px-width:first');
+            var el = $(this);
             var width = el.outerWidth() + 'px';
-            el.html(width);
+            el.find('.dynamic-px-width:first').html(width);
           });
         }
 
