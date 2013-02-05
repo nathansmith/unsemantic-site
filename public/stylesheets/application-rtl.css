@@ -1388,7 +1388,8 @@ header[role="banner"] ul {
   -ms-border-radius: 4px;
   -o-border-radius: 4px;
   border-radius: 4px;
-  line-height: 35px;
+  font-size: 16px;
+  line-height: 45px;
   overflow: hidden;
   text-shadow: rgba(0, 0, 0, 0.5) 0 -1px 0;
 }
@@ -1693,6 +1694,11 @@ footer[role="contentinfo"] {
 }
 
 @media screen and (min-width: 767px) {
+  header[role="banner"] ul {
+    font-size: 13px;
+    line-height: 35px;
+  }
+
   header[role="banner"] li {
     border: 0;
     float: left;
