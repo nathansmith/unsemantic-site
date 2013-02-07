@@ -269,7 +269,7 @@
   margin-right: expression((!this.className.match(/grid-[1-9]/) &amp;&amp; this.currentStyle.display === "block") &amp;&amp; "10px");
 }</pre>
 <p>
-  Don't be worried about this causing performance issues in modern browsers (or other versions of IE). The <code>*margin-left</code> and <code>*margin-right</code> <a href="https://en.wikipedia.org/wiki/CSS_filter">CSS filter</a> (also called the "star hack") keeps other browsers from caring about the selector, so they never evaluate the CSS expression.
+  Don't be worried about this causing performance issues in modern browsers, or other versions of IE. The "star hack" <a href="https://en.wikipedia.org/wiki/CSS_filter">CSS filter</a> of <code>*margin-left</code> (and <code>*margin-right</code>) keeps other browsers from parsing any further, so they never evaluate the CSS expression.
 </p>
 <p>
   Note: If you don't want to support IE7, delete the unnecessary chunks of code to clear your conscience!
