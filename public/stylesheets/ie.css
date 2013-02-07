@@ -5303,7 +5303,7 @@ code {
 }
 
 pre {
-  overflow: auto;
+  overflow-x: auto;
   padding: 20px;
 }
 

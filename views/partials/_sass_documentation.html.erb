@@ -121,31 +121,12 @@ $lang-reverse: left
   %grid-columns-all
 </h3>
 <p>
-  This is the placeholder extended to add left/right padding to all <code>grid-x</code> units, as well as changing their <code>box-sizing</code> to <code>border-box</code>, allowing us to have a fluid, percentage based width coupled with additional padding on each side (without increasing the overall width). There is also some trickery to wrangle IE7, since it doesn't support <code>box-sizing</code>. If you don't need to support IE7, you can safely delete that code.
+  This is the placeholder extended to add left/right padding to all <code>grid-x</code> units, as well as changing their <code>box-sizing</code> to <code>border-box</code>, allowing us to have a fluid, percentage based width coupled with additional padding on each side (without increasing the overall width).
 </p>
 <pre>%grid-columns-all
   +box-sizing(border-box)
   padding-left: $gutter-half
-  padding-right: $gutter-half
-
-  // &lt;Begin IE7 tweaks&gt;
-  //
-  // [1] Remove padding, since IE7 doesn't
-  //     support "box-sizing: border-box".
-  *padding-left: 0
-  *padding-right: 0
-  //
-  // [2] Adjust for possible rounding errors,
-  //     pulling the adjacent sibling closer.
-  *margin-#{$lang-forward}: -1px
-  //
-  // [3] Fake what would normally be padding,
-  //     for browsers that support box-sizing.
-  *:first-child + html & &gt; *
-    margin-left: expression((!this.className.match(/grid-[1-9]/) &amp;&amp; this.currentStyle.display === "block") &amp;&amp; "#{$gutter-half}")
-    margin-right: expression((!this.className.match(/grid-[1-9]/) &amp;&amp; this.currentStyle.display === "block") &amp;&amp; "#{$gutter-half}")
-  //
-  // &lt;/End IE7 tweaks&gt;</pre>
+  padding-right: $gutter-half</pre>
 <h3>
   %grid-parent
 </h3>
@@ -337,7 +318,7 @@ $lang-reverse: left
   }
 
   .layout {
-    zoom: 1;
+    *zoom: 1;
   }
 
   .layout {
@@ -358,12 +339,6 @@ $lang-reverse: left
     *padding-left: 0;
     *padding-right: 0;
     *margin-left: -1px;
-  }
-
-  *:first-child + html .main > *,
-  *:first-child + html .sidebar > * {
-    margin-left: expression((!this.className.match(/grid-[1-9]/) &amp;&amp; this.currentStyle.display === "block") &amp;&amp; "10px");
-    margin-right: expression((!this.className.match(/grid-[1-9]/) &amp;&amp; this.currentStyle.display === "block") &amp;&amp; "10px");
   }
 }
 
@@ -389,7 +364,7 @@ $lang-reverse: left
 
   .main,
   .sidebar {
-    zoom: 1;
+    *zoom: 1;
   }
 
   .main,
