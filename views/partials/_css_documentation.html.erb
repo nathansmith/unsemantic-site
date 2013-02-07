@@ -264,12 +264,12 @@
 </p>
 <pre>/* For .grid-5 to .grid-100 */
 
-*:first-child + html .grid-5 > * {
+.grid-5 > * {
   margin-left: expression((!this.className.match(/grid-[1-9]/) &amp;&amp; this.currentStyle.display === "block") &amp;&amp; "10px");
   margin-right: expression((!this.className.match(/grid-[1-9]/) &amp;&amp; this.currentStyle.display === "block") &amp;&amp; "10px");
 }</pre>
 <p>
-  Don't be worried about this causing performance issues in modern browsers (or other versions of IE). The <code>*:first-child</code> CSS filter (okay, it's a hack) keeps other browsers from caring about the selector, so they never evaluate the CSS expression.
+  Don't be worried about this causing performance issues in modern browsers (or other versions of IE). The <code>*margin-left</code> and <code>*margin-right</code> CSS filters (okay, it's a hack) keeps other browsers from caring about the selector, so they never evaluate the CSS expression.
 </p>
 <p>
   Note: If you don't want to support IE7, delete the unnecessary chunks of code to clear your conscience!
