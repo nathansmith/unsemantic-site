@@ -269,7 +269,7 @@
   *margin-right: expression((!this.className.match(/grid-[1-9]/) &amp;&amp; this.currentStyle.display === "block") &amp;&amp; "10px");
 }</pre>
 <p>
-  Don't be worried about this causing performance issues in modern browsers, or other versions of IE. The presence of a "star hack" <a href="https://en.wikipedia.org/wiki/CSS_filter">CSS filter</a> in <code>*margin-left</code> and <code>*margin-right</code> prevents modern browsers from evaluating the CSS expression. Since IE7 erroneously parses passed the CSS filter, it is the only browser affected.
+  Don't be worried about this causing performance issues in good browsers, or other versions of IE. The presence of a "star hack" <a href="https://en.wikipedia.org/wiki/CSS_filter">CSS filter</a> in <code>*margin-left</code> and <code>*margin-right</code> prevents modern browsers from evaluating the CSS expression. Since it erroneously parses the CSS filter instead of ignoring it, IE7 is the only browser affected.
 </p>
 <p>
   Note: If you don't want to support IE7, delete the unnecessary chunks of code to clear your conscience!
