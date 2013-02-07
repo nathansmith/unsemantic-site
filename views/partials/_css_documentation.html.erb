@@ -257,9 +257,8 @@
   IE7 Support
 </h2>
 <p>
-  In order to support Internet Explorer 7, there is an optional Sass variable that's set to <code>true</code> by default. This causes additional code to be generated, which fakes <code>box-sizing</code> and addresses some rounding errors when dealing with CSS percentages.
+  In order to support Internet Explorer 7, there is an optional Sass variable <code>$unsemnatic-ie7-support</code> that's set to <code>true</code> by default. This causes additional code to be generated, which fakes <code>box-sizing</code> and addresses some rounding errors when dealing with CSS percentages.
 </p>
-<pre>$unsemantic-ie7-support: true</pre>
 <p>
   For instance, there's some code that zeros out padding on <code>grid-x</code> elements, and instead adds margins to the left/right of their immediate children. This is called a <a href="http://msdn.microsoft.com/en-us/library/ms537634(v=vs.85).aspx">CSS expression</a> and is basically embedded JavaScript that works only in older versions of IE. Normally, this is a pretty <a href="http://robertnyman.com/2007/11/13/stop-using-poor-performance-css-expressions-use-javascript-instead/">terrible</a> thing to do, but hey&hellip; It's IE7.
 </p>
