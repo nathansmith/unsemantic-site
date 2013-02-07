@@ -9,9 +9,11 @@
 <p>
   You can see the compiled, responsive CSS file here:
 </p>
-<p>
-  <a href="./stylesheets/unsemantic-grid-responsive.css">unsemantic-grid-responsive.css</a>
-</p>
+<ul>
+  <li>
+    <a href="./stylesheets/unsemantic-grid-responsive.css">unsemantic-grid-responsive.css</a>
+  </li>
+</ul>
 <p>
   If you're using Unsemantic with <a href="https://github.com/nathansmith/adapt">Adapt.js</a>, there are three CSS files. Essentially, they're comprised of code from the responsive CSS file, but are split out separately without <code>@media</code> queries.
 </p>
@@ -24,6 +26,32 @@
   </li>
   <li>
     <a href="./stylesheets/unsemantic-grid-mobile.css">unsemantic-grid-mobile.css</a>
+  </li>
+</ul>
+<hr />
+<p>
+  If you don't need to support IE7 in your project, there are versions of the CSS without the extra code.
+</p>
+<p>
+  <b>Responsive</b>
+</p>
+<ul>
+  <li>
+    <a href="./stylesheets/unsemantic-grid-responsive-without-ie7.css">unsemantic-grid-responsive-without-ie7.css</a>
+  </li>
+</ul>
+<p>
+  <b>Adapt.js</b>
+</p>
+<ul>
+  <li>
+    <a href="./stylesheets/unsemantic-grid-base-without-ie7.css">unsemantic-grid-base-without-ie7.css</a>
+  </li>
+  <li>
+    <a href="./stylesheets/unsemantic-grid-desktop-without-ie7.css">unsemantic-grid-desktop-without-ie7.css</a>
+  </li>
+  <li>
+    <a href="./stylesheets/unsemantic-grid-mobile-without-ie7.css">unsemantic-grid-mobile-without-ie7.css</a>
   </li>
 </ul>
 <hr />
@@ -84,7 +112,7 @@
   There are grid classes named <code>grid-x</code> where "x" is a number that represents the percentage width of each grid unit. These cover multiples of 5, up to 100 &mdash; <code>grid-5</code>, <code>grid-10</code> &hellip; <code>grid-95</code>, <code>grid-100</code>. There are also classes for dividing a page into thirds: <code>grid-33</code> and <code>grid-66</code> which are 33.3333% and 66.6667% wide, respectively.
 </p>
 <p>
-  Each <code>grid-x</code> unit has 10px of padding on the right and left side white, when coupled with the padding from an adjacent <code>grid-x</code> unit (or the <code>grid-container</code> itself), creates a 20px gutter. The reason for this symmetry, versus having 20px spacing on <i>only</i> the left/right is that it allows for <code>push-x</code> and <code>pull-x</code> classes to rearrange grid units, regardless of whether they are at the beginning/end of a row.
+  Each <code>grid-x</code> unit has 10px of padding on the right and left side that, when coupled with the padding from an adjacent <code>grid-x</code> unit (or the <code>grid-container</code> itself), creates a 20px gutter. The reason for this symmetry, versus having 20px spacing on <i>only</i> the left/right is that it allows for <code>push-x</code> and <code>pull-x</code> classes to rearrange grid units, regardless of whether they are at the beginning/end of a row.
 </p>
 <h3>
   Mobile &amp; Hidden Classes
@@ -257,7 +285,7 @@
   IE7 Support
 </h2>
 <p>
-  In order to support Internet Explorer 7, there is an optional Sass variable <code>$unsemnatic-ie7-support</code> that's set to <code>true</code> by default. This causes additional code to be generated, which fakes <code>box-sizing</code> and addresses some rounding errors when dealing with CSS percentages.
+  In order to support Internet Explorer 7, there is an optional Sass variable <code>$unsemantic-ie7-support</code> that's set to <code>true</code> by default. This causes additional code to be generated, which fakes <code>box-sizing</code> and addresses some rounding errors when dealing with CSS percentages.
 </p>
 <p>
   For instance, there's some code that zeros out padding on <code>grid-x</code> elements, and instead adds margins to the left/right of their immediate children. This is called a <a href="http://msdn.microsoft.com/en-us/library/ms537634(v=vs.85).aspx">CSS expression</a> and is basically embedded JavaScript that works only in older versions of IE. Normally, this is a pretty <a href="http://robertnyman.com/2007/11/13/stop-using-poor-performance-css-expressions-use-javascript-instead/">terrible</a> thing to do, but hey&hellip; It's IE7.

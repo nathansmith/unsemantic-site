@@ -231,6 +231,16 @@ svg {
     box-sizing: border-box;
     padding-left: 10px;
     padding-right: 10px;
+    /* <IE7> */
+    *padding-left: 0;
+    *padding-right: 0;
+    /* </IE7> */
+  }
+  .grid-5 > *, .mobile-grid-5 > *, .grid-10 > *, .mobile-grid-10 > *, .grid-15 > *, .mobile-grid-15 > *, .grid-20 > *, .mobile-grid-20 > *, .grid-25 > *, .mobile-grid-25 > *, .grid-30 > *, .mobile-grid-30 > *, .grid-35 > *, .mobile-grid-35 > *, .grid-40 > *, .mobile-grid-40 > *, .grid-45 > *, .mobile-grid-45 > *, .grid-50 > *, .mobile-grid-50 > *, .grid-55 > *, .mobile-grid-55 > *, .grid-60 > *, .mobile-grid-60 > *, .grid-65 > *, .mobile-grid-65 > *, .grid-70 > *, .mobile-grid-70 > *, .grid-75 > *, .mobile-grid-75 > *, .grid-80 > *, .mobile-grid-80 > *, .grid-85 > *, .mobile-grid-85 > *, .grid-90 > *, .mobile-grid-90 > *, .grid-95 > *, .mobile-grid-95 > *, .grid-100 > *, .mobile-grid-100 > *, .grid-33 > *, .mobile-grid-33 > *, .grid-66 > *, .mobile-grid-66 > * {
+    /* <IE7> */
+    *margin-left: expression((!this.className.match(/grid-[1-9]/) && this.currentStyle.display === "block") && "10px");
+    *margin-right: expression((!this.className.match(/grid-[1-9]/) && this.currentStyle.display === "block") && "10px");
+    /* </IE7> */
   }
 
   .grid-parent {
@@ -298,6 +308,9 @@ svg {
 
   .mobile-grid-5 {
     width: 5%;
+    /* <IE7> */
+    *width: expression(Math.floor(0.05 * (this.parentNode.offsetWidth - 20)) + "px");
+    /* </IE7> */
   }
 
   .mobile-prefix-5 {
@@ -310,14 +323,23 @@ svg {
 
   .mobile-push-5 {
     right: 5%;
+    /* <IE7> */
+    *right: expression(Math.floor(0.05 * (this.parentNode.offsetWidth - 20)) + "px");
+    /* </IE7> */
   }
 
   .mobile-pull-5 {
     right: -5%;
+    /* <IE7> */
+    *right: expression(Math.floor(-0.05 * (this.parentNode.offsetWidth - 20)) + "px");
+    /* </IE7> */
   }
 
   .mobile-grid-10 {
     width: 10%;
+    /* <IE7> */
+    *width: expression(Math.floor(0.1 * (this.parentNode.offsetWidth - 20)) + "px");
+    /* </IE7> */
   }
 
   .mobile-prefix-10 {
@@ -330,14 +352,23 @@ svg {
 
   .mobile-push-10 {
     right: 10%;
+    /* <IE7> */
+    *right: expression(Math.floor(0.1 * (this.parentNode.offsetWidth - 20)) + "px");
+    /* </IE7> */
   }
 
   .mobile-pull-10 {
     right: -10%;
+    /* <IE7> */
+    *right: expression(Math.floor(-0.1 * (this.parentNode.offsetWidth - 20)) + "px");
+    /* </IE7> */
   }
 
   .mobile-grid-15 {
     width: 15%;
+    /* <IE7> */
+    *width: expression(Math.floor(0.15 * (this.parentNode.offsetWidth - 20)) + "px");
+    /* </IE7> */
   }
 
   .mobile-prefix-15 {
@@ -350,14 +381,23 @@ svg {
 
   .mobile-push-15 {
     right: 15%;
+    /* <IE7> */
+    *right: expression(Math.floor(0.15 * (this.parentNode.offsetWidth - 20)) + "px");
+    /* </IE7> */
   }
 
   .mobile-pull-15 {
     right: -15%;
+    /* <IE7> */
+    *right: expression(Math.floor(-0.15 * (this.parentNode.offsetWidth - 20)) + "px");
+    /* </IE7> */
   }
 
   .mobile-grid-20 {
     width: 20%;
+    /* <IE7> */
+    *width: expression(Math.floor(0.2 * (this.parentNode.offsetWidth - 20)) + "px");
+    /* </IE7> */
   }
 
   .mobile-prefix-20 {
@@ -370,14 +410,23 @@ svg {
 
   .mobile-push-20 {
     right: 20%;
+    /* <IE7> */
+    *right: expression(Math.floor(0.2 * (this.parentNode.offsetWidth - 20)) + "px");
+    /* </IE7> */
   }
 
   .mobile-pull-20 {
     right: -20%;
+    /* <IE7> */
+    *right: expression(Math.floor(-0.2 * (this.parentNode.offsetWidth - 20)) + "px");
+    /* </IE7> */
   }
 
   .mobile-grid-25 {
     width: 25%;
+    /* <IE7> */
+    *width: expression(Math.floor(0.25 * (this.parentNode.offsetWidth - 20)) + "px");
+    /* </IE7> */
   }
 
   .mobile-prefix-25 {
@@ -390,14 +439,23 @@ svg {
 
   .mobile-push-25 {
     right: 25%;
+    /* <IE7> */
+    *right: expression(Math.floor(0.25 * (this.parentNode.offsetWidth - 20)) + "px");
+    /* </IE7> */
   }
 
   .mobile-pull-25 {
     right: -25%;
+    /* <IE7> */
+    *right: expression(Math.floor(-0.25 * (this.parentNode.offsetWidth - 20)) + "px");
+    /* </IE7> */
   }
 
   .mobile-grid-30 {
     width: 30%;
+    /* <IE7> */
+    *width: expression(Math.floor(0.3 * (this.parentNode.offsetWidth - 20)) + "px");
+    /* </IE7> */
   }
 
   .mobile-prefix-30 {
@@ -410,14 +468,23 @@ svg {
 
   .mobile-push-30 {
     right: 30%;
+    /* <IE7> */
+    *right: expression(Math.floor(0.3 * (this.parentNode.offsetWidth - 20)) + "px");
+    /* </IE7> */
   }
 
   .mobile-pull-30 {
     right: -30%;
+    /* <IE7> */
+    *right: expression(Math.floor(-0.3 * (this.parentNode.offsetWidth - 20)) + "px");
+    /* </IE7> */
   }
 
   .mobile-grid-35 {
     width: 35%;
+    /* <IE7> */
+    *width: expression(Math.floor(0.35 * (this.parentNode.offsetWidth - 20)) + "px");
+    /* </IE7> */
   }
 
   .mobile-prefix-35 {
@@ -430,14 +497,23 @@ svg {
 
   .mobile-push-35 {
     right: 35%;
+    /* <IE7> */
+    *right: expression(Math.floor(0.35 * (this.parentNode.offsetWidth - 20)) + "px");
+    /* </IE7> */
   }
 
   .mobile-pull-35 {
     right: -35%;
+    /* <IE7> */
+    *right: expression(Math.floor(-0.35 * (this.parentNode.offsetWidth - 20)) + "px");
+    /* </IE7> */
   }
 
   .mobile-grid-40 {
     width: 40%;
+    /* <IE7> */
+    *width: expression(Math.floor(0.4 * (this.parentNode.offsetWidth - 20)) + "px");
+    /* </IE7> */
   }
 
   .mobile-prefix-40 {
@@ -450,14 +526,23 @@ svg {
 
   .mobile-push-40 {
     right: 40%;
+    /* <IE7> */
+    *right: expression(Math.floor(0.4 * (this.parentNode.offsetWidth - 20)) + "px");
+    /* </IE7> */
   }
 
   .mobile-pull-40 {
     right: -40%;
+    /* <IE7> */
+    *right: expression(Math.floor(-0.4 * (this.parentNode.offsetWidth - 20)) + "px");
+    /* </IE7> */
   }
 
   .mobile-grid-45 {
     width: 45%;
+    /* <IE7> */
+    *width: expression(Math.floor(0.45 * (this.parentNode.offsetWidth - 20)) + "px");
+    /* </IE7> */
   }
 
   .mobile-prefix-45 {
@@ -470,14 +555,23 @@ svg {
 
   .mobile-push-45 {
     right: 45%;
+    /* <IE7> */
+    *right: expression(Math.floor(0.45 * (this.parentNode.offsetWidth - 20)) + "px");
+    /* </IE7> */
   }
 
   .mobile-pull-45 {
     right: -45%;
+    /* <IE7> */
+    *right: expression(Math.floor(-0.45 * (this.parentNode.offsetWidth - 20)) + "px");
+    /* </IE7> */
   }
 
   .mobile-grid-50 {
     width: 50%;
+    /* <IE7> */
+    *width: expression(Math.floor(0.5 * (this.parentNode.offsetWidth - 20)) + "px");
+    /* </IE7> */
   }
 
   .mobile-prefix-50 {
@@ -490,14 +584,23 @@ svg {
 
   .mobile-push-50 {
     right: 50%;
+    /* <IE7> */
+    *right: expression(Math.floor(0.5 * (this.parentNode.offsetWidth - 20)) + "px");
+    /* </IE7> */
   }
 
   .mobile-pull-50 {
     right: -50%;
+    /* <IE7> */
+    *right: expression(Math.floor(-0.5 * (this.parentNode.offsetWidth - 20)) + "px");
+    /* </IE7> */
   }
 
   .mobile-grid-55 {
     width: 55%;
+    /* <IE7> */
+    *width: expression(Math.floor(0.55 * (this.parentNode.offsetWidth - 20)) + "px");
+    /* </IE7> */
   }
 
   .mobile-prefix-55 {
@@ -510,14 +613,23 @@ svg {
 
   .mobile-push-55 {
     right: 55%;
+    /* <IE7> */
+    *right: expression(Math.floor(0.55 * (this.parentNode.offsetWidth - 20)) + "px");
+    /* </IE7> */
   }
 
   .mobile-pull-55 {
     right: -55%;
+    /* <IE7> */
+    *right: expression(Math.floor(-0.55 * (this.parentNode.offsetWidth - 20)) + "px");
+    /* </IE7> */
   }
 
   .mobile-grid-60 {
     width: 60%;
+    /* <IE7> */
+    *width: expression(Math.floor(0.6 * (this.parentNode.offsetWidth - 20)) + "px");
+    /* </IE7> */
   }
 
   .mobile-prefix-60 {
@@ -530,14 +642,23 @@ svg {
 
   .mobile-push-60 {
     right: 60%;
+    /* <IE7> */
+    *right: expression(Math.floor(0.6 * (this.parentNode.offsetWidth - 20)) + "px");
+    /* </IE7> */
   }
 
   .mobile-pull-60 {
     right: -60%;
+    /* <IE7> */
+    *right: expression(Math.floor(-0.6 * (this.parentNode.offsetWidth - 20)) + "px");
+    /* </IE7> */
   }
 
   .mobile-grid-65 {
     width: 65%;
+    /* <IE7> */
+    *width: expression(Math.floor(0.65 * (this.parentNode.offsetWidth - 20)) + "px");
+    /* </IE7> */
   }
 
   .mobile-prefix-65 {
@@ -550,14 +671,23 @@ svg {
 
   .mobile-push-65 {
     right: 65%;
+    /* <IE7> */
+    *right: expression(Math.floor(0.65 * (this.parentNode.offsetWidth - 20)) + "px");
+    /* </IE7> */
   }
 
   .mobile-pull-65 {
     right: -65%;
+    /* <IE7> */
+    *right: expression(Math.floor(-0.65 * (this.parentNode.offsetWidth - 20)) + "px");
+    /* </IE7> */
   }
 
   .mobile-grid-70 {
     width: 70%;
+    /* <IE7> */
+    *width: expression(Math.floor(0.7 * (this.parentNode.offsetWidth - 20)) + "px");
+    /* </IE7> */
   }
 
   .mobile-prefix-70 {
@@ -570,14 +700,23 @@ svg {
 
   .mobile-push-70 {
     right: 70%;
+    /* <IE7> */
+    *right: expression(Math.floor(0.7 * (this.parentNode.offsetWidth - 20)) + "px");
+    /* </IE7> */
   }
 
   .mobile-pull-70 {
     right: -70%;
+    /* <IE7> */
+    *right: expression(Math.floor(-0.7 * (this.parentNode.offsetWidth - 20)) + "px");
+    /* </IE7> */
   }
 
   .mobile-grid-75 {
     width: 75%;
+    /* <IE7> */
+    *width: expression(Math.floor(0.75 * (this.parentNode.offsetWidth - 20)) + "px");
+    /* </IE7> */
   }
 
   .mobile-prefix-75 {
@@ -590,14 +729,23 @@ svg {
 
   .mobile-push-75 {
     right: 75%;
+    /* <IE7> */
+    *right: expression(Math.floor(0.75 * (this.parentNode.offsetWidth - 20)) + "px");
+    /* </IE7> */
   }
 
   .mobile-pull-75 {
     right: -75%;
+    /* <IE7> */
+    *right: expression(Math.floor(-0.75 * (this.parentNode.offsetWidth - 20)) + "px");
+    /* </IE7> */
   }
 
   .mobile-grid-80 {
     width: 80%;
+    /* <IE7> */
+    *width: expression(Math.floor(0.8 * (this.parentNode.offsetWidth - 20)) + "px");
+    /* </IE7> */
   }
 
   .mobile-prefix-80 {
@@ -610,14 +758,23 @@ svg {
 
   .mobile-push-80 {
     right: 80%;
+    /* <IE7> */
+    *right: expression(Math.floor(0.8 * (this.parentNode.offsetWidth - 20)) + "px");
+    /* </IE7> */
   }
 
   .mobile-pull-80 {
     right: -80%;
+    /* <IE7> */
+    *right: expression(Math.floor(-0.8 * (this.parentNode.offsetWidth - 20)) + "px");
+    /* </IE7> */
   }
 
   .mobile-grid-85 {
     width: 85%;
+    /* <IE7> */
+    *width: expression(Math.floor(0.85 * (this.parentNode.offsetWidth - 20)) + "px");
+    /* </IE7> */
   }
 
   .mobile-prefix-85 {
@@ -630,14 +787,23 @@ svg {
 
   .mobile-push-85 {
     right: 85%;
+    /* <IE7> */
+    *right: expression(Math.floor(0.85 * (this.parentNode.offsetWidth - 20)) + "px");
+    /* </IE7> */
   }
 
   .mobile-pull-85 {
     right: -85%;
+    /* <IE7> */
+    *right: expression(Math.floor(-0.85 * (this.parentNode.offsetWidth - 20)) + "px");
+    /* </IE7> */
   }
 
   .mobile-grid-90 {
     width: 90%;
+    /* <IE7> */
+    *width: expression(Math.floor(0.9 * (this.parentNode.offsetWidth - 20)) + "px");
+    /* </IE7> */
   }
 
   .mobile-prefix-90 {
@@ -650,14 +816,23 @@ svg {
 
   .mobile-push-90 {
     right: 90%;
+    /* <IE7> */
+    *right: expression(Math.floor(0.9 * (this.parentNode.offsetWidth - 20)) + "px");
+    /* </IE7> */
   }
 
   .mobile-pull-90 {
     right: -90%;
+    /* <IE7> */
+    *right: expression(Math.floor(-0.9 * (this.parentNode.offsetWidth - 20)) + "px");
+    /* </IE7> */
   }
 
   .mobile-grid-95 {
     width: 95%;
+    /* <IE7> */
+    *width: expression(Math.floor(0.95 * (this.parentNode.offsetWidth - 20)) + "px");
+    /* </IE7> */
   }
 
   .mobile-prefix-95 {
@@ -670,10 +845,16 @@ svg {
 
   .mobile-push-95 {
     right: 95%;
+    /* <IE7> */
+    *right: expression(Math.floor(0.95 * (this.parentNode.offsetWidth - 20)) + "px");
+    /* </IE7> */
   }
 
   .mobile-pull-95 {
     right: -95%;
+    /* <IE7> */
+    *right: expression(Math.floor(-0.95 * (this.parentNode.offsetWidth - 20)) + "px");
+    /* </IE7> */
   }
 
   .mobile-grid-33 {
@@ -690,10 +871,16 @@ svg {
 
   .mobile-push-33 {
     right: 33.33333%;
+    /* <IE7> */
+    *right: expression(Math.floor(0.33333 * (this.parentNode.offsetWidth - 20)) + "px");
+    /* </IE7> */
   }
 
   .mobile-pull-33 {
     right: -33.33333%;
+    /* <IE7> */
+    *right: expression(Math.floor(-0.33333 * (this.parentNode.offsetWidth - 20)) + "px");
+    /* </IE7> */
   }
 
   .mobile-grid-66 {
@@ -710,10 +897,16 @@ svg {
 
   .mobile-push-66 {
     right: 66.66667%;
+    /* <IE7> */
+    *right: expression(Math.floor(0.66667 * (this.parentNode.offsetWidth - 20)) + "px");
+    /* </IE7> */
   }
 
   .mobile-pull-66 {
     right: -66.66667%;
+    /* <IE7> */
+    *right: expression(Math.floor(-0.66667 * (this.parentNode.offsetWidth - 20)) + "px");
+    /* </IE7> */
   }
 
   .mobile-grid-100 {
@@ -777,6 +970,9 @@ svg {
 
   .grid-5 {
     width: 5%;
+    /* <IE7> */
+    *width: expression(Math.floor(0.05 * (this.parentNode.offsetWidth - 20)) + "px");
+    /* </IE7> */
   }
 
   .prefix-5 {
@@ -789,14 +985,23 @@ svg {
 
   .push-5 {
     right: 5%;
+    /* <IE7> */
+    *right: expression(Math.floor(0.05 * (this.parentNode.offsetWidth - 20)) + "px");
+    /* </IE7> */
   }
 
   .pull-5 {
     right: -5%;
+    /* <IE7> */
+    *right: expression(Math.floor(-0.05 * (this.parentNode.offsetWidth - 20)) + "px");
+    /* </IE7> */
   }
 
   .grid-10 {
     width: 10%;
+    /* <IE7> */
+    *width: expression(Math.floor(0.1 * (this.parentNode.offsetWidth - 20)) + "px");
+    /* </IE7> */
   }
 
   .prefix-10 {
@@ -809,14 +1014,23 @@ svg {
 
   .push-10 {
     right: 10%;
+    /* <IE7> */
+    *right: expression(Math.floor(0.1 * (this.parentNode.offsetWidth - 20)) + "px");
+    /* </IE7> */
   }
 
   .pull-10 {
     right: -10%;
+    /* <IE7> */
+    *right: expression(Math.floor(-0.1 * (this.parentNode.offsetWidth - 20)) + "px");
+    /* </IE7> */
   }
 
   .grid-15 {
     width: 15%;
+    /* <IE7> */
+    *width: expression(Math.floor(0.15 * (this.parentNode.offsetWidth - 20)) + "px");
+    /* </IE7> */
   }
 
   .prefix-15 {
@@ -829,14 +1043,23 @@ svg {
 
   .push-15 {
     right: 15%;
+    /* <IE7> */
+    *right: expression(Math.floor(0.15 * (this.parentNode.offsetWidth - 20)) + "px");
+    /* </IE7> */
   }
 
   .pull-15 {
     right: -15%;
+    /* <IE7> */
+    *right: expression(Math.floor(-0.15 * (this.parentNode.offsetWidth - 20)) + "px");
+    /* </IE7> */
   }
 
   .grid-20 {
     width: 20%;
+    /* <IE7> */
+    *width: expression(Math.floor(0.2 * (this.parentNode.offsetWidth - 20)) + "px");
+    /* </IE7> */
   }
 
   .prefix-20 {
@@ -849,14 +1072,23 @@ svg {
 
   .push-20 {
     right: 20%;
+    /* <IE7> */
+    *right: expression(Math.floor(0.2 * (this.parentNode.offsetWidth - 20)) + "px");
+    /* </IE7> */
   }
 
   .pull-20 {
     right: -20%;
+    /* <IE7> */
+    *right: expression(Math.floor(-0.2 * (this.parentNode.offsetWidth - 20)) + "px");
+    /* </IE7> */
   }
 
   .grid-25 {
     width: 25%;
+    /* <IE7> */
+    *width: expression(Math.floor(0.25 * (this.parentNode.offsetWidth - 20)) + "px");
+    /* </IE7> */
   }
 
   .prefix-25 {
@@ -869,14 +1101,23 @@ svg {
 
   .push-25 {
     right: 25%;
+    /* <IE7> */
+    *right: expression(Math.floor(0.25 * (this.parentNode.offsetWidth - 20)) + "px");
+    /* </IE7> */
   }
 
   .pull-25 {
     right: -25%;
+    /* <IE7> */
+    *right: expression(Math.floor(-0.25 * (this.parentNode.offsetWidth - 20)) + "px");
+    /* </IE7> */
   }
 
   .grid-30 {
     width: 30%;
+    /* <IE7> */
+    *width: expression(Math.floor(0.3 * (this.parentNode.offsetWidth - 20)) + "px");
+    /* </IE7> */
   }
 
   .prefix-30 {
@@ -889,14 +1130,23 @@ svg {
 
   .push-30 {
     right: 30%;
+    /* <IE7> */
+    *right: expression(Math.floor(0.3 * (this.parentNode.offsetWidth - 20)) + "px");
+    /* </IE7> */
   }
 
   .pull-30 {
     right: -30%;
+    /* <IE7> */
+    *right: expression(Math.floor(-0.3 * (this.parentNode.offsetWidth - 20)) + "px");
+    /* </IE7> */
   }
 
   .grid-35 {
     width: 35%;
+    /* <IE7> */
+    *width: expression(Math.floor(0.35 * (this.parentNode.offsetWidth - 20)) + "px");
+    /* </IE7> */
   }
 
   .prefix-35 {
@@ -909,14 +1159,23 @@ svg {
 
   .push-35 {
     right: 35%;
+    /* <IE7> */
+    *right: expression(Math.floor(0.35 * (this.parentNode.offsetWidth - 20)) + "px");
+    /* </IE7> */
   }
 
   .pull-35 {
     right: -35%;
+    /* <IE7> */
+    *right: expression(Math.floor(-0.35 * (this.parentNode.offsetWidth - 20)) + "px");
+    /* </IE7> */
   }
 
   .grid-40 {
     width: 40%;
+    /* <IE7> */
+    *width: expression(Math.floor(0.4 * (this.parentNode.offsetWidth - 20)) + "px");
+    /* </IE7> */
   }
 
   .prefix-40 {
@@ -929,14 +1188,23 @@ svg {
 
   .push-40 {
     right: 40%;
+    /* <IE7> */
+    *right: expression(Math.floor(0.4 * (this.parentNode.offsetWidth - 20)) + "px");
+    /* </IE7> */
   }
 
   .pull-40 {
     right: -40%;
+    /* <IE7> */
+    *right: expression(Math.floor(-0.4 * (this.parentNode.offsetWidth - 20)) + "px");
+    /* </IE7> */
   }
 
   .grid-45 {
     width: 45%;
+    /* <IE7> */
+    *width: expression(Math.floor(0.45 * (this.parentNode.offsetWidth - 20)) + "px");
+    /* </IE7> */
   }
 
   .prefix-45 {
@@ -949,14 +1217,23 @@ svg {
 
   .push-45 {
     right: 45%;
+    /* <IE7> */
+    *right: expression(Math.floor(0.45 * (this.parentNode.offsetWidth - 20)) + "px");
+    /* </IE7> */
   }
 
   .pull-45 {
     right: -45%;
+    /* <IE7> */
+    *right: expression(Math.floor(-0.45 * (this.parentNode.offsetWidth - 20)) + "px");
+    /* </IE7> */
   }
 
   .grid-50 {
     width: 50%;
+    /* <IE7> */
+    *width: expression(Math.floor(0.5 * (this.parentNode.offsetWidth - 20)) + "px");
+    /* </IE7> */
   }
 
   .prefix-50 {
@@ -969,14 +1246,23 @@ svg {
 
   .push-50 {
     right: 50%;
+    /* <IE7> */
+    *right: expression(Math.floor(0.5 * (this.parentNode.offsetWidth - 20)) + "px");
+    /* </IE7> */
   }
 
   .pull-50 {
     right: -50%;
+    /* <IE7> */
+    *right: expression(Math.floor(-0.5 * (this.parentNode.offsetWidth - 20)) + "px");
+    /* </IE7> */
   }
 
   .grid-55 {
     width: 55%;
+    /* <IE7> */
+    *width: expression(Math.floor(0.55 * (this.parentNode.offsetWidth - 20)) + "px");
+    /* </IE7> */
   }
 
   .prefix-55 {
@@ -989,14 +1275,23 @@ svg {
 
   .push-55 {
     right: 55%;
+    /* <IE7> */
+    *right: expression(Math.floor(0.55 * (this.parentNode.offsetWidth - 20)) + "px");
+    /* </IE7> */
   }
 
   .pull-55 {
     right: -55%;
+    /* <IE7> */
+    *right: expression(Math.floor(-0.55 * (this.parentNode.offsetWidth - 20)) + "px");
+    /* </IE7> */
   }
 
   .grid-60 {
     width: 60%;
+    /* <IE7> */
+    *width: expression(Math.floor(0.6 * (this.parentNode.offsetWidth - 20)) + "px");
+    /* </IE7> */
   }
 
   .prefix-60 {
@@ -1009,14 +1304,23 @@ svg {
 
   .push-60 {
     right: 60%;
+    /* <IE7> */
+    *right: expression(Math.floor(0.6 * (this.parentNode.offsetWidth - 20)) + "px");
+    /* </IE7> */
   }
 
   .pull-60 {
     right: -60%;
+    /* <IE7> */
+    *right: expression(Math.floor(-0.6 * (this.parentNode.offsetWidth - 20)) + "px");
+    /* </IE7> */
   }
 
   .grid-65 {
     width: 65%;
+    /* <IE7> */
+    *width: expression(Math.floor(0.65 * (this.parentNode.offsetWidth - 20)) + "px");
+    /* </IE7> */
   }
 
   .prefix-65 {
@@ -1029,14 +1333,23 @@ svg {
 
   .push-65 {
     right: 65%;
+    /* <IE7> */
+    *right: expression(Math.floor(0.65 * (this.parentNode.offsetWidth - 20)) + "px");
+    /* </IE7> */
   }
 
   .pull-65 {
     right: -65%;
+    /* <IE7> */
+    *right: expression(Math.floor(-0.65 * (this.parentNode.offsetWidth - 20)) + "px");
+    /* </IE7> */
   }
 
   .grid-70 {
     width: 70%;
+    /* <IE7> */
+    *width: expression(Math.floor(0.7 * (this.parentNode.offsetWidth - 20)) + "px");
+    /* </IE7> */
   }
 
   .prefix-70 {
@@ -1049,14 +1362,23 @@ svg {
 
   .push-70 {
     right: 70%;
+    /* <IE7> */
+    *right: expression(Math.floor(0.7 * (this.parentNode.offsetWidth - 20)) + "px");
+    /* </IE7> */
   }
 
   .pull-70 {
     right: -70%;
+    /* <IE7> */
+    *right: expression(Math.floor(-0.7 * (this.parentNode.offsetWidth - 20)) + "px");
+    /* </IE7> */
   }
 
   .grid-75 {
     width: 75%;
+    /* <IE7> */
+    *width: expression(Math.floor(0.75 * (this.parentNode.offsetWidth - 20)) + "px");
+    /* </IE7> */
   }
 
   .prefix-75 {
@@ -1069,14 +1391,23 @@ svg {
 
   .push-75 {
     right: 75%;
+    /* <IE7> */
+    *right: expression(Math.floor(0.75 * (this.parentNode.offsetWidth - 20)) + "px");
+    /* </IE7> */
   }
 
   .pull-75 {
     right: -75%;
+    /* <IE7> */
+    *right: expression(Math.floor(-0.75 * (this.parentNode.offsetWidth - 20)) + "px");
+    /* </IE7> */
   }
 
   .grid-80 {
     width: 80%;
+    /* <IE7> */
+    *width: expression(Math.floor(0.8 * (this.parentNode.offsetWidth - 20)) + "px");
+    /* </IE7> */
   }
 
   .prefix-80 {
@@ -1089,14 +1420,23 @@ svg {
 
   .push-80 {
     right: 80%;
+    /* <IE7> */
+    *right: expression(Math.floor(0.8 * (this.parentNode.offsetWidth - 20)) + "px");
+    /* </IE7> */
   }
 
   .pull-80 {
     right: -80%;
+    /* <IE7> */
+    *right: expression(Math.floor(-0.8 * (this.parentNode.offsetWidth - 20)) + "px");
+    /* </IE7> */
   }
 
   .grid-85 {
     width: 85%;
+    /* <IE7> */
+    *width: expression(Math.floor(0.85 * (this.parentNode.offsetWidth - 20)) + "px");
+    /* </IE7> */
   }
 
   .prefix-85 {
@@ -1109,14 +1449,23 @@ svg {
 
   .push-85 {
     right: 85%;
+    /* <IE7> */
+    *right: expression(Math.floor(0.85 * (this.parentNode.offsetWidth - 20)) + "px");
+    /* </IE7> */
   }
 
   .pull-85 {
     right: -85%;
+    /* <IE7> */
+    *right: expression(Math.floor(-0.85 * (this.parentNode.offsetWidth - 20)) + "px");
+    /* </IE7> */
   }
 
   .grid-90 {
     width: 90%;
+    /* <IE7> */
+    *width: expression(Math.floor(0.9 * (this.parentNode.offsetWidth - 20)) + "px");
+    /* </IE7> */
   }
 
   .prefix-90 {
@@ -1129,14 +1478,23 @@ svg {
 
   .push-90 {
     right: 90%;
+    /* <IE7> */
+    *right: expression(Math.floor(0.9 * (this.parentNode.offsetWidth - 20)) + "px");
+    /* </IE7> */
   }
 
   .pull-90 {
     right: -90%;
+    /* <IE7> */
+    *right: expression(Math.floor(-0.9 * (this.parentNode.offsetWidth - 20)) + "px");
+    /* </IE7> */
   }
 
   .grid-95 {
     width: 95%;
+    /* <IE7> */
+    *width: expression(Math.floor(0.95 * (this.parentNode.offsetWidth - 20)) + "px");
+    /* </IE7> */
   }
 
   .prefix-95 {
@@ -1149,10 +1507,16 @@ svg {
 
   .push-95 {
     right: 95%;
+    /* <IE7> */
+    *right: expression(Math.floor(0.95 * (this.parentNode.offsetWidth - 20)) + "px");
+    /* </IE7> */
   }
 
   .pull-95 {
     right: -95%;
+    /* <IE7> */
+    *right: expression(Math.floor(-0.95 * (this.parentNode.offsetWidth - 20)) + "px");
+    /* </IE7> */
   }
 
   .grid-33 {
@@ -1169,10 +1533,16 @@ svg {
 
   .push-33 {
     right: 33.33333%;
+    /* <IE7> */
+    *right: expression(Math.floor(0.33333 * (this.parentNode.offsetWidth - 20)) + "px");
+    /* </IE7> */
   }
 
   .pull-33 {
     right: -33.33333%;
+    /* <IE7> */
+    *right: expression(Math.floor(-0.33333 * (this.parentNode.offsetWidth - 20)) + "px");
+    /* </IE7> */
   }
 
   .grid-66 {
@@ -1189,10 +1559,16 @@ svg {
 
   .push-66 {
     right: 66.66667%;
+    /* <IE7> */
+    *right: expression(Math.floor(0.66667 * (this.parentNode.offsetWidth - 20)) + "px");
+    /* </IE7> */
   }
 
   .pull-66 {
     right: -66.66667%;
+    /* <IE7> */
+    *right: expression(Math.floor(-0.66667 * (this.parentNode.offsetWidth - 20)) + "px");
+    /* </IE7> */
   }
 
   .grid-100 {
