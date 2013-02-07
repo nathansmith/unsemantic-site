@@ -285,7 +285,9 @@ figure {
   }
 
   .grid-container, .clearfix {
+    /* <IE7> */
     *zoom: 1;
+    /* </IE7> */
   }
 
   .grid-container {
@@ -341,7 +343,9 @@ figure {
   }
 
   .mobile-grid-100 {
+    /* <IE7> */
     *zoom: 1;
+    /* </IE7> */
   }
 
   .mobile-push-5,
@@ -1003,7 +1007,9 @@ figure {
   }
 
   .grid-100 {
+    /* <IE7> */
     *zoom: 1;
+    /* </IE7> */
   }
 
   .push-5,

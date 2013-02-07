@@ -214,7 +214,9 @@ svg {
   }
 
   .grid-container, .clearfix {
+    /* <IE7> */
     *zoom: 1;
+    /* </IE7> */
   }
 
   .grid-container {
@@ -270,7 +272,9 @@ svg {
   }
 
   .mobile-grid-100 {
+    /* <IE7> */
     *zoom: 1;
+    /* </IE7> */
   }
 
   .mobile-push-5,
@@ -932,7 +936,9 @@ svg {
   }
 
   .grid-100 {
+    /* <IE7> */
     *zoom: 1;
+    /* </IE7> */
   }
 
   .push-5,
