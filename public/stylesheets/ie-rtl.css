@@ -5303,9 +5303,10 @@ code {
 }
 
 pre {
-  overflow-x: auto;
-  overflow-y: hidden;
+  overflow: auto;
   padding: 20px;
+  *overflow-x: scroll;
+  *overflow-y: hidden;
 }
 
 pre code {

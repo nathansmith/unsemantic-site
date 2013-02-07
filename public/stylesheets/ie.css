@@ -5303,8 +5303,10 @@ code {
 }
 
 pre {
-  overflow-x: auto;
+  overflow: auto;
   padding: 20px;
+  *overflow-x: scroll;
+  *overflow-y: hidden;
 }
 
 pre code {
