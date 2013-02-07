@@ -7,6 +7,17 @@
 </p>
 <hr />
 <h2>
+  IE7 Support
+</h2>
+<p>
+  In order to support Internet Explorer 7, there is an optional Sass variable that's set to <code>true</code> by default. This causes additional code to be generated, which fakes <code>box-sizing</code> and addresses some rounding errors when dealing with CSS percentages.
+</p>
+<pre>$unsemantic-ie7-support: true</pre>
+<p>
+  If you don't need to support IE7, just declare this variable as <code>false</code> at the highest level scope. Be sure that your variable preceeds all of Unsemantic's *.sass files in <code>@import</code> order, and the default will be overridden. As a result, no CSS specific to IE7 will be generated.
+</p>
+<hr />
+<h2>
   Breakpoint
 </h2>
 <p>
