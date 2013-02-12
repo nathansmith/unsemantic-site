@@ -148,13 +148,16 @@ $lang-reverse: left
 %grid-columns-push-pull
   position: relative</pre>
 <h3>
-  %grid-columns
+  %grid-float
 </h3>
 <p>
   This handles float direction for all <code>grid-x</code> units, which are floated left by default.
 </p>
-<pre>%grid-columns
+<pre>%grid-float
   float: $lang-forward</pre>
+<p>
+  You shouldn't ever need to apply this directly, because it's used by <code>%grid-x</code> units.
+</p>
 <hr />
 <h2>
   Sass Loops
@@ -271,11 +274,23 @@ $unsemantic-ie7-support: false
 @import "compass/css3"
 @import "partials/unsemantic-ie-snap"
 
+/*=============*/
+/* All screens */
+/*=============*/
+
 @media screen
   @import "partials/unsemantic-vars"
 
   .layout
     @extend %grid-container
+
+  .main,
+  .sidebar
+    @extend %grid-columns-all
+
+/*=======================*/
+/* "Mobile" screen width */
+/*=======================*/
 
 @media screen and (max-width: $media-query-breakpoint)
   @import "partials/unsemantic-vars"
@@ -283,6 +298,10 @@ $unsemantic-ie7-support: false
   .main,
   .sidebar
     @extend %grid-100
+
+/*========================*/
+/* "Desktop" screen width */
+/*========================*/
 
 @media screen and (min-width: $media-query-breakpoint)
   @import "partials/unsemantic-vars"
@@ -300,6 +319,10 @@ $unsemantic-ie7-support: false
     width: 320px;
   }
 }
+
+/*=============*/
+/* All screens */
+/*=============*/
 
 @media screen {
   .layout:before,
@@ -333,11 +356,12 @@ $unsemantic-ie7-support: false
     box-sizing: border-box;
     padding-left: 10px;
     padding-right: 10px;
-    *padding-left: 0;
-    *padding-right: 0;
-    *margin-left: -1px;
   }
 }
+
+/*=======================*/
+/* "Mobile" screen width */
+/*=======================*/
 
 @media screen and (max-width: 767px) {
   .main:before,
@@ -366,6 +390,10 @@ $unsemantic-ie7-support: false
   }
 }
 
+/*========================*/
+/* "Desktop" screen width */
+/*========================*/
+
 @media screen and (min-width: 767px) {
   .sidebar,
   .main {
@@ -379,5 +407,4 @@ $unsemantic-ie7-support: false
   .main {
     width: 75%;
   }
-}
-</pre>
+}</pre>
