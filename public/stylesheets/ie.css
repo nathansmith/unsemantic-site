@@ -347,11 +347,8 @@ figure {
   display: none !important;
 }
 
-.grid-5, .grid-10, .grid-15, .grid-20, .grid-25, .grid-30, .grid-35, .grid-40, .grid-45, .grid-50, .grid-55, .grid-60, .grid-65, .grid-70, .grid-75, .grid-80, .grid-85, .grid-90, .grid-95, .grid-33, .grid-66 {
-  float: left;
-}
-
 .grid-5 {
+  float: left;
   width: 5%;
   /* <IE7> */
   *width: expression(Math.floor(0.05 * (this.parentNode.offsetWidth - parseFloat(this.parentNode.currentStyle.paddingLeft) - parseFloat(this.parentNode.currentStyle.paddingRight))) + "px");
@@ -381,6 +378,7 @@ figure {
 }
 
 .grid-10 {
+  float: left;
   width: 10%;
   /* <IE7> */
   *width: expression(Math.floor(0.1 * (this.parentNode.offsetWidth - parseFloat(this.parentNode.currentStyle.paddingLeft) - parseFloat(this.parentNode.currentStyle.paddingRight))) + "px");
@@ -410,6 +408,7 @@ figure {
 }
 
 .grid-15 {
+  float: left;
   width: 15%;
   /* <IE7> */
   *width: expression(Math.floor(0.15 * (this.parentNode.offsetWidth - parseFloat(this.parentNode.currentStyle.paddingLeft) - parseFloat(this.parentNode.currentStyle.paddingRight))) + "px");
@@ -439,6 +438,7 @@ figure {
 }
 
 .grid-20 {
+  float: left;
   width: 20%;
   /* <IE7> */
   *width: expression(Math.floor(0.2 * (this.parentNode.offsetWidth - parseFloat(this.parentNode.currentStyle.paddingLeft) - parseFloat(this.parentNode.currentStyle.paddingRight))) + "px");
@@ -468,6 +468,7 @@ figure {
 }
 
 .grid-25 {
+  float: left;
   width: 25%;
   /* <IE7> */
   *width: expression(Math.floor(0.25 * (this.parentNode.offsetWidth - parseFloat(this.parentNode.currentStyle.paddingLeft) - parseFloat(this.parentNode.currentStyle.paddingRight))) + "px");
@@ -497,6 +498,7 @@ figure {
 }
 
 .grid-30 {
+  float: left;
   width: 30%;
   /* <IE7> */
   *width: expression(Math.floor(0.3 * (this.parentNode.offsetWidth - parseFloat(this.parentNode.currentStyle.paddingLeft) - parseFloat(this.parentNode.currentStyle.paddingRight))) + "px");
@@ -526,6 +528,7 @@ figure {
 }
 
 .grid-35 {
+  float: left;
   width: 35%;
   /* <IE7> */
   *width: expression(Math.floor(0.35 * (this.parentNode.offsetWidth - parseFloat(this.parentNode.currentStyle.paddingLeft) - parseFloat(this.parentNode.currentStyle.paddingRight))) + "px");
@@ -555,6 +558,7 @@ figure {
 }
 
 .grid-40 {
+  float: left;
   width: 40%;
   /* <IE7> */
   *width: expression(Math.floor(0.4 * (this.parentNode.offsetWidth - parseFloat(this.parentNode.currentStyle.paddingLeft) - parseFloat(this.parentNode.currentStyle.paddingRight))) + "px");
@@ -584,6 +588,7 @@ figure {
 }
 
 .grid-45 {
+  float: left;
   width: 45%;
   /* <IE7> */
   *width: expression(Math.floor(0.45 * (this.parentNode.offsetWidth - parseFloat(this.parentNode.currentStyle.paddingLeft) - parseFloat(this.parentNode.currentStyle.paddingRight))) + "px");
@@ -613,6 +618,7 @@ figure {
 }
 
 .grid-50 {
+  float: left;
   width: 50%;
   /* <IE7> */
   *width: expression(Math.floor(0.5 * (this.parentNode.offsetWidth - parseFloat(this.parentNode.currentStyle.paddingLeft) - parseFloat(this.parentNode.currentStyle.paddingRight))) + "px");
@@ -642,6 +648,7 @@ figure {
 }
 
 .grid-55 {
+  float: left;
   width: 55%;
   /* <IE7> */
   *width: expression(Math.floor(0.55 * (this.parentNode.offsetWidth - parseFloat(this.parentNode.currentStyle.paddingLeft) - parseFloat(this.parentNode.currentStyle.paddingRight))) + "px");
@@ -671,6 +678,7 @@ figure {
 }
 
 .grid-60 {
+  float: left;
   width: 60%;
   /* <IE7> */
   *width: expression(Math.floor(0.6 * (this.parentNode.offsetWidth - parseFloat(this.parentNode.currentStyle.paddingLeft) - parseFloat(this.parentNode.currentStyle.paddingRight))) + "px");
@@ -700,6 +708,7 @@ figure {
 }
 
 .grid-65 {
+  float: left;
   width: 65%;
   /* <IE7> */
   *width: expression(Math.floor(0.65 * (this.parentNode.offsetWidth - parseFloat(this.parentNode.currentStyle.paddingLeft) - parseFloat(this.parentNode.currentStyle.paddingRight))) + "px");
@@ -729,6 +738,7 @@ figure {
 }
 
 .grid-70 {
+  float: left;
   width: 70%;
   /* <IE7> */
   *width: expression(Math.floor(0.7 * (this.parentNode.offsetWidth - parseFloat(this.parentNode.currentStyle.paddingLeft) - parseFloat(this.parentNode.currentStyle.paddingRight))) + "px");
@@ -758,6 +768,7 @@ figure {
 }
 
 .grid-75 {
+  float: left;
   width: 75%;
   /* <IE7> */
   *width: expression(Math.floor(0.75 * (this.parentNode.offsetWidth - parseFloat(this.parentNode.currentStyle.paddingLeft) - parseFloat(this.parentNode.currentStyle.paddingRight))) + "px");
@@ -787,6 +798,7 @@ figure {
 }
 
 .grid-80 {
+  float: left;
   width: 80%;
   /* <IE7> */
   *width: expression(Math.floor(0.8 * (this.parentNode.offsetWidth - parseFloat(this.parentNode.currentStyle.paddingLeft) - parseFloat(this.parentNode.currentStyle.paddingRight))) + "px");
@@ -816,6 +828,7 @@ figure {
 }
 
 .grid-85 {
+  float: left;
   width: 85%;
   /* <IE7> */
   *width: expression(Math.floor(0.85 * (this.parentNode.offsetWidth - parseFloat(this.parentNode.currentStyle.paddingLeft) - parseFloat(this.parentNode.currentStyle.paddingRight))) + "px");
@@ -845,6 +858,7 @@ figure {
 }
 
 .grid-90 {
+  float: left;
   width: 90%;
   /* <IE7> */
   *width: expression(Math.floor(0.9 * (this.parentNode.offsetWidth - parseFloat(this.parentNode.currentStyle.paddingLeft) - parseFloat(this.parentNode.currentStyle.paddingRight))) + "px");
@@ -874,6 +888,7 @@ figure {
 }
 
 .grid-95 {
+  float: left;
   width: 95%;
   /* <IE7> */
   *width: expression(Math.floor(0.95 * (this.parentNode.offsetWidth - parseFloat(this.parentNode.currentStyle.paddingLeft) - parseFloat(this.parentNode.currentStyle.paddingRight))) + "px");
@@ -903,6 +918,7 @@ figure {
 }
 
 .grid-33 {
+  float: left;
   width: 33.33333%;
   /* <IE7> */
   *width: expression(Math.floor(0.33333 * (this.parentNode.offsetWidth - parseFloat(this.parentNode.currentStyle.paddingLeft) - parseFloat(this.parentNode.currentStyle.paddingRight))) + "px");
@@ -932,6 +948,7 @@ figure {
 }
 
 .grid-66 {
+  float: left;
   width: 66.66667%;
   /* <IE7> */
   *width: expression(Math.floor(0.66667 * (this.parentNode.offsetWidth - parseFloat(this.parentNode.currentStyle.paddingLeft) - parseFloat(this.parentNode.currentStyle.paddingRight))) + "px");
@@ -1062,11 +1079,8 @@ body {
   display: none !important;
 }
 
-.grid-5, .grid-10, .grid-15, .grid-20, .grid-25, .grid-30, .grid-35, .grid-40, .grid-45, .grid-50, .grid-55, .grid-60, .grid-65, .grid-70, .grid-75, .grid-80, .grid-85, .grid-90, .grid-95, .grid-33, .grid-66 {
-  float: left;
-}
-
 .grid-5 {
+  float: left;
   width: 5%;
   /* <IE7> */
   *width: expression(Math.floor(0.05 * (this.parentNode.offsetWidth - parseFloat(this.parentNode.currentStyle.paddingLeft) - parseFloat(this.parentNode.currentStyle.paddingRight))) + "px");
@@ -1096,6 +1110,7 @@ body {
 }
 
 .grid-10 {
+  float: left;
   width: 10%;
   /* <IE7> */
   *width: expression(Math.floor(0.1 * (this.parentNode.offsetWidth - parseFloat(this.parentNode.currentStyle.paddingLeft) - parseFloat(this.parentNode.currentStyle.paddingRight))) + "px");
@@ -1125,6 +1140,7 @@ body {
 }
 
 .grid-15 {
+  float: left;
   width: 15%;
   /* <IE7> */
   *width: expression(Math.floor(0.15 * (this.parentNode.offsetWidth - parseFloat(this.parentNode.currentStyle.paddingLeft) - parseFloat(this.parentNode.currentStyle.paddingRight))) + "px");
@@ -1154,6 +1170,7 @@ body {
 }
 
 .grid-20 {
+  float: left;
   width: 20%;
   /* <IE7> */
   *width: expression(Math.floor(0.2 * (this.parentNode.offsetWidth - parseFloat(this.parentNode.currentStyle.paddingLeft) - parseFloat(this.parentNode.currentStyle.paddingRight))) + "px");
@@ -1183,6 +1200,7 @@ body {
 }
 
 .grid-25 {
+  float: left;
   width: 25%;
   /* <IE7> */
   *width: expression(Math.floor(0.25 * (this.parentNode.offsetWidth - parseFloat(this.parentNode.currentStyle.paddingLeft) - parseFloat(this.parentNode.currentStyle.paddingRight))) + "px");
@@ -1212,6 +1230,7 @@ body {
 }
 
 .grid-30 {
+  float: left;
   width: 30%;
   /* <IE7> */
   *width: expression(Math.floor(0.3 * (this.parentNode.offsetWidth - parseFloat(this.parentNode.currentStyle.paddingLeft) - parseFloat(this.parentNode.currentStyle.paddingRight))) + "px");
@@ -1241,6 +1260,7 @@ body {
 }
 
 .grid-35 {
+  float: left;
   width: 35%;
   /* <IE7> */
   *width: expression(Math.floor(0.35 * (this.parentNode.offsetWidth - parseFloat(this.parentNode.currentStyle.paddingLeft) - parseFloat(this.parentNode.currentStyle.paddingRight))) + "px");
@@ -1270,6 +1290,7 @@ body {
 }
 
 .grid-40 {
+  float: left;
   width: 40%;
   /* <IE7> */
   *width: expression(Math.floor(0.4 * (this.parentNode.offsetWidth - parseFloat(this.parentNode.currentStyle.paddingLeft) - parseFloat(this.parentNode.currentStyle.paddingRight))) + "px");
@@ -1299,6 +1320,7 @@ body {
 }
 
 .grid-45 {
+  float: left;
   width: 45%;
   /* <IE7> */
   *width: expression(Math.floor(0.45 * (this.parentNode.offsetWidth - parseFloat(this.parentNode.currentStyle.paddingLeft) - parseFloat(this.parentNode.currentStyle.paddingRight))) + "px");
@@ -1328,6 +1350,7 @@ body {
 }
 
 .grid-50 {
+  float: left;
   width: 50%;
   /* <IE7> */
   *width: expression(Math.floor(0.5 * (this.parentNode.offsetWidth - parseFloat(this.parentNode.currentStyle.paddingLeft) - parseFloat(this.parentNode.currentStyle.paddingRight))) + "px");
@@ -1357,6 +1380,7 @@ body {
 }
 
 .grid-55 {
+  float: left;
   width: 55%;
   /* <IE7> */
   *width: expression(Math.floor(0.55 * (this.parentNode.offsetWidth - parseFloat(this.parentNode.currentStyle.paddingLeft) - parseFloat(this.parentNode.currentStyle.paddingRight))) + "px");
@@ -1386,6 +1410,7 @@ body {
 }
 
 .grid-60 {
+  float: left;
   width: 60%;
   /* <IE7> */
   *width: expression(Math.floor(0.6 * (this.parentNode.offsetWidth - parseFloat(this.parentNode.currentStyle.paddingLeft) - parseFloat(this.parentNode.currentStyle.paddingRight))) + "px");
@@ -1415,6 +1440,7 @@ body {
 }
 
 .grid-65 {
+  float: left;
   width: 65%;
   /* <IE7> */
   *width: expression(Math.floor(0.65 * (this.parentNode.offsetWidth - parseFloat(this.parentNode.currentStyle.paddingLeft) - parseFloat(this.parentNode.currentStyle.paddingRight))) + "px");
@@ -1444,6 +1470,7 @@ body {
 }
 
 .grid-70 {
+  float: left;
   width: 70%;
   /* <IE7> */
   *width: expression(Math.floor(0.7 * (this.parentNode.offsetWidth - parseFloat(this.parentNode.currentStyle.paddingLeft) - parseFloat(this.parentNode.currentStyle.paddingRight))) + "px");
@@ -1473,6 +1500,7 @@ body {
 }
 
 .grid-75 {
+  float: left;
   width: 75%;
   /* <IE7> */
   *width: expression(Math.floor(0.75 * (this.parentNode.offsetWidth - parseFloat(this.parentNode.currentStyle.paddingLeft) - parseFloat(this.parentNode.currentStyle.paddingRight))) + "px");
@@ -1502,6 +1530,7 @@ body {
 }
 
 .grid-80 {
+  float: left;
   width: 80%;
   /* <IE7> */
   *width: expression(Math.floor(0.8 * (this.parentNode.offsetWidth - parseFloat(this.parentNode.currentStyle.paddingLeft) - parseFloat(this.parentNode.currentStyle.paddingRight))) + "px");
@@ -1531,6 +1560,7 @@ body {
 }
 
 .grid-85 {
+  float: left;
   width: 85%;
   /* <IE7> */
   *width: expression(Math.floor(0.85 * (this.parentNode.offsetWidth - parseFloat(this.parentNode.currentStyle.paddingLeft) - parseFloat(this.parentNode.currentStyle.paddingRight))) + "px");
@@ -1560,6 +1590,7 @@ body {
 }
 
 .grid-90 {
+  float: left;
   width: 90%;
   /* <IE7> */
   *width: expression(Math.floor(0.9 * (this.parentNode.offsetWidth - parseFloat(this.parentNode.currentStyle.paddingLeft) - parseFloat(this.parentNode.currentStyle.paddingRight))) + "px");
@@ -1589,6 +1620,7 @@ body {
 }
 
 .grid-95 {
+  float: left;
   width: 95%;
   /* <IE7> */
   *width: expression(Math.floor(0.95 * (this.parentNode.offsetWidth - parseFloat(this.parentNode.currentStyle.paddingLeft) - parseFloat(this.parentNode.currentStyle.paddingRight))) + "px");
@@ -1618,6 +1650,7 @@ body {
 }
 
 .grid-33 {
+  float: left;
   width: 33.33333%;
   /* <IE7> */
   *width: expression(Math.floor(0.33333 * (this.parentNode.offsetWidth - parseFloat(this.parentNode.currentStyle.paddingLeft) - parseFloat(this.parentNode.currentStyle.paddingRight))) + "px");
@@ -1647,6 +1680,7 @@ body {
 }
 
 .grid-66 {
+  float: left;
   width: 66.66667%;
   /* <IE7> */
   *width: expression(Math.floor(0.66667 * (this.parentNode.offsetWidth - parseFloat(this.parentNode.currentStyle.paddingLeft) - parseFloat(this.parentNode.currentStyle.paddingRight))) + "px");
@@ -2130,5 +2164,5 @@ header[role="banner"] li:first-child a {
 }
 
 body {
-  min-width: 767px;
+  min-width: 1025px;
 }

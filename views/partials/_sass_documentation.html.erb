@@ -18,26 +18,53 @@
 </p>
 <hr />
 <h2>
-  Breakpoint
+  Breakpoints
 </h2>
 <p>
   Within the <i>_unsemantic-grid-responsive.sass</i> file, three other Sass partials are assembled within media queries, to create a responsive CSS file. These partials can also be compiled together without a <code>@media</code> query (or compiled separately), for handling older IE versions.
 </p>
-<pre>$media-query-breakpoint: 767px !default
+<p>
+  The <code>$media-desktop</code> variable is set to a default of 767px, and is the point at which the Unsemantic grid will pivot between a "mobile" or "desktop" layout. This is one pixel less than an iPad (arguably the most popular tablet) in portait orientation, allowing it to have a "desktop" layout. Whereas, anything below that width gets a "mobile" layout, which can be tailored to smaller screens.
+</p>
+<pre>/* ============================================ */
+/* This file has a mobile-to-desktop breakpoint */
+/* ============================================ */
+
+$media-mobile: 767px !default
 
 @import "unsemantic-ie-snap"
 
 @media screen
   @import "unsemantic-grid-base"
 
-@media screen and (max-width: $media-query-breakpoint)
+@media screen and (max-width: $media-mobile)
   @import "unsemantic-grid-mobile"
 
-@media screen and (min-width: $media-query-breakpoint)
+@media screen and (min-width: $media-mobile)
   @import "unsemantic-grid-desktop"</pre>
 <p>
-  The <code>$media-query-breakpoint</code> variable is set to a default of 767px, and is the point at which the Unsemantic grid will pivot between a "mobile" or "desktop" layout. This is one pixel less than an iPad (arguably the most popular tablet) in portait orientation, allowing it to have a "desktop" layout. Whereas, anything below that width gets a "mobile" layout, which can be tailored to smaller screens.
+  The <i>_unsemantic-grid-responsive-tablet.sass</i> file is similar, except it also adds support for a <i>tablet</i> width, between the <i>mobile</i> and <i>desktop</i> breakpoints. This file has an additional variable named <code>$media-desktop</code>, that is set to 1025px by default.
 </p>
+<pre>/* ================================================================== */
+/* This file has a mobile-to-tablet, and tablet-to-desktop breakpoint */
+/* ================================================================== */
+
+$media-mobile: 767px !default
+$media-desktop: 1025px !default
+
+@import "unsemantic-ie-snap"
+
+@media screen
+  @import "unsemantic-grid-base-tablet"
+
+@media screen and (max-width: $media-mobile)
+  @import "unsemantic-grid-mobile"
+
+@media screen and (min-width: $media-mobile) and (max-width: $media-desktop)
+  @import "unsemantic-grid-tablet"
+
+@media screen and (min-width: $media-desktop)
+  @import "unsemantic-grid-desktop"</pre>
 <hr />
 <h2>
   Other Variables
@@ -45,7 +72,9 @@
 <p>
   At the top of the <i>_unsemantic-vars.sass</i> file, there are several variables upon which some of the other Sass files depend. These are provided with initial values, in lieu of a specific value being defined. This is done via the <code>!default</code> keyword.
 </p>
-<pre>$container-max-width: 1200px !default
+<pre>$unsemantic-ie7-support: true !default
+
+$container-max-width: 1200px !default
 
 $gutter-half: 10px !default
 
@@ -147,17 +176,6 @@ $lang-reverse: left
   <pre>// Allows columns to be offset +/- left.
 %grid-columns-push-pull
   position: relative</pre>
-<h3>
-  %grid-float
-</h3>
-<p>
-  This handles float direction for all <code>grid-x</code> units, which are floated left by default.
-</p>
-<pre>%grid-float
-  float: $lang-forward</pre>
-<p>
-  You shouldn't ever need to apply this directly, because it's used by <code>%grid-x</code> units.
-</p>
 <hr />
 <h2>
   Sass Loops
@@ -268,7 +286,7 @@ $lang-reverse: left
 <p>
   You could generate some custom CSS by putting this in your own Sass file&hellip;
 </p>
-<pre>$media-query-breakpoint: 767px
+<pre>$media-mobile: 767px
 $unsemantic-ie7-support: false
 
 @import "compass/css3"
@@ -292,7 +310,7 @@ $unsemantic-ie7-support: false
 /* "Mobile" screen width */
 /*=======================*/
 
-@media screen and (max-width: $media-query-breakpoint)
+@media screen and (max-width: $media-mobile)
   @import "partials/unsemantic-vars"
 
   .main,
@@ -303,7 +321,7 @@ $unsemantic-ie7-support: false
 /* "Desktop" screen width */
 /*========================*/
 
-@media screen and (min-width: $media-query-breakpoint)
+@media screen and (min-width: $media-mobile)
   @import "partials/unsemantic-vars"
 
   .main

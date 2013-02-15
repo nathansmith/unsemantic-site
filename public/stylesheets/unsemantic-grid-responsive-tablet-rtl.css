@@ -1,191 +1,6 @@
-a,
-abbr,
-acronym,
-address,
-applet,
-article,
-aside,
-audio,
-b,
-big,
-blockquote,
-body,
-canvas,
-caption,
-center,
-cite,
-code,
-dd,
-del,
-details,
-dfn,
-dialog,
-div,
-dl,
-dt,
-em,
-embed,
-fieldset,
-figcaption,
-figure,
-font,
-footer,
-form,
-h1,
-h2,
-h3,
-h4,
-h5,
-h6,
-header,
-hgroup,
-hr,
-html,
-i,
-iframe,
-img,
-ins,
-kbd,
-label,
-legend,
-li,
-main,
-mark,
-menu,
-meter,
-nav,
-object,
-ol,
-output,
-p,
-pre,
-progress,
-q,
-rp,
-rt,
-ruby,
-s,
-samp,
-section,
-small,
-span,
-strike,
-strong,
-sub,
-summary,
-sup,
-table,
-tbody,
-td,
-tfoot,
-th,
-thead,
-time,
-tr,
-tt,
-u,
-ul,
-var,
-video,
-xmp {
-  border: 0;
-  margin: 0;
-  padding: 0;
-  font-size: 100%;
-}
-
-html,
-body {
-  height: 100%;
-}
-
-article,
-aside,
-details,
-figcaption,
-figure,
-footer,
-header,
-hgroup,
-main,
-menu,
-nav,
-section {
-  display: block;
-}
-
-b,
-strong {
-  font-weight: bold;
-}
-
-img {
-  color: transparent;
-  font-size: 0;
-  vertical-align: middle;
-  -ms-interpolation-mode: bicubic;
-}
-
-ul,
-ol {
-  list-style: none;
-}
-
-li {
-  display: list-item;
-}
-
-table {
-  border-collapse: collapse;
-  border-spacing: 0;
-}
-
-th,
-td,
-caption {
-  font-weight: normal;
-  vertical-align: top;
-  text-align: left;
-}
-
-q {
-  quotes: none;
-}
-
-q:before,
-q:after {
-  content: "";
-  content: none;
-}
-
-sub,
-sup,
-small {
-  font-size: 75%;
-}
-
-sub,
-sup {
-  line-height: 0;
-  position: relative;
-  vertical-align: baseline;
-}
-
-sub {
-  bottom: -0.25em;
-}
-
-sup {
-  top: -0.5em;
-}
-
-svg {
-  overflow: hidden;
-}
-
-/* ============================================ */
-/* This file has a mobile-to-desktop breakpoint */
-/* ============================================ */
+/* ================================================================== */
+/* This file has a mobile-to-tablet, and tablet-to-desktop breakpoint */
+/* ================================================================== */
 @media screen and (max-width: 400px) {
   @-ms-viewport {
     width: 320px;
@@ -232,7 +47,7 @@ svg {
     max-width: 1200px;
   }
 
-  .grid-5, .mobile-grid-5, .grid-10, .mobile-grid-10, .grid-15, .mobile-grid-15, .grid-20, .mobile-grid-20, .grid-25, .mobile-grid-25, .grid-30, .mobile-grid-30, .grid-35, .mobile-grid-35, .grid-40, .mobile-grid-40, .grid-45, .mobile-grid-45, .grid-50, .mobile-grid-50, .grid-55, .mobile-grid-55, .grid-60, .mobile-grid-60, .grid-65, .mobile-grid-65, .grid-70, .mobile-grid-70, .grid-75, .mobile-grid-75, .grid-80, .mobile-grid-80, .grid-85, .mobile-grid-85, .grid-90, .mobile-grid-90, .grid-95, .mobile-grid-95, .grid-100, .mobile-grid-100, .grid-33, .mobile-grid-33, .grid-66, .mobile-grid-66 {
+  .grid-5, .mobile-grid-5, .tablet-grid-5, .grid-10, .mobile-grid-10, .tablet-grid-10, .grid-15, .mobile-grid-15, .tablet-grid-15, .grid-20, .mobile-grid-20, .tablet-grid-20, .grid-25, .mobile-grid-25, .tablet-grid-25, .grid-30, .mobile-grid-30, .tablet-grid-30, .grid-35, .mobile-grid-35, .tablet-grid-35, .grid-40, .mobile-grid-40, .tablet-grid-40, .grid-45, .mobile-grid-45, .tablet-grid-45, .grid-50, .mobile-grid-50, .tablet-grid-50, .grid-55, .mobile-grid-55, .tablet-grid-55, .grid-60, .mobile-grid-60, .tablet-grid-60, .grid-65, .mobile-grid-65, .tablet-grid-65, .grid-70, .mobile-grid-70, .tablet-grid-70, .grid-75, .mobile-grid-75, .tablet-grid-75, .grid-80, .mobile-grid-80, .tablet-grid-80, .grid-85, .mobile-grid-85, .tablet-grid-85, .grid-90, .mobile-grid-90, .tablet-grid-90, .grid-95, .mobile-grid-95, .tablet-grid-95, .grid-100, .mobile-grid-100, .tablet-grid-100, .grid-33, .mobile-grid-33, .tablet-grid-33, .grid-66, .mobile-grid-66, .tablet-grid-66 {
     -webkit-box-sizing: border-box;
     -moz-box-sizing: border-box;
     box-sizing: border-box;
@@ -243,7 +58,7 @@ svg {
     *padding-right: 0;
     /* </IE7> */
   }
-  .grid-5 > *, .mobile-grid-5 > *, .grid-10 > *, .mobile-grid-10 > *, .grid-15 > *, .mobile-grid-15 > *, .grid-20 > *, .mobile-grid-20 > *, .grid-25 > *, .mobile-grid-25 > *, .grid-30 > *, .mobile-grid-30 > *, .grid-35 > *, .mobile-grid-35 > *, .grid-40 > *, .mobile-grid-40 > *, .grid-45 > *, .mobile-grid-45 > *, .grid-50 > *, .mobile-grid-50 > *, .grid-55 > *, .mobile-grid-55 > *, .grid-60 > *, .mobile-grid-60 > *, .grid-65 > *, .mobile-grid-65 > *, .grid-70 > *, .mobile-grid-70 > *, .grid-75 > *, .mobile-grid-75 > *, .grid-80 > *, .mobile-grid-80 > *, .grid-85 > *, .mobile-grid-85 > *, .grid-90 > *, .mobile-grid-90 > *, .grid-95 > *, .mobile-grid-95 > *, .grid-100 > *, .mobile-grid-100 > *, .grid-33 > *, .mobile-grid-33 > *, .grid-66 > *, .mobile-grid-66 > * {
+  .grid-5 > *, .mobile-grid-5 > *, .tablet-grid-5 > *, .grid-10 > *, .mobile-grid-10 > *, .tablet-grid-10 > *, .grid-15 > *, .mobile-grid-15 > *, .tablet-grid-15 > *, .grid-20 > *, .mobile-grid-20 > *, .tablet-grid-20 > *, .grid-25 > *, .mobile-grid-25 > *, .tablet-grid-25 > *, .grid-30 > *, .mobile-grid-30 > *, .tablet-grid-30 > *, .grid-35 > *, .mobile-grid-35 > *, .tablet-grid-35 > *, .grid-40 > *, .mobile-grid-40 > *, .tablet-grid-40 > *, .grid-45 > *, .mobile-grid-45 > *, .tablet-grid-45 > *, .grid-50 > *, .mobile-grid-50 > *, .tablet-grid-50 > *, .grid-55 > *, .mobile-grid-55 > *, .tablet-grid-55 > *, .grid-60 > *, .mobile-grid-60 > *, .tablet-grid-60 > *, .grid-65 > *, .mobile-grid-65 > *, .tablet-grid-65 > *, .grid-70 > *, .mobile-grid-70 > *, .tablet-grid-70 > *, .grid-75 > *, .mobile-grid-75 > *, .tablet-grid-75 > *, .grid-80 > *, .mobile-grid-80 > *, .tablet-grid-80 > *, .grid-85 > *, .mobile-grid-85 > *, .tablet-grid-85 > *, .grid-90 > *, .mobile-grid-90 > *, .tablet-grid-90 > *, .grid-95 > *, .mobile-grid-95 > *, .tablet-grid-95 > *, .grid-100 > *, .mobile-grid-100 > *, .tablet-grid-100 > *, .grid-33 > *, .mobile-grid-33 > *, .tablet-grid-33 > *, .grid-66 > *, .mobile-grid-66 > *, .tablet-grid-66 > * {
     /* <IE7> */
     *margin-left: expression((!this.className.match(/grid-[1-9]/) && this.currentStyle.display === "block" && this.currentStyle.width === "auto") && "10px");
     *margin-right: expression((!this.className.match(/grid-[1-9]/) && this.currentStyle.display === "block" && this.currentStyle.width === "auto") && "10px");
@@ -946,7 +761,694 @@ svg {
     width: 100%;
   }
 }
-@media screen and (min-width: 767px) {
+@media screen and (min-width: 767px) and (max-width: 1025px) {
+  .tablet-grid-100:before,
+  .tablet-grid-100:after {
+    content: ".";
+    display: block;
+    overflow: hidden;
+    visibility: hidden;
+    font-size: 0;
+    line-height: 0;
+    width: 0;
+    height: 0;
+  }
+
+  .tablet-grid-100:after {
+    clear: both;
+  }
+
+  .tablet-grid-100 {
+    /* <IE7> */
+    *zoom: 1;
+    /* </IE7> */
+  }
+
+  .tablet-push-5,
+  .tablet-pull-5, .tablet-push-10,
+  .tablet-pull-10, .tablet-push-15,
+  .tablet-pull-15, .tablet-push-20,
+  .tablet-pull-20, .tablet-push-25,
+  .tablet-pull-25, .tablet-push-30,
+  .tablet-pull-30, .tablet-push-35,
+  .tablet-pull-35, .tablet-push-40,
+  .tablet-pull-40, .tablet-push-45,
+  .tablet-pull-45, .tablet-push-50,
+  .tablet-pull-50, .tablet-push-55,
+  .tablet-pull-55, .tablet-push-60,
+  .tablet-pull-60, .tablet-push-65,
+  .tablet-pull-65, .tablet-push-70,
+  .tablet-pull-70, .tablet-push-75,
+  .tablet-pull-75, .tablet-push-80,
+  .tablet-pull-80, .tablet-push-85,
+  .tablet-pull-85, .tablet-push-90,
+  .tablet-pull-90, .tablet-push-95,
+  .tablet-pull-95, .tablet-push-33,
+  .tablet-pull-33, .tablet-push-66,
+  .tablet-pull-66 {
+    position: relative;
+  }
+
+  .hide-on-tablet {
+    display: none !important;
+  }
+
+  .tablet-grid-5 {
+    float: right;
+    width: 5%;
+    /* <IE7> */
+    *width: expression(Math.floor(0.05 * (this.parentNode.offsetWidth - parseFloat(this.parentNode.currentStyle.paddingLeft) - parseFloat(this.parentNode.currentStyle.paddingRight))) + "px");
+    /* </IE7> */
+  }
+
+  .tablet-prefix-5 {
+    margin-right: 5%;
+  }
+
+  .tablet-suffix-5 {
+    margin-left: 5%;
+  }
+
+  .tablet-push-5 {
+    right: 5%;
+    /* <IE7> */
+    *right: expression(Math.floor(0.05 * (this.parentNode.offsetWidth - parseFloat(this.parentNode.currentStyle.paddingLeft) - parseFloat(this.parentNode.currentStyle.paddingRight))) + "px");
+    /* </IE7> */
+  }
+
+  .tablet-pull-5 {
+    right: -5%;
+    /* <IE7> */
+    *right: expression(Math.floor(-0.05 * (this.parentNode.offsetWidth - parseFloat(this.parentNode.currentStyle.paddingLeft) - parseFloat(this.parentNode.currentStyle.paddingRight))) + "px");
+    /* </IE7> */
+  }
+
+  .tablet-grid-10 {
+    float: right;
+    width: 10%;
+    /* <IE7> */
+    *width: expression(Math.floor(0.1 * (this.parentNode.offsetWidth - parseFloat(this.parentNode.currentStyle.paddingLeft) - parseFloat(this.parentNode.currentStyle.paddingRight))) + "px");
+    /* </IE7> */
+  }
+
+  .tablet-prefix-10 {
+    margin-right: 10%;
+  }
+
+  .tablet-suffix-10 {
+    margin-left: 10%;
+  }
+
+  .tablet-push-10 {
+    right: 10%;
+    /* <IE7> */
+    *right: expression(Math.floor(0.1 * (this.parentNode.offsetWidth - parseFloat(this.parentNode.currentStyle.paddingLeft) - parseFloat(this.parentNode.currentStyle.paddingRight))) + "px");
+    /* </IE7> */
+  }
+
+  .tablet-pull-10 {
+    right: -10%;
+    /* <IE7> */
+    *right: expression(Math.floor(-0.1 * (this.parentNode.offsetWidth - parseFloat(this.parentNode.currentStyle.paddingLeft) - parseFloat(this.parentNode.currentStyle.paddingRight))) + "px");
+    /* </IE7> */
+  }
+
+  .tablet-grid-15 {
+    float: right;
+    width: 15%;
+    /* <IE7> */
+    *width: expression(Math.floor(0.15 * (this.parentNode.offsetWidth - parseFloat(this.parentNode.currentStyle.paddingLeft) - parseFloat(this.parentNode.currentStyle.paddingRight))) + "px");
+    /* </IE7> */
+  }
+
+  .tablet-prefix-15 {
+    margin-right: 15%;
+  }
+
+  .tablet-suffix-15 {
+    margin-left: 15%;
+  }
+
+  .tablet-push-15 {
+    right: 15%;
+    /* <IE7> */
+    *right: expression(Math.floor(0.15 * (this.parentNode.offsetWidth - parseFloat(this.parentNode.currentStyle.paddingLeft) - parseFloat(this.parentNode.currentStyle.paddingRight))) + "px");
+    /* </IE7> */
+  }
+
+  .tablet-pull-15 {
+    right: -15%;
+    /* <IE7> */
+    *right: expression(Math.floor(-0.15 * (this.parentNode.offsetWidth - parseFloat(this.parentNode.currentStyle.paddingLeft) - parseFloat(this.parentNode.currentStyle.paddingRight))) + "px");
+    /* </IE7> */
+  }
+
+  .tablet-grid-20 {
+    float: right;
+    width: 20%;
+    /* <IE7> */
+    *width: expression(Math.floor(0.2 * (this.parentNode.offsetWidth - parseFloat(this.parentNode.currentStyle.paddingLeft) - parseFloat(this.parentNode.currentStyle.paddingRight))) + "px");
+    /* </IE7> */
+  }
+
+  .tablet-prefix-20 {
+    margin-right: 20%;
+  }
+
+  .tablet-suffix-20 {
+    margin-left: 20%;
+  }
+
+  .tablet-push-20 {
+    right: 20%;
+    /* <IE7> */
+    *right: expression(Math.floor(0.2 * (this.parentNode.offsetWidth - parseFloat(this.parentNode.currentStyle.paddingLeft) - parseFloat(this.parentNode.currentStyle.paddingRight))) + "px");
+    /* </IE7> */
+  }
+
+  .tablet-pull-20 {
+    right: -20%;
+    /* <IE7> */
+    *right: expression(Math.floor(-0.2 * (this.parentNode.offsetWidth - parseFloat(this.parentNode.currentStyle.paddingLeft) - parseFloat(this.parentNode.currentStyle.paddingRight))) + "px");
+    /* </IE7> */
+  }
+
+  .tablet-grid-25 {
+    float: right;
+    width: 25%;
+    /* <IE7> */
+    *width: expression(Math.floor(0.25 * (this.parentNode.offsetWidth - parseFloat(this.parentNode.currentStyle.paddingLeft) - parseFloat(this.parentNode.currentStyle.paddingRight))) + "px");
+    /* </IE7> */
+  }
+
+  .tablet-prefix-25 {
+    margin-right: 25%;
+  }
+
+  .tablet-suffix-25 {
+    margin-left: 25%;
+  }
+
+  .tablet-push-25 {
+    right: 25%;
+    /* <IE7> */
+    *right: expression(Math.floor(0.25 * (this.parentNode.offsetWidth - parseFloat(this.parentNode.currentStyle.paddingLeft) - parseFloat(this.parentNode.currentStyle.paddingRight))) + "px");
+    /* </IE7> */
+  }
+
+  .tablet-pull-25 {
+    right: -25%;
+    /* <IE7> */
+    *right: expression(Math.floor(-0.25 * (this.parentNode.offsetWidth - parseFloat(this.parentNode.currentStyle.paddingLeft) - parseFloat(this.parentNode.currentStyle.paddingRight))) + "px");
+    /* </IE7> */
+  }
+
+  .tablet-grid-30 {
+    float: right;
+    width: 30%;
+    /* <IE7> */
+    *width: expression(Math.floor(0.3 * (this.parentNode.offsetWidth - parseFloat(this.parentNode.currentStyle.paddingLeft) - parseFloat(this.parentNode.currentStyle.paddingRight))) + "px");
+    /* </IE7> */
+  }
+
+  .tablet-prefix-30 {
+    margin-right: 30%;
+  }
+
+  .tablet-suffix-30 {
+    margin-left: 30%;
+  }
+
+  .tablet-push-30 {
+    right: 30%;
+    /* <IE7> */
+    *right: expression(Math.floor(0.3 * (this.parentNode.offsetWidth - parseFloat(this.parentNode.currentStyle.paddingLeft) - parseFloat(this.parentNode.currentStyle.paddingRight))) + "px");
+    /* </IE7> */
+  }
+
+  .tablet-pull-30 {
+    right: -30%;
+    /* <IE7> */
+    *right: expression(Math.floor(-0.3 * (this.parentNode.offsetWidth - parseFloat(this.parentNode.currentStyle.paddingLeft) - parseFloat(this.parentNode.currentStyle.paddingRight))) + "px");
+    /* </IE7> */
+  }
+
+  .tablet-grid-35 {
+    float: right;
+    width: 35%;
+    /* <IE7> */
+    *width: expression(Math.floor(0.35 * (this.parentNode.offsetWidth - parseFloat(this.parentNode.currentStyle.paddingLeft) - parseFloat(this.parentNode.currentStyle.paddingRight))) + "px");
+    /* </IE7> */
+  }
+
+  .tablet-prefix-35 {
+    margin-right: 35%;
+  }
+
+  .tablet-suffix-35 {
+    margin-left: 35%;
+  }
+
+  .tablet-push-35 {
+    right: 35%;
+    /* <IE7> */
+    *right: expression(Math.floor(0.35 * (this.parentNode.offsetWidth - parseFloat(this.parentNode.currentStyle.paddingLeft) - parseFloat(this.parentNode.currentStyle.paddingRight))) + "px");
+    /* </IE7> */
+  }
+
+  .tablet-pull-35 {
+    right: -35%;
+    /* <IE7> */
+    *right: expression(Math.floor(-0.35 * (this.parentNode.offsetWidth - parseFloat(this.parentNode.currentStyle.paddingLeft) - parseFloat(this.parentNode.currentStyle.paddingRight))) + "px");
+    /* </IE7> */
+  }
+
+  .tablet-grid-40 {
+    float: right;
+    width: 40%;
+    /* <IE7> */
+    *width: expression(Math.floor(0.4 * (this.parentNode.offsetWidth - parseFloat(this.parentNode.currentStyle.paddingLeft) - parseFloat(this.parentNode.currentStyle.paddingRight))) + "px");
+    /* </IE7> */
+  }
+
+  .tablet-prefix-40 {
+    margin-right: 40%;
+  }
+
+  .tablet-suffix-40 {
+    margin-left: 40%;
+  }
+
+  .tablet-push-40 {
+    right: 40%;
+    /* <IE7> */
+    *right: expression(Math.floor(0.4 * (this.parentNode.offsetWidth - parseFloat(this.parentNode.currentStyle.paddingLeft) - parseFloat(this.parentNode.currentStyle.paddingRight))) + "px");
+    /* </IE7> */
+  }
+
+  .tablet-pull-40 {
+    right: -40%;
+    /* <IE7> */
+    *right: expression(Math.floor(-0.4 * (this.parentNode.offsetWidth - parseFloat(this.parentNode.currentStyle.paddingLeft) - parseFloat(this.parentNode.currentStyle.paddingRight))) + "px");
+    /* </IE7> */
+  }
+
+  .tablet-grid-45 {
+    float: right;
+    width: 45%;
+    /* <IE7> */
+    *width: expression(Math.floor(0.45 * (this.parentNode.offsetWidth - parseFloat(this.parentNode.currentStyle.paddingLeft) - parseFloat(this.parentNode.currentStyle.paddingRight))) + "px");
+    /* </IE7> */
+  }
+
+  .tablet-prefix-45 {
+    margin-right: 45%;
+  }
+
+  .tablet-suffix-45 {
+    margin-left: 45%;
+  }
+
+  .tablet-push-45 {
+    right: 45%;
+    /* <IE7> */
+    *right: expression(Math.floor(0.45 * (this.parentNode.offsetWidth - parseFloat(this.parentNode.currentStyle.paddingLeft) - parseFloat(this.parentNode.currentStyle.paddingRight))) + "px");
+    /* </IE7> */
+  }
+
+  .tablet-pull-45 {
+    right: -45%;
+    /* <IE7> */
+    *right: expression(Math.floor(-0.45 * (this.parentNode.offsetWidth - parseFloat(this.parentNode.currentStyle.paddingLeft) - parseFloat(this.parentNode.currentStyle.paddingRight))) + "px");
+    /* </IE7> */
+  }
+
+  .tablet-grid-50 {
+    float: right;
+    width: 50%;
+    /* <IE7> */
+    *width: expression(Math.floor(0.5 * (this.parentNode.offsetWidth - parseFloat(this.parentNode.currentStyle.paddingLeft) - parseFloat(this.parentNode.currentStyle.paddingRight))) + "px");
+    /* </IE7> */
+  }
+
+  .tablet-prefix-50 {
+    margin-right: 50%;
+  }
+
+  .tablet-suffix-50 {
+    margin-left: 50%;
+  }
+
+  .tablet-push-50 {
+    right: 50%;
+    /* <IE7> */
+    *right: expression(Math.floor(0.5 * (this.parentNode.offsetWidth - parseFloat(this.parentNode.currentStyle.paddingLeft) - parseFloat(this.parentNode.currentStyle.paddingRight))) + "px");
+    /* </IE7> */
+  }
+
+  .tablet-pull-50 {
+    right: -50%;
+    /* <IE7> */
+    *right: expression(Math.floor(-0.5 * (this.parentNode.offsetWidth - parseFloat(this.parentNode.currentStyle.paddingLeft) - parseFloat(this.parentNode.currentStyle.paddingRight))) + "px");
+    /* </IE7> */
+  }
+
+  .tablet-grid-55 {
+    float: right;
+    width: 55%;
+    /* <IE7> */
+    *width: expression(Math.floor(0.55 * (this.parentNode.offsetWidth - parseFloat(this.parentNode.currentStyle.paddingLeft) - parseFloat(this.parentNode.currentStyle.paddingRight))) + "px");
+    /* </IE7> */
+  }
+
+  .tablet-prefix-55 {
+    margin-right: 55%;
+  }
+
+  .tablet-suffix-55 {
+    margin-left: 55%;
+  }
+
+  .tablet-push-55 {
+    right: 55%;
+    /* <IE7> */
+    *right: expression(Math.floor(0.55 * (this.parentNode.offsetWidth - parseFloat(this.parentNode.currentStyle.paddingLeft) - parseFloat(this.parentNode.currentStyle.paddingRight))) + "px");
+    /* </IE7> */
+  }
+
+  .tablet-pull-55 {
+    right: -55%;
+    /* <IE7> */
+    *right: expression(Math.floor(-0.55 * (this.parentNode.offsetWidth - parseFloat(this.parentNode.currentStyle.paddingLeft) - parseFloat(this.parentNode.currentStyle.paddingRight))) + "px");
+    /* </IE7> */
+  }
+
+  .tablet-grid-60 {
+    float: right;
+    width: 60%;
+    /* <IE7> */
+    *width: expression(Math.floor(0.6 * (this.parentNode.offsetWidth - parseFloat(this.parentNode.currentStyle.paddingLeft) - parseFloat(this.parentNode.currentStyle.paddingRight))) + "px");
+    /* </IE7> */
+  }
+
+  .tablet-prefix-60 {
+    margin-right: 60%;
+  }
+
+  .tablet-suffix-60 {
+    margin-left: 60%;
+  }
+
+  .tablet-push-60 {
+    right: 60%;
+    /* <IE7> */
+    *right: expression(Math.floor(0.6 * (this.parentNode.offsetWidth - parseFloat(this.parentNode.currentStyle.paddingLeft) - parseFloat(this.parentNode.currentStyle.paddingRight))) + "px");
+    /* </IE7> */
+  }
+
+  .tablet-pull-60 {
+    right: -60%;
+    /* <IE7> */
+    *right: expression(Math.floor(-0.6 * (this.parentNode.offsetWidth - parseFloat(this.parentNode.currentStyle.paddingLeft) - parseFloat(this.parentNode.currentStyle.paddingRight))) + "px");
+    /* </IE7> */
+  }
+
+  .tablet-grid-65 {
+    float: right;
+    width: 65%;
+    /* <IE7> */
+    *width: expression(Math.floor(0.65 * (this.parentNode.offsetWidth - parseFloat(this.parentNode.currentStyle.paddingLeft) - parseFloat(this.parentNode.currentStyle.paddingRight))) + "px");
+    /* </IE7> */
+  }
+
+  .tablet-prefix-65 {
+    margin-right: 65%;
+  }
+
+  .tablet-suffix-65 {
+    margin-left: 65%;
+  }
+
+  .tablet-push-65 {
+    right: 65%;
+    /* <IE7> */
+    *right: expression(Math.floor(0.65 * (this.parentNode.offsetWidth - parseFloat(this.parentNode.currentStyle.paddingLeft) - parseFloat(this.parentNode.currentStyle.paddingRight))) + "px");
+    /* </IE7> */
+  }
+
+  .tablet-pull-65 {
+    right: -65%;
+    /* <IE7> */
+    *right: expression(Math.floor(-0.65 * (this.parentNode.offsetWidth - parseFloat(this.parentNode.currentStyle.paddingLeft) - parseFloat(this.parentNode.currentStyle.paddingRight))) + "px");
+    /* </IE7> */
+  }
+
+  .tablet-grid-70 {
+    float: right;
+    width: 70%;
+    /* <IE7> */
+    *width: expression(Math.floor(0.7 * (this.parentNode.offsetWidth - parseFloat(this.parentNode.currentStyle.paddingLeft) - parseFloat(this.parentNode.currentStyle.paddingRight))) + "px");
+    /* </IE7> */
+  }
+
+  .tablet-prefix-70 {
+    margin-right: 70%;
+  }
+
+  .tablet-suffix-70 {
+    margin-left: 70%;
+  }
+
+  .tablet-push-70 {
+    right: 70%;
+    /* <IE7> */
+    *right: expression(Math.floor(0.7 * (this.parentNode.offsetWidth - parseFloat(this.parentNode.currentStyle.paddingLeft) - parseFloat(this.parentNode.currentStyle.paddingRight))) + "px");
+    /* </IE7> */
+  }
+
+  .tablet-pull-70 {
+    right: -70%;
+    /* <IE7> */
+    *right: expression(Math.floor(-0.7 * (this.parentNode.offsetWidth - parseFloat(this.parentNode.currentStyle.paddingLeft) - parseFloat(this.parentNode.currentStyle.paddingRight))) + "px");
+    /* </IE7> */
+  }
+
+  .tablet-grid-75 {
+    float: right;
+    width: 75%;
+    /* <IE7> */
+    *width: expression(Math.floor(0.75 * (this.parentNode.offsetWidth - parseFloat(this.parentNode.currentStyle.paddingLeft) - parseFloat(this.parentNode.currentStyle.paddingRight))) + "px");
+    /* </IE7> */
+  }
+
+  .tablet-prefix-75 {
+    margin-right: 75%;
+  }
+
+  .tablet-suffix-75 {
+    margin-left: 75%;
+  }
+
+  .tablet-push-75 {
+    right: 75%;
+    /* <IE7> */
+    *right: expression(Math.floor(0.75 * (this.parentNode.offsetWidth - parseFloat(this.parentNode.currentStyle.paddingLeft) - parseFloat(this.parentNode.currentStyle.paddingRight))) + "px");
+    /* </IE7> */
+  }
+
+  .tablet-pull-75 {
+    right: -75%;
+    /* <IE7> */
+    *right: expression(Math.floor(-0.75 * (this.parentNode.offsetWidth - parseFloat(this.parentNode.currentStyle.paddingLeft) - parseFloat(this.parentNode.currentStyle.paddingRight))) + "px");
+    /* </IE7> */
+  }
+
+  .tablet-grid-80 {
+    float: right;
+    width: 80%;
+    /* <IE7> */
+    *width: expression(Math.floor(0.8 * (this.parentNode.offsetWidth - parseFloat(this.parentNode.currentStyle.paddingLeft) - parseFloat(this.parentNode.currentStyle.paddingRight))) + "px");
+    /* </IE7> */
+  }
+
+  .tablet-prefix-80 {
+    margin-right: 80%;
+  }
+
+  .tablet-suffix-80 {
+    margin-left: 80%;
+  }
+
+  .tablet-push-80 {
+    right: 80%;
+    /* <IE7> */
+    *right: expression(Math.floor(0.8 * (this.parentNode.offsetWidth - parseFloat(this.parentNode.currentStyle.paddingLeft) - parseFloat(this.parentNode.currentStyle.paddingRight))) + "px");
+    /* </IE7> */
+  }
+
+  .tablet-pull-80 {
+    right: -80%;
+    /* <IE7> */
+    *right: expression(Math.floor(-0.8 * (this.parentNode.offsetWidth - parseFloat(this.parentNode.currentStyle.paddingLeft) - parseFloat(this.parentNode.currentStyle.paddingRight))) + "px");
+    /* </IE7> */
+  }
+
+  .tablet-grid-85 {
+    float: right;
+    width: 85%;
+    /* <IE7> */
+    *width: expression(Math.floor(0.85 * (this.parentNode.offsetWidth - parseFloat(this.parentNode.currentStyle.paddingLeft) - parseFloat(this.parentNode.currentStyle.paddingRight))) + "px");
+    /* </IE7> */
+  }
+
+  .tablet-prefix-85 {
+    margin-right: 85%;
+  }
+
+  .tablet-suffix-85 {
+    margin-left: 85%;
+  }
+
+  .tablet-push-85 {
+    right: 85%;
+    /* <IE7> */
+    *right: expression(Math.floor(0.85 * (this.parentNode.offsetWidth - parseFloat(this.parentNode.currentStyle.paddingLeft) - parseFloat(this.parentNode.currentStyle.paddingRight))) + "px");
+    /* </IE7> */
+  }
+
+  .tablet-pull-85 {
+    right: -85%;
+    /* <IE7> */
+    *right: expression(Math.floor(-0.85 * (this.parentNode.offsetWidth - parseFloat(this.parentNode.currentStyle.paddingLeft) - parseFloat(this.parentNode.currentStyle.paddingRight))) + "px");
+    /* </IE7> */
+  }
+
+  .tablet-grid-90 {
+    float: right;
+    width: 90%;
+    /* <IE7> */
+    *width: expression(Math.floor(0.9 * (this.parentNode.offsetWidth - parseFloat(this.parentNode.currentStyle.paddingLeft) - parseFloat(this.parentNode.currentStyle.paddingRight))) + "px");
+    /* </IE7> */
+  }
+
+  .tablet-prefix-90 {
+    margin-right: 90%;
+  }
+
+  .tablet-suffix-90 {
+    margin-left: 90%;
+  }
+
+  .tablet-push-90 {
+    right: 90%;
+    /* <IE7> */
+    *right: expression(Math.floor(0.9 * (this.parentNode.offsetWidth - parseFloat(this.parentNode.currentStyle.paddingLeft) - parseFloat(this.parentNode.currentStyle.paddingRight))) + "px");
+    /* </IE7> */
+  }
+
+  .tablet-pull-90 {
+    right: -90%;
+    /* <IE7> */
+    *right: expression(Math.floor(-0.9 * (this.parentNode.offsetWidth - parseFloat(this.parentNode.currentStyle.paddingLeft) - parseFloat(this.parentNode.currentStyle.paddingRight))) + "px");
+    /* </IE7> */
+  }
+
+  .tablet-grid-95 {
+    float: right;
+    width: 95%;
+    /* <IE7> */
+    *width: expression(Math.floor(0.95 * (this.parentNode.offsetWidth - parseFloat(this.parentNode.currentStyle.paddingLeft) - parseFloat(this.parentNode.currentStyle.paddingRight))) + "px");
+    /* </IE7> */
+  }
+
+  .tablet-prefix-95 {
+    margin-right: 95%;
+  }
+
+  .tablet-suffix-95 {
+    margin-left: 95%;
+  }
+
+  .tablet-push-95 {
+    right: 95%;
+    /* <IE7> */
+    *right: expression(Math.floor(0.95 * (this.parentNode.offsetWidth - parseFloat(this.parentNode.currentStyle.paddingLeft) - parseFloat(this.parentNode.currentStyle.paddingRight))) + "px");
+    /* </IE7> */
+  }
+
+  .tablet-pull-95 {
+    right: -95%;
+    /* <IE7> */
+    *right: expression(Math.floor(-0.95 * (this.parentNode.offsetWidth - parseFloat(this.parentNode.currentStyle.paddingLeft) - parseFloat(this.parentNode.currentStyle.paddingRight))) + "px");
+    /* </IE7> */
+  }
+
+  .tablet-grid-33 {
+    float: right;
+    width: 33.33333%;
+    /* <IE7> */
+    *width: expression(Math.floor(0.33333 * (this.parentNode.offsetWidth - parseFloat(this.parentNode.currentStyle.paddingLeft) - parseFloat(this.parentNode.currentStyle.paddingRight))) + "px");
+    /* </IE7> */
+  }
+
+  .tablet-prefix-33 {
+    margin-right: 33.33333%;
+  }
+
+  .tablet-suffix-33 {
+    margin-left: 33.33333%;
+  }
+
+  .tablet-push-33 {
+    right: 33.33333%;
+    /* <IE7> */
+    *right: expression(Math.floor(0.33333 * (this.parentNode.offsetWidth - parseFloat(this.parentNode.currentStyle.paddingLeft) - parseFloat(this.parentNode.currentStyle.paddingRight))) + "px");
+    /* </IE7> */
+  }
+
+  .tablet-pull-33 {
+    right: -33.33333%;
+    /* <IE7> */
+    *right: expression(Math.floor(-0.33333 * (this.parentNode.offsetWidth - parseFloat(this.parentNode.currentStyle.paddingLeft) - parseFloat(this.parentNode.currentStyle.paddingRight))) + "px");
+    /* </IE7> */
+  }
+
+  .tablet-grid-66 {
+    float: right;
+    width: 66.66667%;
+    /* <IE7> */
+    *width: expression(Math.floor(0.66667 * (this.parentNode.offsetWidth - parseFloat(this.parentNode.currentStyle.paddingLeft) - parseFloat(this.parentNode.currentStyle.paddingRight))) + "px");
+    /* </IE7> */
+  }
+
+  .tablet-prefix-66 {
+    margin-right: 66.66667%;
+  }
+
+  .tablet-suffix-66 {
+    margin-left: 66.66667%;
+  }
+
+  .tablet-push-66 {
+    right: 66.66667%;
+    /* <IE7> */
+    *right: expression(Math.floor(0.66667 * (this.parentNode.offsetWidth - parseFloat(this.parentNode.currentStyle.paddingLeft) - parseFloat(this.parentNode.currentStyle.paddingRight))) + "px");
+    /* </IE7> */
+  }
+
+  .tablet-pull-66 {
+    right: -66.66667%;
+    /* <IE7> */
+    *right: expression(Math.floor(-0.66667 * (this.parentNode.offsetWidth - parseFloat(this.parentNode.currentStyle.paddingLeft) - parseFloat(this.parentNode.currentStyle.paddingRight))) + "px");
+    /* </IE7> */
+  }
+
+  .tablet-grid-100 {
+    clear: both;
+    width: 100%;
+  }
+}
+@media screen and (min-width: 1025px) {
   .grid-100:before,
   .grid-100:after {
     content: ".";
@@ -1631,526 +2133,5 @@ svg {
   .grid-100 {
     clear: both;
     width: 100%;
-  }
-}
-body {
-  font: 13px/1.5 "Helvetica Neue", Arial, "Liberation Sans", FreeSans, sans-serif;
-}
-
-pre,
-code {
-  font-family: "DejaVu Sans Mono", Monaco, Consolas, monospace;
-}
-
-hr {
-  border: 0 #cccccc solid;
-  border-top-width: 1px;
-  clear: both;
-  height: 0;
-}
-
-h1 {
-  font-size: 25px;
-}
-
-h2 {
-  font-size: 23px;
-}
-
-h3 {
-  font-size: 21px;
-}
-
-h4 {
-  font-size: 19px;
-}
-
-h5 {
-  font-size: 17px;
-}
-
-h6 {
-  font-size: 15px;
-}
-
-ol {
-  list-style: decimal;
-}
-
-ul {
-  list-style: disc;
-}
-
-li {
-  margin-left: 30px;
-}
-
-p,
-dl,
-hr,
-h1,
-h2,
-h3,
-h4,
-h5,
-h6,
-ol,
-ul,
-pre,
-table,
-address,
-fieldset,
-figure {
-  margin-bottom: 20px;
-}
-
-html {
-  overflow-y: scroll;
-}
-
-body {
-  background: white;
-  color: #333333;
-}
-
-img {
-  max-width: 100%;
-}
-
-a {
-  color: #0066cc;
-}
-
-a:hover {
-  color: #cc9966;
-}
-
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-  position: relative;
-}
-
-.align-center {
-  text-align: center;
-}
-
-.mute,
-.mute a {
-  color: #999999;
-}
-
-.mute a:hover {
-  color: #666666;
-}
-
-.grid-container > hr,
-main[role="main"] > hr {
-  margin-left: 10px;
-  margin-right: 10px;
-}
-
-.gutter-top {
-  margin-top: 20px;
-}
-
-.permalink {
-  -webkit-border-radius: 4px;
-  -moz-border-radius: 4px;
-  -ms-border-radius: 4px;
-  -o-border-radius: 4px;
-  border-radius: 4px;
-  position: absolute;
-  top: auto;
-  left: auto;
-  right: auto;
-  bottom: auto;
-  color: transparent;
-  display: inline-block;
-  font-size: 0;
-  overflow: hidden;
-  text-indent: -99999px;
-  background: #999999;
-  top: 50%;
-  left: -20px;
-  width: 10px;
-  height: 10px;
-  margin-top: -5px;
-}
-.permalink:hover {
-  background: orange;
-}
-
-#wrapper {
-  min-height: 100%;
-}
-
-#brand {
-  display: block;
-  padding-bottom: 30px;
-  text-align: center;
-}
-
-header[role="banner"] {
-  padding-top: 20px;
-}
-
-header[role="banner"] ul {
-  background-color: #7f7f7f;
-  *zoom: 1;
-  filter: progid:DXImageTransform.Microsoft.gradient(gradientType=0, startColorstr='#FF999999', endColorstr='#FF666666');
-  background-image: url('data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4gPHN2ZyB2ZXJzaW9uPSIxLjEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PGRlZnM+PGxpbmVhckdyYWRpZW50IGlkPSJncmFkIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgeDE9IjUwJSIgeTE9IjAlIiB4Mj0iNTAlIiB5Mj0iMTAwJSI+PHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iIzk5OTk5OSIvPjxzdG9wIG9mZnNldD0iMTAwJSIgc3RvcC1jb2xvcj0iIzY2NjY2NiIvPjwvbGluZWFyR3JhZGllbnQ+PC9kZWZzPjxyZWN0IHg9IjAiIHk9IjAiIHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiIGZpbGw9InVybCgjZ3JhZCkiIC8+PC9zdmc+IA==');
-  background-size: 100%;
-  background-image: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #999999), color-stop(100%, #666666));
-  background-image: -webkit-linear-gradient(#999999, #666666);
-  background-image: -moz-linear-gradient(#999999, #666666);
-  background-image: -o-linear-gradient(#999999, #666666);
-  background-image: linear-gradient(#999999, #666666);
-  -webkit-border-radius: 4px;
-  -moz-border-radius: 4px;
-  -ms-border-radius: 4px;
-  -o-border-radius: 4px;
-  border-radius: 4px;
-  font-size: 16px;
-  line-height: 45px;
-  overflow: hidden;
-  text-shadow: rgba(0, 0, 0, 0.5) 0 -1px 0;
-}
-
-header[role="banner"] li {
-  border-top: 1px solid white;
-  list-style: none;
-  margin: 0;
-  text-align: center;
-}
-header[role="banner"] li:first-child {
-  border: 0;
-}
-
-header[role="banner"] li a {
-  color: white;
-  display: block;
-  padding: 0 20px;
-  text-decoration: none;
-}
-header[role="banner"] li a:hover {
-  text-decoration: underline;
-}
-
-header[role="banner"] .on > a {
-  background: #555555;
-}
-
-header[role="banner"] li:first-child a {
-  -moz-border-radius-topleft: 4px;
-  -webkit-border-top-left-radius: 4px;
-  border-top-left-radius: 4px;
-  -moz-border-radius-topright: 4px;
-  -webkit-border-top-right-radius: 4px;
-  border-top-right-radius: 4px;
-}
-
-header[role="banner"] li:last-child a {
-  -moz-border-radius-bottomleft: 4px;
-  -webkit-border-bottom-left-radius: 4px;
-  border-bottom-left-radius: 4px;
-  -moz-border-radius-bottomright: 4px;
-  -webkit-border-bottom-right-radius: 4px;
-  border-bottom-right-radius: 4px;
-}
-
-main[role="main"] {
-  padding-bottom: 50px;
-}
-
-.button-big {
-  -webkit-border-radius: 4px;
-  -moz-border-radius: 4px;
-  -ms-border-radius: 4px;
-  -o-border-radius: 4px;
-  border-radius: 4px;
-  background-color: #dddddd;
-  *zoom: 1;
-  filter: progid:DXImageTransform.Microsoft.gradient(gradientType=0, startColorstr='#FFEEEEEE', endColorstr='#FFCCCCCC');
-  background-image: url('data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4gPHN2ZyB2ZXJzaW9uPSIxLjEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PGRlZnM+PGxpbmVhckdyYWRpZW50IGlkPSJncmFkIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgeDE9IjUwJSIgeTE9IjAlIiB4Mj0iNTAlIiB5Mj0iMTAwJSI+PHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iI2VlZWVlZSIvPjxzdG9wIG9mZnNldD0iMTAwJSIgc3RvcC1jb2xvcj0iI2NjY2NjYyIvPjwvbGluZWFyR3JhZGllbnQ+PC9kZWZzPjxyZWN0IHg9IjAiIHk9IjAiIHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiIGZpbGw9InVybCgjZ3JhZCkiIC8+PC9zdmc+IA==');
-  background-size: 100%;
-  background-image: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #eeeeee), color-stop(100%, #cccccc));
-  background-image: -webkit-linear-gradient(#eeeeee, #cccccc);
-  background-image: -moz-linear-gradient(#eeeeee, #cccccc);
-  background-image: -o-linear-gradient(#eeeeee, #cccccc);
-  background-image: linear-gradient(#eeeeee, #cccccc);
-  -webkit-box-shadow: inset white 0 1px 2px 0;
-  -moz-box-shadow: inset white 0 1px 2px 0;
-  box-shadow: inset white 0 1px 2px 0;
-  border: 1px solid;
-  border-color: #dddddd #cccccc #bbbbbb;
-  color: #333333;
-  display: block;
-  font-size: 16px;
-  font-weight: bold;
-  padding: 10px 20px;
-  text-align: center;
-  text-decoration: none;
-  text-shadow: white 0 1px 0;
-}
-.button-big:hover {
-  background-color: #d4d4d4;
-  *zoom: 1;
-  filter: progid:DXImageTransform.Microsoft.gradient(gradientType=0, startColorstr='#FFEEEEEE', endColorstr='#FFBBBBBB');
-  background-image: url('data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4gPHN2ZyB2ZXJzaW9uPSIxLjEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PGRlZnM+PGxpbmVhckdyYWRpZW50IGlkPSJncmFkIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgeDE9IjUwJSIgeTE9IjAlIiB4Mj0iNTAlIiB5Mj0iMTAwJSI+PHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iI2VlZWVlZSIvPjxzdG9wIG9mZnNldD0iMTAwJSIgc3RvcC1jb2xvcj0iI2JiYmJiYiIvPjwvbGluZWFyR3JhZGllbnQ+PC9kZWZzPjxyZWN0IHg9IjAiIHk9IjAiIHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiIGZpbGw9InVybCgjZ3JhZCkiIC8+PC9zdmc+IA==');
-  background-size: 100%;
-  background-image: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #eeeeee), color-stop(100%, #bbbbbb));
-  background-image: -webkit-linear-gradient(#eeeeee, #bbbbbb);
-  background-image: -moz-linear-gradient(#eeeeee, #bbbbbb);
-  background-image: -o-linear-gradient(#eeeeee, #bbbbbb);
-  background-image: linear-gradient(#eeeeee, #bbbbbb);
-  color: black;
-}
-.button-big:active {
-  background-color: #cccccc;
-  *zoom: 1;
-  filter: progid:DXImageTransform.Microsoft.gradient(gradientType=0, startColorstr='#FFBBBBBB', endColorstr='#FFDDDDDD');
-  background-image: url('data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4gPHN2ZyB2ZXJzaW9uPSIxLjEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PGRlZnM+PGxpbmVhckdyYWRpZW50IGlkPSJncmFkIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgeDE9IjUwJSIgeTE9IjAlIiB4Mj0iNTAlIiB5Mj0iMTAwJSI+PHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iI2JiYmJiYiIvPjxzdG9wIG9mZnNldD0iMTAwJSIgc3RvcC1jb2xvcj0iI2RkZGRkZCIvPjwvbGluZWFyR3JhZGllbnQ+PC9kZWZzPjxyZWN0IHg9IjAiIHk9IjAiIHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiIGZpbGw9InVybCgjZ3JhZCkiIC8+PC9zdmc+IA==');
-  background-size: 100%;
-  background-image: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #bbbbbb), color-stop(100%, #dddddd));
-  background-image: -webkit-linear-gradient(#bbbbbb, #dddddd);
-  background-image: -moz-linear-gradient(#bbbbbb, #dddddd);
-  background-image: -o-linear-gradient(#bbbbbb, #dddddd);
-  background-image: linear-gradient(#bbbbbb, #dddddd);
-  -webkit-box-shadow: inset rgba(0, 0, 0, 0.25) 0 1px 2px 0;
-  -moz-box-shadow: inset rgba(0, 0, 0, 0.25) 0 1px 2px 0;
-  box-shadow: inset rgba(0, 0, 0, 0.25) 0 1px 2px 0;
-  border-color: #aaaaaa #bbbbbb #cccccc;
-}
-
-code {
-  background: #ffffee;
-}
-
-pre {
-  overflow: auto;
-  padding: 20px;
-  *overflow-x: scroll;
-  *overflow-y: hidden;
-}
-
-pre code {
-  background: none;
-  display: block;
-  padding: 0 0 20px;
-}
-
-pre,
-.definition {
-  background: #ffffee;
-  border: 1px solid;
-  border-color: #eeeeee #dddddd #cccccc;
-}
-
-.definition {
-  font-size: 16px;
-  font-family: Georgia, "Times New Roman", serif;
-  padding: 20px;
-}
-
-.definition dt {
-  font-size: 180%;
-}
-
-.definition dd {
-  padding-top: 20px;
-}
-
-.definition dd i {
-  display: block;
-  margin-bottom: 10px;
-}
-
-.equal-block {
-  min-height: 215px;
-}
-
-.list-inline {
-  font-size: 0;
-  margin-left: -15px;
-}
-
-.list-inline li {
-  display: inline-block;
-  font-size: 13px;
-  list-style: none;
-  margin: 0;
-  padding-left: 15px;
-  *display: inline;
-  *zoom: 1;
-}
-
-.list-spacing {
-  margin: 0;
-}
-
-.list-spacing li {
-  padding-bottom: 20px;
-}
-
-.pill {
-  -webkit-border-radius: 15px;
-  -moz-border-radius: 15px;
-  -ms-border-radius: 15px;
-  -o-border-radius: 15px;
-  border-radius: 15px;
-  display: block;
-  padding: 5px 15px;
-}
-.list-inline .pill {
-  margin-left: -15px;
-}
-
-.on > .pill {
-  background: #777777;
-  color: white;
-  text-decoration: none;
-}
-
-.example-block {
-  background: #eeeeee;
-  font-size: 10px;
-  overflow: hidden;
-  margin-bottom: 20px;
-  padding: 10px 0;
-  text-align: center;
-}
-div[class*="push-"] .example-block {
-  background: #ddeecc;
-}
-div[class*="pull-"] .example-block {
-  background: #ffccdd;
-}
-
-.dynamic-px-width {
-  display: block;
-}
-
-footer[role="contentinfo"] {
-  background: #eeeeee;
-  font-size: 11px;
-  margin-top: -40px;
-  line-height: 40px;
-  text-align: center;
-}
-
-#table-of-contents {
-  -webkit-border-radius: 4px;
-  -moz-border-radius: 4px;
-  -ms-border-radius: 4px;
-  -o-border-radius: 4px;
-  border-radius: 4px;
-  background: #eeeeee;
-  border: 1px solid;
-  border-color: #eeeeee #dddddd #cccccc;
-  display: none;
-  overflow: hidden;
-  text-shadow: white 0 1px 0;
-  white-space: nowrap;
-}
-
-#table-of-contents a,
-#table-of-contents dt {
-  display: block;
-  padding: 5px 10px;
-}
-
-#table-of-contents dt {
-  -moz-border-radius-topleft: 4px;
-  -webkit-border-top-left-radius: 4px;
-  border-top-left-radius: 4px;
-  -moz-border-radius-topright: 4px;
-  -webkit-border-top-right-radius: 4px;
-  border-top-right-radius: 4px;
-  background-color: #e5e5e5;
-  *zoom: 1;
-  filter: progid:DXImageTransform.Microsoft.gradient(gradientType=0, startColorstr='#FFFFFFFF', endColorstr='#FFCCCCCC');
-  background-image: url('data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4gPHN2ZyB2ZXJzaW9uPSIxLjEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PGRlZnM+PGxpbmVhckdyYWRpZW50IGlkPSJncmFkIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgeDE9IjUwJSIgeTE9IjAlIiB4Mj0iNTAlIiB5Mj0iMTAwJSI+PHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iI2ZmZmZmZiIvPjxzdG9wIG9mZnNldD0iMTAwJSIgc3RvcC1jb2xvcj0iI2NjY2NjYyIvPjwvbGluZWFyR3JhZGllbnQ+PC9kZWZzPjxyZWN0IHg9IjAiIHk9IjAiIHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiIGZpbGw9InVybCgjZ3JhZCkiIC8+PC9zdmc+IA==');
-  background-size: 100%;
-  background-image: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #ffffff), color-stop(100%, #cccccc));
-  background-image: -webkit-linear-gradient(#ffffff, #cccccc);
-  background-image: -moz-linear-gradient(#ffffff, #cccccc);
-  background-image: -o-linear-gradient(#ffffff, #cccccc);
-  background-image: linear-gradient(#ffffff, #cccccc);
-  font-weight: bold;
-}
-
-#table-of-contents a {
-  border-top: 1px solid white;
-  color: #333333;
-  text-decoration: none;
-}
-#table-of-contents a:hover {
-  background: #dddddd;
-}
-
-#table-of-contents dd:last-child a {
-  -moz-border-radius-bottomleft: 4px;
-  -webkit-border-bottom-left-radius: 4px;
-  border-bottom-left-radius: 4px;
-  -moz-border-radius-bottomright: 4px;
-  -webkit-border-bottom-right-radius: 4px;
-  border-bottom-right-radius: 4px;
-}
-
-#table-of-contents .h2 a {
-  padding-left: 20px;
-}
-
-#table-of-contents .h3 a {
-  padding-left: 30px;
-}
-
-#table-of-contents .h4 a {
-  padding-left: 40px;
-}
-
-#table-of-contents .h5 a {
-  padding-left: 50px;
-}
-
-#table-of-contents .h6 a {
-  padding-left: 60px;
-}
-
-@media screen and (min-width: 1025px) {
-  header[role="banner"] ul {
-    font-size: 13px;
-    line-height: 35px;
-  }
-
-  header[role="banner"] li {
-    border: 0;
-    float: left;
-  }
-
-  header[role="banner"] li a {
-    border-right: 1px solid #999999;
-  }
-
-  header[role="banner"] li:first-child a,
-  header[role="banner"] li:last-child a {
-    -webkit-border-radius: 0;
-    -moz-border-radius: 0;
-    -ms-border-radius: 0;
-    -o-border-radius: 0;
-    border-radius: 0;
-  }
-
-  header[role="banner"] li:first-child a {
-    -moz-border-radius-topleft: 4px;
-    -webkit-border-top-left-radius: 4px;
-    border-top-left-radius: 4px;
-    -moz-border-radius-bottomleft: 4px;
-    -webkit-border-bottom-left-radius: 4px;
-    border-bottom-left-radius: 4px;
   }
 }
