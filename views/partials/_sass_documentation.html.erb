@@ -95,8 +95,29 @@ $lang-reverse: right !default</pre>
 <p>
   The following is an explanation of what each variable pertains to&hellip;
 </p>
+<h3>
+  $unsemantic-ie7-support
+</h3>
 <p>
-  If you think this a gross over-generalization, feel free to make edits to suit your needs. Bear in mind, because this is all open source, you could always define multiple breakpoints and accompanying class names (such as <code>tablet-grid-x</code>, which could be between 768px and 1024px).
+  This variable defaults to <code>true</code>, causing code to be generated to support Internet Explorer 7. If you don't need to support IE7, then by setting this variable to <code>false</code>, there is a considerable amount of code that is <i>not</i> generated. In the respository download, there are flat CSS versions of Unsemantic with, and without, IE7 support. They are differentiated by <code>no-ie7</code> in the file name.
+</p>
+<p>
+  You can see the differences by comparing these two files&hellip;
+</p>
+<ul class="list-spacing">
+  <li>
+    <i>IE7 support</i>
+    <br />
+    <a href="./stylesheets/unsemantic-grid-responsive.css?<%= Time.now.to_i %>">unsemantic-grid-responsive.css</a>
+  </li>
+  <li>
+    <i>No IE7 support</i>
+    <br />
+    <a href="./stylesheets/unsemantic-grid-responsive-no-ie7.css?<%= Time.now.to_i %>">unsemantic-grid-responsive-no-ie7.css</a>
+  </li>
+</ul>
+<p>
+  Specifically used to patch IE7 deficiencies, <code>expression(&hellip;)</code> code is conspicuously absent in the <code>no-ie7</code> version.
 </p>
 <h3>
   $container-max-width
