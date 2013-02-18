@@ -7,17 +7,6 @@
 </p>
 <hr />
 <h2>
-  IE7 Support
-</h2>
-<p>
-  In order to support Internet Explorer 7, there is an optional Sass variable <code>$unsemantic-ie7-support</code> that's set to <code>true</code> by default. This causes additional code to be generated, which fakes <code>box-sizing</code> and addresses some rounding errors when dealing with CSS percentages. This is in the <i>_unsemantic-vars.sass</i> file&hellip;
-</p>
-<pre>$unsemantic-ie7-support: true !default</pre>
-<p>
-  If you don't need to support IE7, just declare this variable as <code>false</code> at the highest level scope. Be sure that your variable preceeds all of Unsemantic's <i>*.sass</i> files in <code>@import</code> order, and the default will be overridden. As a result, no CSS specific to IE7 will be generated.
-</p>
-<hr />
-<h2>
   Breakpoints
 </h2>
 <p>
@@ -67,7 +56,7 @@ $media-desktop: 1025px !default
   @import "unsemantic-grid-desktop"</pre>
 <hr />
 <h2>
-  Other Variables
+  Default Variables
 </h2>
 <p>
   At the top of the <i>_unsemantic-vars.sass</i> file, there are several variables upon which some of the other Sass files depend. These are provided with initial values, in lieu of a specific value being defined. This is done via the <code>!default</code> keyword.
@@ -82,7 +71,7 @@ $lang-forward: left !default
 
 $lang-reverse: right !default</pre>
 <p>
-  Since all of these values are set <i>only</i> if the variables are not already defined, to override them simply create your own <i>_vars.sass</i> partial, and <code>@import</code> it before the any of Unsemantic's Sass files. Anything you set will take precedence, and anything you leave undefined will get a default value. Here is an example&hellip;
+  Since all of these values are set <i>only</i> if the variables are not already defined, to override them simply create your own <i>_vars.sass</i> partial (or name it whatever you like), and <code>@import</code> it before the any of Unsemantic's Sass files. Anything you set will take precedence, and anything you leave undefined will get a default value. Here is an example&hellip;
 </p>
 <pre>// Example application.sass file
 
@@ -93,13 +82,13 @@ $lang-reverse: right !default</pre>
 @import "partials/text"
 @import "partials/site"</pre>
 <p>
-  The following is an explanation of what each variable pertains to&hellip;
+  The following is an explanation of what each variable pertains to.
 </p>
 <h3>
   $unsemantic-ie7-support
 </h3>
 <p>
-  This variable defaults to <code>true</code>, causing code to be generated to support Internet Explorer 7. If you don't need to support IE7, then by setting this variable to <code>false</code>, there is a considerable amount of code that is <i>not</i> generated. In the respository download, there are flat CSS versions of Unsemantic with, and without, IE7 support. They are differentiated by <code>no-ie7</code> in the file name.
+  This variable defaults to <code>true</code>, causing code to be generated to support Internet Explorer 7. This fakes <code>box-sizing</code> and addresses some rounding errors when dealing with CSS percentages. In the respository download, there are flat CSS versions of Unsemantic with, and without, IE7 support. They are differentiated by <code>no-ie7</code> in the file name.
 </p>
 <p>
   You can see the differences by comparing these two files&hellip;
@@ -117,7 +106,10 @@ $lang-reverse: right !default</pre>
   </li>
 </ul>
 <p>
-  Specifically used to patch IE7 deficiencies, <code>expression(&hellip;)</code> code is conspicuously absent in the <code>no-ie7</code> version.
+  Specifically used to patch IE7 deficiencies, <code>expression(&hellip;)</code> code is omitted from the <code>no-ie7</code> version.
+</p>
+<p>
+  If you don't need to support IE7, just set this variable to <code>false</code> at the highest level scope. Be sure it preceeds Unsemantic's <i>*.sass</i> files in <code>@import</code> order. As a result, no CSS specific to IE7 will be generated.
 </p>
 <h3>
   $container-max-width
