@@ -121,7 +121,7 @@ $lang-reverse: right !default</pre>
   $gutter-half
 </h3>
 <p>
-  This value controls how much padding each <code>grid-x</code> unit recieves on the left/right. It defaults to 10px.
+  This value controls how much padding each <code>grid-x</code> unit recieves on the left/right. It defaults to 10px. If you set this value to <code>0</code> to override the default, then the corresponding <code>padding-left</code> and <code>padding-right</code> will be omitted when CSS is generated (smaller file size).
 </p>
 <h3>
   $lang-*
@@ -154,11 +154,15 @@ $lang-reverse: left
   This is used by the <code>grid-container</code> class, and keeps the grid layout centered within the browser viewport if the browser is wider than the <code>$container-max-width</code>. It also has 10px of padding on the left/right by default.
 </p>
 <pre>%grid-container
+  @extend %clearfix
   margin-left: auto
   margin-right: auto
-  padding-left: $gutter-half
-  padding-right: $gutter-half
-  max-width: $container-max-width</pre>
+  max-width: $container-max-width
+
+  // Set if gutter is non-zero
+  @if $gutter-half != 0
+    padding-left: $gutter-half
+    padding-right: $gutter-half</pre>
 <h3>
   %grid-columns-all
 </h3>
@@ -167,8 +171,11 @@ $lang-reverse: left
 </p>
 <pre>%grid-columns-all
   +box-sizing(border-box)
-  padding-left: $gutter-half
-  padding-right: $gutter-half</pre>
+
+  // Set if gutter is non-zero
+  @if $gutter-half != 0
+    padding-left: $gutter-half
+    padding-right: $gutter-half</pre>
 <h3>
   %grid-parent
 </h3>
