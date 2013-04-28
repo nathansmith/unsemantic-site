@@ -134,9 +134,50 @@
 <p>
   Each <code>grid-x</code> unit has 10px of padding on the right and left side that, when coupled with the padding from an adjacent <code>grid-x</code> unit (or the <code>grid-container</code> itself), creates a 20px gutter. The reason for this symmetry, versus having 20px spacing on <i>only</i> the left/right is that it allows for <code>push-x</code> and <code>pull-x</code> classes to rearrange grid units, regardless of whether they are at the beginning/end of a row.
 </p>
-<h3>
-  Mobile &amp; Hidden Classes
+<hr />
+<h2>
+  Nested Grids, Zero Padding
 </h3>
+<p>
+  If you want to nest grid units inside others, you will need to use the class <code>grid-parent</code> on the element that will contain child grid units. This will zero out any side padding on the element itself, allowing the padding of the nested grid units to create a gutter. This can also be handy if you simply want to zero out padding for a particular grid unit, to allow its contents to be full width.
+</p>
+  <pre>&lt;div class="grid-container"&gt;
+  &lt;div class="grid-50"&gt;
+    Tall content here that
+    would be alongside the
+    50%, 25|25 25|25 rows.
+  &lt;/div&gt;
+
+  &lt;!--
+    Nested grid units...
+  --&gt;
+
+  &lt;div class="grid-50 grid-parent"&gt;
+    &lt;div class="grid-50"&gt;
+      Row 1:
+        I am 25% (50% of 50%)
+    &lt;/div&gt;
+    &lt;div class="grid-50"&gt;
+      Row 1:
+        I am 25% (50% of 50%)
+    &lt;/div&gt;
+    &lt;div class="grid-50"&gt;
+      Row 2:
+        I am 25% (50% of 50%)
+    &lt;/div&gt;
+    &lt;div class="grid-50"&gt;
+      Row 2:
+        I am 25% (50% of 50%)
+    &lt;/div&gt;
+  &lt;/div&gt;
+&lt;/div&gt;</pre>
+<p>
+  Note: If you find yourself wanting to zero out padding on <i>all</i> grid units, you should probably just do a custom Sass build. Set the <code>$gutter-half</code> variable to <code>0</code> (before your <code>@import</code> of the <i>_unsemantic-vars.sass</i> file). That will prevent <i>any</i> <code>padding-left</code> or <code>padding-right</code> from being emitted to the *.css files for <code>.grid-x</code> classes.
+</p>
+<hr />
+<h2>
+  Mobile &amp; Hidden Classes
+</h2>
 <p>
   There are also <code>mobile-grid-x</code> classes that can be applied, to create a separate visual grid for devices that have a screen width lower than 767px. (Note: 768px is width of an iPad in portrait orientation, so that gets a "desktop" grid.) This allows you to mix class names, for a different layout on desktop and mobile.
 </p>
