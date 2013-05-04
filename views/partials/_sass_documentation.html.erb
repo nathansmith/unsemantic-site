@@ -13,46 +13,52 @@
   Within the <i>_unsemantic-grid-responsive.sass</i> file, three other Sass partials are assembled within media queries, to create a responsive CSS file. These partials can also be compiled together without a <code>@media</code> query (or compiled separately), for handling older IE versions.
 </p>
 <p>
-  The <code>$media-desktop</code> variable is set to a default of 767px, and is the point at which the Unsemantic grid will pivot between a "mobile" or "desktop" layout. This is one pixel less than an iPad (arguably the most popular tablet) in portait orientation, allowing it to have a "desktop" layout. Whereas, anything below that width gets a "mobile" layout, which can be tailored to smaller screens.
+  The <code>$media-mobile-max</code> variable is set to a default of 767px, and <code>$media-desktop-min</code> defaults to 768px. This 767|768 breakpoint is where the Unsemantic grid will pivot between a "mobile" or "desktop" layout.
+</p>
+<p>
+  768px is one pixel less than an iPad (arguably the most popular tablet) in portait orientation, allowing it to have a "desktop" layout. Whereas, anything below that width gets a "mobile" layout, which can be tailored to smaller screens.
 </p>
 <pre>/* ============================================ */
 /* This file has a mobile-to-desktop breakpoint */
 /* ============================================ */
 
-$media-mobile: 767px !default
+$media-mobile-max: 767px !default
+$media-desktop-min: 768px !default
 
 @import "unsemantic-ie-snap"
 
 @media screen
   @import "unsemantic-grid-base"
 
-@media screen and (max-width: $media-mobile)
+@media screen and (max-width: $media-mobile-max)
   @import "unsemantic-grid-mobile"
 
-@media screen and (min-width: $media-mobile)
+@media screen and (min-width: $media-desktop-min)
   @import "unsemantic-grid-desktop"</pre>
 <p>
-  The <i>_unsemantic-grid-responsive-tablet.sass</i> file is similar, except it also adds support for a <i>tablet</i> width, between the <i>mobile</i> and <i>desktop</i> breakpoints. This file has an additional variable named <code>$media-desktop</code>, that is set to 1025px by default.
+  The <i>_unsemantic-grid-responsive-tablet.sass</i> file is similar, except it also adds support for a <i>tablet</i> width, between the <i>mobile</i> and <i>desktop</i> breakpoints. This file has additional variables named <code>$media-tablet-min</code> and <code>$media-tablet-max</code>. This makes for two breakpoints: 767|768 and 1024|1025.
 </p>
 <pre>/* ================================================================== */
 /* This file has a mobile-to-tablet, and tablet-to-desktop breakpoint */
 /* ================================================================== */
 
-$media-mobile: 767px !default
-$media-desktop: 1025px !default
+$media-mobile-max: 767px !default
+$media-tablet-min: 768px !default
+$media-tablet-max: 1024px !default
+$media-desktop-min: 1025px !default
 
 @import "unsemantic-ie-snap"
 
 @media screen
   @import "unsemantic-grid-base-tablet"
 
-@media screen and (max-width: $media-mobile)
+@media screen and (max-width: $media-mobile-max)
   @import "unsemantic-grid-mobile"
 
-@media screen and (min-width: $media-mobile) and (max-width: $media-desktop)
+@media screen and (min-width: $media-tablet-min) and (max-width: $media-tablet-max)
   @import "unsemantic-grid-tablet"
 
-@media screen and (min-width: $media-desktop)
+@media screen and (min-width: $media-desktop-min)
   @import "unsemantic-grid-desktop"</pre>
 <hr />
 <h2>
