@@ -117,7 +117,7 @@
 <p>
   Here is an example of a simple use case.
 </p>
-  <pre>&lt;div class="grid-container"&gt;
+<pre>&lt;div class="grid-container"&gt;
   &lt;div class="grid-50"&gt;
     I am 50% wide.
   &lt;/div&gt;
@@ -141,7 +141,7 @@
 <p>
   If you want to nest grid units inside others, you will need to use the class <code>grid-parent</code> on the element that will contain child grid units. This will zero out any side padding on the element itself, allowing the padding of the nested grid units to create a gutter. This can also be handy if you simply want to zero out padding for a particular grid unit, to allow its contents to be full width.
 </p>
-  <pre>&lt;div class="grid-container"&gt;
+<pre>&lt;div class="grid-container"&gt;
   &lt;div class="grid-50"&gt;
     Tall content here that
     would be alongside the
@@ -181,7 +181,7 @@
 <p>
   There are also <code>mobile-grid-x</code> classes that can be applied, to create a separate visual grid for devices that have a screen width lower than 767px. (Note: 768px is width of an iPad in portrait orientation, so that gets a "desktop" grid.) This allows you to mix class names, for a different layout on desktop and mobile.
 </p>
-  <pre>&lt;div class="grid-container"&gt;
+<pre>&lt;div class="grid-container"&gt;
   &lt;div class="grid-50 mobile-grid-100"&gt;
     I am 50% wide on desktop.
     I am 100% wide on mobile.
@@ -202,6 +202,73 @@
 <p>
   If you want to hide/show content based on mobile or desktop widths, you can use <code>hide-on-mobile</code> and <code>hide-on-desktop</code>.
 </p>
+<hr />
+<h2>
+  Tablet Classes
+</h2>
+<p>
+  Note: Throughout this documentation, anywhere that a <code>mobile-*</code> class is mentioned, there is also a corresponding <code>tablet-*</code> class when using a CSS file that has <code>tablet</code> in its name, such as&hellip;
+</p>
+<ul>
+  <li>
+    <a href="https://raw.github.com/nathansmith/unsemantic/master/assets/stylesheets/unsemantic-grid-responsive-tablet.css">unsemantic-grid-responsive-tablet.css</a>
+  </li>
+  <li>
+    <a href="https://raw.github.com/nathansmith/unsemantic/master/assets/stylesheets/unsemantic-grid-responsive-tablet-no-ie7.css">unsemantic-grid-responsive-tablet-no-ie7.css</a>
+  </li>
+</ul>
+<p>
+  These class names include:
+</p>
+<ul>
+  <li>
+    <code>tablet-grid-x</code>
+  </li>
+  <li>
+    <code>tablet-push-x</code>
+  </li>
+  <li>
+    <code>tablet-pull-x</code>
+  </li>
+  <li>
+    <code>tablet-prefix-x</code>
+  </li>
+  <li>
+    <code>tablet-suffix-x</code>
+  </li>
+  <li>
+    <code>hide-on-tablet</code>
+  </li>
+</ul>
+<p>
+  They are applicable between the widths of 768px and 1024px (typical dimensions on an iPad).
+</p>
+<p>
+  Here is the previous code example, with tablet classes added.
+</p>
+<pre>&lt;div class="grid-container"&gt;
+  &lt;div class="grid-50 mobile-grid-100 tablet-grid-50"&gt;
+    I am 50% wide on desktop.
+    I am 100% wide on mobile.
+    I am 50% wide on tablet.
+  &lt;/div&gt;
+  &lt;div class="grid-25 mobile-grid-50 tablet-grid-50"&gt;
+    I am 25% wide on desktop.
+    I am 50% wide on mobile.
+    I am 50% wide on tablet.
+  &lt;/div&gt;
+  &lt;div class="grid-25 mobile-grid-50 tablet-grid-100"&gt;
+    &lt;span class="hide-on-desktop"&gt;
+      I am hidden on desktop.
+    &lt;/span&gt;
+    &lt;span class="hide-on-mobile"&gt;
+      I am hidden on mobile.
+    &lt;/span&gt;
+    &lt;span class="hide-on-tablet"&gt;
+      I am hidden on tablet.
+    &lt;/span&gt;
+  &lt;/div&gt;
+&lt;/div&gt;</pre>
 <hr />
 <h2>
   Push &amp; Pull Classes
@@ -361,5 +428,5 @@
   Don't be worried about this causing performance issues in good browsers, or other versions of IE. The presence of a "star hack" <a href="https://en.wikipedia.org/wiki/CSS_filter">CSS filter</a> in <code>*margin-left</code> and <code>*margin-right</code> prevents modern browsers from evaluating the CSS expression. Since it erroneously parses the CSS filter instead of ignoring it, IE7 is the only browser affected.
 </p>
 <p>
-  Note: If you don't want to support IE7, delete the unnecessary chunks of code to clear your conscience!
+  Note: If you don't need to support IE7, the files ending in <code>*-no-ie7.css</code> are smaller.
 </p>

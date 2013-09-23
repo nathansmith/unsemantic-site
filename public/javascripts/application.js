@@ -32,7 +32,7 @@ var APP = (function($, window, document, undefined) {
     init: {
       // APP.init.assign_dom_vars
       assign_dom_vars: function() {
-        body = $(document.body);
+        body = $(document.documentElement);
       },
       // APP.init.stop_dead_links
       stop_dead_links: function(ev) {
