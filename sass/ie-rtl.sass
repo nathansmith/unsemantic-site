@@ -9,8 +9,12 @@ $lang-reverse: left
 @import "partials/vars"
 @import "partials/reset"
 @import "partials/text"
-@import "partials/unsemantic-grid-base"
-@import "partials/unsemantic-grid-desktop"
 @import "partials/site"
 @import "partials/site-desktop"
-@import "partials/ie"
+
+@media all
+  @import "partials/unsemantic-grid-base"
+
+@media screen
+  @import "partials/unsemantic-grid-desktop"
+  @import "partials/ie"
