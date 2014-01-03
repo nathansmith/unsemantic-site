@@ -325,10 +325,9 @@ footer[role="contentinfo"]
   clear: both
   display: none
   font-size: 11px
-  margin-bottom: 30px
+  margin-bottom: 20px
   padding: 25px 10px 0
   position: relative
-  top: 10px
 
 #fusion_ad a
   text-decoration: none
@@ -337,6 +336,8 @@ footer[role="contentinfo"]
   background: #fff
   float: left
   margin-right: 10px
+  width: auto
+  height: auto
 
 #fusion_ad .fusionentire
   display: block
@@ -363,6 +364,20 @@ footer[role="contentinfo"]
 //
 // Prevent awkward line wrapping
 //
+@media screen and (min-width: $media-desktop)
+  #fusion_ad.fusion_mini
+    text-align: center
+
+  #fusion_ad.fusion_mini .fusionimg
+    display: block
+    float: none
+    margin: 0 auto 10px
+
+  .fusion_mini #powered-by-fusion
+    left: 0
+    right: 0
+    width: auto
+
 @media screen and (min-width: $media-mobile + 1px) and (max-width: 1100px)
   #fusion_ad
     text-align: center

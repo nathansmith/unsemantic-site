@@ -3,7 +3,10 @@
   @title = "Responsive Demo - LTR"
   @page = "responsive_ltr"
 %>
-<div class="grid-100 mobile-grid-100 align-center">
+<div class="grid-20 push-80">
+  <%= render "/partials/fusion_ad_mini" %>
+</div>
+<div class="grid-80 pull-20 align-center">
   <%= render "/partials/demo_top" %>
   <p>
     <b>View grid CSS&hellip;</b>
@@ -13,7 +16,3 @@
   </p>
 </div>
 <%= render "/partials/demo_grid" %>
-<hr />
-<div class="grid-33 prefix-33">
-  <%= render "/partials/fusion_ad" %>
-</div>
