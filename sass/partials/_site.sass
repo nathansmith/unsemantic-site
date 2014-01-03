@@ -313,3 +313,66 @@ footer[role="contentinfo"]
 
 #table-of-contents .h6 a
   padding-left: 60px
+
+// `Fusion Ad
+//----------------------------------------------------------------------------------------------------
+
+#fusion_ad
+  +round
+  background: #eee
+  border: 1px solid
+  border-color: #eee #ddd #ccc
+  clear: both
+  display: none
+  font-size: 11px
+  margin-bottom: 30px
+  padding: 25px 10px 0
+  position: relative
+  top: 10px
+
+#fusion_ad a
+  text-decoration: none
+
+#fusion_ad .fusionimg
+  background: #fff
+  float: left
+  margin-right: 10px
+
+#fusion_ad .fusionentire
+  display: block
+  overflow: hidden
+  margin-bottom: 10px
+
+#powered-by-fusion
+  clear: both
+  font-size: 10px
+  line-height: 1
+  text-align: center
+  text-transform: uppercase
+  width: 130px
+  position: absolute
+  top: 10px
+  left: 10px
+
+#powered-by-fusion a
+  color: #999
+
+  &:hover
+    color: #666
+
+//
+// Prevent awkward line wrapping
+//
+@media screen and (min-width: $media-mobile + 1px) and (max-width: 1100px)
+  #fusion_ad
+    text-align: center
+
+  #fusion_ad .fusionimg
+    display: block
+    float: none
+    margin: 0 auto 10px
+
+  #powered-by-fusion
+    left: 0
+    right: 0
+    width: auto

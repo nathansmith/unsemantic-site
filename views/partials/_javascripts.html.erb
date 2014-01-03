@@ -1,5 +1,8 @@
 <script src="./javascripts/jquery.js?<%= Time.now.to_i %>"></script>
 <script src="./javascripts/application.js?<%= Time.now.to_i %>"></script>
+
+
+
 <%
   # Page-specific JavaScript.
   #
@@ -15,3 +18,23 @@
 <%= yield :javascripts %>
 </script>
 <% end %>
+
+
+
+<script>
+(function(w, d){
+  var fusion;
+  var host = w.location.hostname;
+
+  if (!host.match('unsemantic.com')) {
+    return;
+  }
+
+  d.getElementById('fusion_ad').style.display = 'block';
+
+  fusion = d.createElement('script');
+  fusion.src = w.location.protocol + '//adn.fusionads.net/api/1.0/ad.js?zoneid=222&rand=' + Math.floor(Math.random() * 9999999);
+  fusion.async = true;
+  (d.head || d.getElementsByTagName('head')[0]).appendChild(fusion);
+})(this, this.document);
+</script>
