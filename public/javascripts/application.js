@@ -16,7 +16,7 @@ var APP = (function($, window, document, undefined) {
   });
 
   // "Private constant" vars.
-  var body;
+  var body, head;
 
   return {
     // APP.go
@@ -33,6 +33,7 @@ var APP = (function($, window, document, undefined) {
       // APP.init.assign_dom_vars
       assign_dom_vars: function() {
         body = $(document.documentElement);
+        head = document.head || document.getElementsByTagName('head')[0];
       },
       // APP.init.stop_dead_links
       stop_dead_links: function(ev) {
@@ -108,6 +109,22 @@ var APP = (function($, window, document, undefined) {
         }
 
         toc.style.display = 'block';
+      },
+      fusion_ad: function() {
+        var fusion;
+        var host = window.location.hostname;
+        var div = document.getElementById('fusion_ad');
+
+        if (!host.match('unsemantic.com') || div.style.display === 'block') {
+          // Exit
+          return;
+        }
+
+        fusion = document.createElement('script');
+        fusion.src = window.location.protocol + '//adn.fusionads.net/api/1.0/ad.js?zoneid=222&rand=' + Math.floor(Math.random() * 9999999);
+        fusion.async = true;
+        head.appendChild(fusion);
+        div.style.display = 'block';
       }
     }
   };

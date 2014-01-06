@@ -332,14 +332,13 @@ footer[role="contentinfo"]
 #fusion_ad a
   text-decoration: none
 
-#fusion_ad .fusionimg
-  background: #fff
+.fusionimg
   float: left
   margin-right: 10px
   width: auto
   height: auto
 
-#fusion_ad .fusionentire
+.fusionentire
   display: block
   overflow: hidden
   margin-bottom: 10px
@@ -364,11 +363,11 @@ footer[role="contentinfo"]
 //
 // Prevent awkward line wrapping
 //
-@media screen and (min-width: $media-desktop)
-  #fusion_ad.fusion_mini
+@media screen and (min-width: $media-desktop-min)
+  .fusion_mini
     text-align: center
 
-  #fusion_ad.fusion_mini .fusionimg
+  .fusion_mini .fusionimg
     display: block
     float: none
     margin: 0 auto 10px
@@ -378,11 +377,11 @@ footer[role="contentinfo"]
     right: 0
     width: auto
 
-@media screen and (min-width: $media-mobile + 1px) and (max-width: 1100px)
+@media screen and (min-width: $media-desktop-min) and (max-width: 1100px)
   #fusion_ad
     text-align: center
 
-  #fusion_ad .fusionimg
+  .fusionimg
     display: block
     float: none
     margin: 0 auto 10px
