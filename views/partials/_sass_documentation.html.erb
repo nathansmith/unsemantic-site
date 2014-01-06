@@ -312,7 +312,8 @@ $lang-reverse: left
 <p>
   You could generate some custom CSS by putting this in your own Sass file&hellip;
 </p>
-<pre>$media-mobile: 767px
+<pre>$media-mobile-max: 767px
+$media-desktop-min: 768px
 $unsemantic-ie7-support: false
 
 @import "compass/css3"
@@ -336,7 +337,7 @@ $unsemantic-ie7-support: false
 /* "Mobile" screen width */
 /*=======================*/
 
-@media screen and (max-width: $media-mobile)
+@media screen and (max-width: $media-mobile-max)
   @import "partials/unsemantic-vars"
 
   .main,
@@ -347,7 +348,7 @@ $unsemantic-ie7-support: false
 /* "Desktop" screen width */
 /*========================*/
 
-@media screen and (min-width: $media-mobile)
+@media screen and (min-width: $media-desktop-min)
   @import "partials/unsemantic-vars"
 
   .main
