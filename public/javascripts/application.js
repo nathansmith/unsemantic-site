@@ -78,10 +78,9 @@ var APP = (function($, window, document, undefined) {
         }
 
         var all = document.getElementById('documentation').getElementsByTagName('*');
+        var html = '<dt>Table of Contents</dt>';
         var headings = [];
         var tag, text;
-
-        toc.innerHTML = '<dt>Table of Contents</dt>';
 
         for (var i = 0, ii = all.length; i < ii; i++) {
           tag = all[i].tagName.toLowerCase();
@@ -105,9 +104,10 @@ var APP = (function($, window, document, undefined) {
 
           headings[j].el.id = anchor;
           headings[j].el.innerHTML += '<a href="#' + anchor + '" class="permalink hide-on-mobile" title="Permalink: ' + text + '"></a>';
-          toc.innerHTML += '<dd class="' + headings[j].tag + '"><a href="#' + anchor + '">&bull;&nbsp; ' + text + '</a></dd>';
+          html += '<dd class="' + headings[j].tag + '"><a href="#' + anchor + '">&bull;&nbsp; ' + text + '</a></dd>';
         }
 
+        toc.innerHTML = html;
         toc.style.display = 'block';
       },
       fusion_ad: function() {
@@ -115,7 +115,7 @@ var APP = (function($, window, document, undefined) {
         var host = window.location.hostname;
         var div = document.getElementById('fusion_ad');
 
-        if (!host.match('unsemantic.com') || div.style.display === 'block') {
+        if (!host.match('unsemantic.com') || div.getElementsByTagName('img').length) {
           // Exit
           return;
         }
@@ -124,7 +124,6 @@ var APP = (function($, window, document, undefined) {
         fusion.src = window.location.protocol + '//adn.fusionads.net/api/1.0/ad.js?zoneid=222&rand=' + Math.floor(Math.random() * 9999999);
         fusion.async = true;
         head.appendChild(fusion);
-        div.style.display = 'block';
       }
     }
   };
