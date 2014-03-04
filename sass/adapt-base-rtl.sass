@@ -6,10 +6,16 @@ $lang-forward: right
 $lang-reverse: left
 
 @import "compass/css3"
-@import "partials/unsemantic-vars"
 @import "partials/vars"
 @import "partials/reset"
-@import "partials/unsemantic-ie-snap"
-@import "partials/unsemantic-grid-base"
 @import "partials/text"
 @import "partials/site"
+
+//
+// Grid.
+//
+@import "partials/unsemantic-vars"
+@import "partials/unsemantic-ie-snap"
+
++unsemantic-grid-placeholders
++unsemantic-grid-base
