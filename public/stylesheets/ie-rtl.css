@@ -1,71 +1,65 @@
 /*
 Syntax error: File to import not found or unreadable: partials/unsemantic-grid-base.
               Load paths:
-                Compass::SpriteImporter
-                /Users/nathansmith/Projects/unsemantic-site/public/stylesheets/sass
                 /Users/nathansmith/Projects/unsemantic-site/sass
-                /Users/nathansmith/.rvm/rubies/ruby-1.9.3-p286/lib/ruby/gems/1.9.1/gems/compass-0.12.2/frameworks/blueprint/stylesheets
-                /Users/nathansmith/.rvm/rubies/ruby-1.9.3-p286/lib/ruby/gems/1.9.1/gems/compass-0.12.2/frameworks/compass/stylesheets
-        on line 16 of ./sass/ie-rtl.scss
-
-11: @import "partials/text";
-12: @import "partials/site";
-13: @import "partials/site-desktop";
-14: 
-15: @media all {
-16:   @import "partials/unsemantic-grid-base";
-17: }
-18: 
-19: @media screen {
-20:   @import "partials/unsemantic-grid-desktop";
-21:   @import "partials/ie";
+                /Users/nathansmith/.rvm/rubies/ruby-1.9.3-p286/lib/ruby/gems/1.9.1/gems/compass-core-1.0.0.alpha.17/stylesheets
+                Compass::SpriteImporter
+        on line 16 of /Users/nathansmith/Projects/unsemantic-site/sass/ie-rtl.scss
 
 Backtrace:
-./sass/ie-rtl.scss:16
-/Users/nathansmith/.rvm/rubies/ruby-1.9.3-p286/lib/ruby/gems/1.9.1/gems/sass-3.2.1/lib/sass/tree/import_node.rb:64:in `rescue in import'
-/Users/nathansmith/.rvm/rubies/ruby-1.9.3-p286/lib/ruby/gems/1.9.1/gems/sass-3.2.1/lib/sass/tree/import_node.rb:42:in `import'
-/Users/nathansmith/.rvm/rubies/ruby-1.9.3-p286/lib/ruby/gems/1.9.1/gems/sass-3.2.1/lib/sass/tree/import_node.rb:25:in `imported_file'
-/Users/nathansmith/.rvm/rubies/ruby-1.9.3-p286/lib/ruby/gems/1.9.1/gems/sass-3.2.1/lib/sass/tree/visitors/check_nesting.rb:85:in `rescue in invalid_import_parent?'
-/Users/nathansmith/.rvm/rubies/ruby-1.9.3-p286/lib/ruby/gems/1.9.1/gems/sass-3.2.1/lib/sass/tree/visitors/check_nesting.rb:79:in `invalid_import_parent?'
-/Users/nathansmith/.rvm/rubies/ruby-1.9.3-p286/lib/ruby/gems/1.9.1/gems/sass-3.2.1/lib/sass/tree/visitors/check_nesting.rb:143:in `try_send'
-/Users/nathansmith/.rvm/rubies/ruby-1.9.3-p286/lib/ruby/gems/1.9.1/gems/sass-3.2.1/lib/sass/tree/visitors/check_nesting.rb:12:in `visit'
-/Users/nathansmith/.rvm/rubies/ruby-1.9.3-p286/lib/ruby/gems/1.9.1/gems/sass-3.2.1/lib/sass/tree/visitors/base.rb:53:in `block in visit_children'
-/Users/nathansmith/.rvm/rubies/ruby-1.9.3-p286/lib/ruby/gems/1.9.1/gems/sass-3.2.1/lib/sass/tree/visitors/base.rb:53:in `map'
-/Users/nathansmith/.rvm/rubies/ruby-1.9.3-p286/lib/ruby/gems/1.9.1/gems/sass-3.2.1/lib/sass/tree/visitors/base.rb:53:in `visit_children'
-/Users/nathansmith/.rvm/rubies/ruby-1.9.3-p286/lib/ruby/gems/1.9.1/gems/sass-3.2.1/lib/sass/tree/visitors/check_nesting.rb:28:in `visit_children'
-/Users/nathansmith/.rvm/rubies/ruby-1.9.3-p286/lib/ruby/gems/1.9.1/gems/sass-3.2.1/lib/sass/tree/visitors/base.rb:39:in `visit'
-/Users/nathansmith/.rvm/rubies/ruby-1.9.3-p286/lib/ruby/gems/1.9.1/gems/sass-3.2.1/lib/sass/tree/visitors/check_nesting.rb:15:in `visit'
-/Users/nathansmith/.rvm/rubies/ruby-1.9.3-p286/lib/ruby/gems/1.9.1/gems/sass-3.2.1/lib/sass/tree/visitors/base.rb:53:in `block in visit_children'
-/Users/nathansmith/.rvm/rubies/ruby-1.9.3-p286/lib/ruby/gems/1.9.1/gems/sass-3.2.1/lib/sass/tree/visitors/base.rb:53:in `map'
-/Users/nathansmith/.rvm/rubies/ruby-1.9.3-p286/lib/ruby/gems/1.9.1/gems/sass-3.2.1/lib/sass/tree/visitors/base.rb:53:in `visit_children'
-/Users/nathansmith/.rvm/rubies/ruby-1.9.3-p286/lib/ruby/gems/1.9.1/gems/sass-3.2.1/lib/sass/tree/visitors/check_nesting.rb:28:in `visit_children'
-/Users/nathansmith/.rvm/rubies/ruby-1.9.3-p286/lib/ruby/gems/1.9.1/gems/sass-3.2.1/lib/sass/tree/visitors/base.rb:37:in `block in visit'
-/Users/nathansmith/.rvm/rubies/ruby-1.9.3-p286/lib/ruby/gems/1.9.1/gems/sass-3.2.1/lib/sass/tree/visitors/check_nesting.rb:35:in `visit_root'
-/Users/nathansmith/.rvm/rubies/ruby-1.9.3-p286/lib/ruby/gems/1.9.1/gems/sass-3.2.1/lib/sass/tree/visitors/base.rb:37:in `visit'
-/Users/nathansmith/.rvm/rubies/ruby-1.9.3-p286/lib/ruby/gems/1.9.1/gems/sass-3.2.1/lib/sass/tree/visitors/check_nesting.rb:15:in `visit'
-/Users/nathansmith/.rvm/rubies/ruby-1.9.3-p286/lib/ruby/gems/1.9.1/gems/sass-3.2.1/lib/sass/tree/visitors/base.rb:24:in `visit'
-/Users/nathansmith/.rvm/rubies/ruby-1.9.3-p286/lib/ruby/gems/1.9.1/gems/sass-3.2.1/lib/sass/tree/root_node.rb:19:in `render'
-/Users/nathansmith/.rvm/rubies/ruby-1.9.3-p286/lib/ruby/gems/1.9.1/gems/sass-3.2.1/lib/sass/engine.rb:315:in `_render'
-/Users/nathansmith/.rvm/rubies/ruby-1.9.3-p286/lib/ruby/gems/1.9.1/gems/sass-3.2.1/lib/sass/engine.rb:262:in `render'
-/Users/nathansmith/.rvm/rubies/ruby-1.9.3-p286/lib/ruby/gems/1.9.1/gems/sass-3.2.1/lib/sass/plugin/compiler.rb:340:in `update_stylesheet'
-/Users/nathansmith/.rvm/rubies/ruby-1.9.3-p286/lib/ruby/gems/1.9.1/gems/sass-3.2.1/lib/sass/plugin/compiler.rb:202:in `block in update_stylesheets'
-/Users/nathansmith/.rvm/rubies/ruby-1.9.3-p286/lib/ruby/gems/1.9.1/gems/sass-3.2.1/lib/sass/plugin/compiler.rb:200:in `each'
-/Users/nathansmith/.rvm/rubies/ruby-1.9.3-p286/lib/ruby/gems/1.9.1/gems/sass-3.2.1/lib/sass/plugin/compiler.rb:200:in `update_stylesheets'
-/Users/nathansmith/.rvm/rubies/ruby-1.9.3-p286/lib/ruby/gems/1.9.1/gems/sass-3.2.1/lib/sass/plugin.rb:81:in `update_stylesheets'
-/Users/nathansmith/.rvm/rubies/ruby-1.9.3-p286/lib/ruby/gems/1.9.1/gems/sass-3.2.1/lib/sass/plugin.rb:54:in `check_for_updates'
-/Users/nathansmith/.rvm/rubies/ruby-1.9.3-p286/lib/ruby/gems/1.9.1/gems/sass-3.2.1/lib/sass/plugin/rack.rb:51:in `call'
-/Users/nathansmith/.rvm/rubies/ruby-1.9.3-p286/lib/ruby/gems/1.9.1/gems/rack-1.5.2/lib/rack/lint.rb:49:in `_call'
-/Users/nathansmith/.rvm/rubies/ruby-1.9.3-p286/lib/ruby/gems/1.9.1/gems/rack-1.5.2/lib/rack/lint.rb:37:in `call'
-/Users/nathansmith/.rvm/rubies/ruby-1.9.3-p286/lib/ruby/gems/1.9.1/gems/rack-1.5.2/lib/rack/showexceptions.rb:24:in `call'
-/Users/nathansmith/.rvm/rubies/ruby-1.9.3-p286/lib/ruby/gems/1.9.1/gems/rack-1.5.2/lib/rack/commonlogger.rb:33:in `call'
-/Users/nathansmith/.rvm/rubies/ruby-1.9.3-p286/lib/ruby/gems/1.9.1/gems/rack-1.5.2/lib/rack/chunked.rb:43:in `call'
-/Users/nathansmith/.rvm/rubies/ruby-1.9.3-p286/lib/ruby/gems/1.9.1/gems/rack-1.5.2/lib/rack/content_length.rb:14:in `call'
-/Users/nathansmith/.rvm/rubies/ruby-1.9.3-p286/lib/ruby/gems/1.9.1/gems/rack-1.5.2/lib/rack/handler/webrick.rb:60:in `service'
-/Users/nathansmith/.rvm/rubies/ruby-1.9.3-p286/lib/ruby/1.9.1/webrick/httpserver.rb:138:in `service'
-/Users/nathansmith/.rvm/rubies/ruby-1.9.3-p286/lib/ruby/1.9.1/webrick/httpserver.rb:94:in `run'
-/Users/nathansmith/.rvm/rubies/ruby-1.9.3-p286/lib/ruby/1.9.1/webrick/server.rb:191:in `block in start_thread'
+/Users/nathansmith/Projects/unsemantic-site/sass/ie-rtl.scss:16
+/Users/nathansmith/.rvm/rubies/ruby-1.9.3-p286/lib/ruby/gems/1.9.1/gems/sass-3.3.0/lib/sass/tree/import_node.rb:66:in `rescue in import'
+/Users/nathansmith/.rvm/rubies/ruby-1.9.3-p286/lib/ruby/gems/1.9.1/gems/sass-3.3.0/lib/sass/tree/import_node.rb:45:in `import'
+/Users/nathansmith/.rvm/rubies/ruby-1.9.3-p286/lib/ruby/gems/1.9.1/gems/sass-3.3.0/lib/sass/tree/import_node.rb:28:in `imported_file'
+/Users/nathansmith/.rvm/rubies/ruby-1.9.3-p286/lib/ruby/gems/1.9.1/gems/sass-3.3.0/lib/sass/tree/visitors/check_nesting.rb:86:in `rescue in invalid_import_parent?'
+/Users/nathansmith/.rvm/rubies/ruby-1.9.3-p286/lib/ruby/gems/1.9.1/gems/sass-3.3.0/lib/sass/tree/visitors/check_nesting.rb:80:in `invalid_import_parent?'
+/Users/nathansmith/.rvm/rubies/ruby-1.9.3-p286/lib/ruby/gems/1.9.1/gems/sass-3.3.0/lib/sass/tree/visitors/check_nesting.rb:147:in `try_send'
+/Users/nathansmith/.rvm/rubies/ruby-1.9.3-p286/lib/ruby/gems/1.9.1/gems/sass-3.3.0/lib/sass/tree/visitors/check_nesting.rb:12:in `visit'
+/Users/nathansmith/.rvm/rubies/ruby-1.9.3-p286/lib/ruby/gems/1.9.1/gems/sass-3.3.0/lib/sass/tree/visitors/base.rb:52:in `block in visit_children'
+/Users/nathansmith/.rvm/rubies/ruby-1.9.3-p286/lib/ruby/gems/1.9.1/gems/sass-3.3.0/lib/sass/tree/visitors/base.rb:52:in `map'
+/Users/nathansmith/.rvm/rubies/ruby-1.9.3-p286/lib/ruby/gems/1.9.1/gems/sass-3.3.0/lib/sass/tree/visitors/base.rb:52:in `visit_children'
+/Users/nathansmith/.rvm/rubies/ruby-1.9.3-p286/lib/ruby/gems/1.9.1/gems/sass-3.3.0/lib/sass/tree/visitors/check_nesting.rb:29:in `visit_children'
+/Users/nathansmith/.rvm/rubies/ruby-1.9.3-p286/lib/ruby/gems/1.9.1/gems/sass-3.3.0/lib/sass/tree/visitors/base.rb:38:in `visit'
+/Users/nathansmith/.rvm/rubies/ruby-1.9.3-p286/lib/ruby/gems/1.9.1/gems/sass-3.3.0/lib/sass/tree/visitors/check_nesting.rb:15:in `visit'
+/Users/nathansmith/.rvm/rubies/ruby-1.9.3-p286/lib/ruby/gems/1.9.1/gems/sass-3.3.0/lib/sass/tree/visitors/base.rb:52:in `block in visit_children'
+/Users/nathansmith/.rvm/rubies/ruby-1.9.3-p286/lib/ruby/gems/1.9.1/gems/sass-3.3.0/lib/sass/tree/visitors/base.rb:52:in `map'
+/Users/nathansmith/.rvm/rubies/ruby-1.9.3-p286/lib/ruby/gems/1.9.1/gems/sass-3.3.0/lib/sass/tree/visitors/base.rb:52:in `visit_children'
+/Users/nathansmith/.rvm/rubies/ruby-1.9.3-p286/lib/ruby/gems/1.9.1/gems/sass-3.3.0/lib/sass/tree/visitors/check_nesting.rb:29:in `visit_children'
+/Users/nathansmith/.rvm/rubies/ruby-1.9.3-p286/lib/ruby/gems/1.9.1/gems/sass-3.3.0/lib/sass/tree/visitors/base.rb:36:in `block in visit'
+/Users/nathansmith/.rvm/rubies/ruby-1.9.3-p286/lib/ruby/gems/1.9.1/gems/sass-3.3.0/lib/sass/tree/visitors/check_nesting.rb:36:in `visit_root'
+/Users/nathansmith/.rvm/rubies/ruby-1.9.3-p286/lib/ruby/gems/1.9.1/gems/sass-3.3.0/lib/sass/tree/visitors/base.rb:36:in `visit'
+/Users/nathansmith/.rvm/rubies/ruby-1.9.3-p286/lib/ruby/gems/1.9.1/gems/sass-3.3.0/lib/sass/tree/visitors/check_nesting.rb:15:in `visit'
+/Users/nathansmith/.rvm/rubies/ruby-1.9.3-p286/lib/ruby/gems/1.9.1/gems/sass-3.3.0/lib/sass/tree/visitors/base.rb:24:in `visit'
+/Users/nathansmith/.rvm/rubies/ruby-1.9.3-p286/lib/ruby/gems/1.9.1/gems/sass-3.3.0/lib/sass/tree/root_node.rb:35:in `css_tree'
+/Users/nathansmith/.rvm/rubies/ruby-1.9.3-p286/lib/ruby/gems/1.9.1/gems/sass-3.3.0/lib/sass/tree/root_node.rb:20:in `render'
+/Users/nathansmith/.rvm/rubies/ruby-1.9.3-p286/lib/ruby/gems/1.9.1/gems/sass-3.3.0/lib/sass/engine.rb:275:in `block in render'
+/Users/nathansmith/.rvm/rubies/ruby-1.9.3-p286/lib/ruby/gems/1.9.1/gems/sass-3.3.0/lib/sass/util.rb:442:in `silence_sass_warnings'
+/Users/nathansmith/.rvm/rubies/ruby-1.9.3-p286/lib/ruby/gems/1.9.1/gems/sass-3.3.0/lib/sass/engine.rb:275:in `render'
+/Users/nathansmith/.rvm/rubies/ruby-1.9.3-p286/lib/ruby/gems/1.9.1/gems/compass-1.0.0.alpha.18/lib/compass/compiler.rb:171:in `block (2 levels) in compile'
+/Users/nathansmith/.rvm/rubies/ruby-1.9.3-p286/lib/ruby/gems/1.9.1/gems/compass-1.0.0.alpha.18/lib/compass/compiler.rb:153:in `timed'
+/Users/nathansmith/.rvm/rubies/ruby-1.9.3-p286/lib/ruby/gems/1.9.1/gems/compass-1.0.0.alpha.18/lib/compass/compiler.rb:166:in `block in compile'
+/Users/nathansmith/.rvm/rubies/ruby-1.9.3-p286/lib/ruby/gems/1.9.1/gems/compass-1.0.0.alpha.18/lib/compass/logger.rb:46:in `red'
+/Users/nathansmith/.rvm/rubies/ruby-1.9.3-p286/lib/ruby/gems/1.9.1/gems/compass-1.0.0.alpha.18/lib/compass/compiler.rb:165:in `compile'
+/Users/nathansmith/.rvm/rubies/ruby-1.9.3-p286/lib/ruby/gems/1.9.1/gems/compass-1.0.0.alpha.18/lib/compass/compiler.rb:144:in `compile_if_required'
+/Users/nathansmith/.rvm/rubies/ruby-1.9.3-p286/lib/ruby/gems/1.9.1/gems/compass-1.0.0.alpha.18/lib/compass/compiler.rb:129:in `block (2 levels) in run'
+/Users/nathansmith/.rvm/rubies/ruby-1.9.3-p286/lib/ruby/gems/1.9.1/gems/compass-1.0.0.alpha.18/lib/compass/compiler.rb:127:in `each'
+/Users/nathansmith/.rvm/rubies/ruby-1.9.3-p286/lib/ruby/gems/1.9.1/gems/compass-1.0.0.alpha.18/lib/compass/compiler.rb:127:in `block in run'
+/Users/nathansmith/.rvm/rubies/ruby-1.9.3-p286/lib/ruby/gems/1.9.1/gems/compass-1.0.0.alpha.18/lib/compass/compiler.rb:153:in `timed'
+/Users/nathansmith/.rvm/rubies/ruby-1.9.3-p286/lib/ruby/gems/1.9.1/gems/compass-1.0.0.alpha.18/lib/compass/compiler.rb:126:in `run'
+/Users/nathansmith/.rvm/rubies/ruby-1.9.3-p286/lib/ruby/gems/1.9.1/gems/compass-1.0.0.alpha.18/lib/compass/commands/update_project.rb:49:in `perform'
+/Users/nathansmith/.rvm/rubies/ruby-1.9.3-p286/lib/ruby/gems/1.9.1/gems/compass-1.0.0.alpha.18/lib/compass/commands/base.rb:18:in `execute'
+/Users/nathansmith/.rvm/rubies/ruby-1.9.3-p286/lib/ruby/gems/1.9.1/gems/compass-1.0.0.alpha.18/lib/compass/commands/project_base.rb:19:in `execute'
+/Users/nathansmith/.rvm/rubies/ruby-1.9.3-p286/lib/ruby/gems/1.9.1/gems/compass-1.0.0.alpha.18/lib/compass/exec/sub_command_ui.rb:43:in `perform!'
+/Users/nathansmith/.rvm/rubies/ruby-1.9.3-p286/lib/ruby/gems/1.9.1/gems/compass-1.0.0.alpha.18/lib/compass/exec/sub_command_ui.rb:15:in `run!'
+/Users/nathansmith/.rvm/rubies/ruby-1.9.3-p286/lib/ruby/gems/1.9.1/gems/compass-1.0.0.alpha.18/bin/compass:30:in `block in <top (required)>'
+/Users/nathansmith/.rvm/rubies/ruby-1.9.3-p286/lib/ruby/gems/1.9.1/gems/compass-1.0.0.alpha.18/bin/compass:44:in `call'
+/Users/nathansmith/.rvm/rubies/ruby-1.9.3-p286/lib/ruby/gems/1.9.1/gems/compass-1.0.0.alpha.18/bin/compass:44:in `<top (required)>'
+/Users/nathansmith/.rvm/gems/ruby-1.9.3-p286/bin/compass:19:in `load'
+/Users/nathansmith/.rvm/gems/ruby-1.9.3-p286/bin/compass:19:in `<main>'
+/Users/nathansmith/.rvm/gems/ruby-1.9.3-p286/bin/ruby_noexec_wrapper:14:in `eval'
+/Users/nathansmith/.rvm/gems/ruby-1.9.3-p286/bin/ruby_noexec_wrapper:14:in `<main>'
 */
 body:before {
   white-space: pre;
   font-family: monospace;
-  content: "Syntax error: File to import not found or unreadable: partials/unsemantic-grid-base.\A               Load paths:\A                 Compass::SpriteImporter\A                 /Users/nathansmith/Projects/unsemantic-site/public/stylesheets/sass\A                 /Users/nathansmith/Projects/unsemantic-site/sass\A                 /Users/nathansmith/.rvm/rubies/ruby-1.9.3-p286/lib/ruby/gems/1.9.1/gems/compass-0.12.2/frameworks/blueprint/stylesheets\A                 /Users/nathansmith/.rvm/rubies/ruby-1.9.3-p286/lib/ruby/gems/1.9.1/gems/compass-0.12.2/frameworks/compass/stylesheets\A         on line 16 of ./sass/ie-rtl.scss\A \A 11: @import \"partials/text\";\A 12: @import \"partials/site\";\A 13: @import \"partials/site-desktop\";\A 14: \A 15: @media all {\A 16:   @import \"partials/unsemantic-grid-base\";\A 17: }\A 18: \A 19: @media screen {\A 20:   @import \"partials/unsemantic-grid-desktop\";\A 21:   @import \"partials/ie\";"; }
+  content: "Syntax error: File to import not found or unreadable: partials/unsemantic-grid-base.\A               Load paths:\A                 /Users/nathansmith/Projects/unsemantic-site/sass\A                 /Users/nathansmith/.rvm/rubies/ruby-1.9.3-p286/lib/ruby/gems/1.9.1/gems/compass-core-1.0.0.alpha.17/stylesheets\A                 Compass::SpriteImporter\A         on line 16 of /Users/nathansmith/Projects/unsemantic-site/sass/ie-rtl.scss"; }
