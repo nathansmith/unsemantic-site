@@ -10,7 +10,7 @@
   Breakpoints
 </h2>
 <p>
-  Within the <i>_unsemantic-grid-responsive.sass</i> file, three other Sass partials are assembled within media queries, to create a responsive CSS file. These partials can also be compiled together without a <code>@media</code> query (or compiled separately), for handling older IE versions.
+  Within the <i>_unsemantic-grid-responsive.scss</i> file, three other Sass partials are assembled within media queries, to create a responsive CSS file. These partials can also be compiled together without a <code>@media</code> query (or compiled separately), for handling older IE versions.
 </p>
 <p>
   The <code>$media-mobile-max</code> variable is set to a default of 767px, and <code>$media-desktop-min</code> defaults to 768px. This 767|768 breakpoint is where the Unsemantic grid will pivot between a "mobile" or "desktop" layout.
@@ -22,78 +22,83 @@
 /* This file has a mobile-to-desktop breakpoint */
 /* ============================================ */
 
-$media-mobile-max: 767px !default
-$media-desktop-min: 768px !default
+$media-mobile-max: 767px !default;
+$media-desktop-min: 768px !default;
 
-@import "unsemantic-vars"
-@import "unsemantic-ie-snap"
+@import "unsemantic-vars";
+@import "unsemantic-ie-snap";
 
-+unsemantic-grid-placeholders
-+unsemantic-grid-base
+@include unsemantic-grid-placeholders;
+@include unsemantic-grid-base;
 
-@media screen and (max-width: $media-mobile-max)
-  +unsemantic-grid-placeholders(mobile)
-  +unsemantic-grid-scoped(mobile)
+@media screen and (max-width: $media-mobile-max) {
+  @include unsemantic-grid-placeholders(mobile);
+  @include unsemantic-grid-scoped(mobile);
+}
 
-@media screen and (min-width: $media-desktop-min)
-  +unsemantic-grid-placeholders(desktop)
-  +unsemantic-grid-scoped(desktop)</pre>
+@media screen and (min-width: $media-desktop-min) {
+  @include unsemantic-grid-placeholders(desktop);
+  @include unsemantic-grid-scoped(desktop);
+}</pre>
 <p>
-  The <i>_unsemantic-grid-responsive-tablet.sass</i> file is similar, except it also adds support for a <i>tablet</i> width, between the <i>mobile</i> and <i>desktop</i> breakpoints. This file has additional variables named <code>$media-tablet-min</code> and <code>$media-tablet-max</code>. This makes for two breakpoints: 767|768 and 1024|1025.
+  The <i>_unsemantic-grid-responsive-tablet.scss</i> file is similar, except it also adds support for a <i>tablet</i> width, between the <i>mobile</i> and <i>desktop</i> breakpoints. This file has additional variables named <code>$media-tablet-min</code> and <code>$media-tablet-max</code>. This makes for two breakpoints: 767|768 and 1024|1025.
 </p>
 <pre>/* ================================================================== */
 /* This file has a mobile-to-tablet, and tablet-to-desktop breakpoint */
 /* ================================================================== */
 
-$media-mobile-max: 767px !default
-$media-tablet-min: 768px !default
-$media-tablet-max: 1024px !default
-$media-desktop-min: 1025px !default
+$media-mobile-max: 767px !default;
+$media-tablet-min: 768px !default;
+$media-tablet-max: 1024px !default;
+$media-desktop-min: 1025px !default;
 
-@import "unsemantic-vars"
-@import "unsemantic-ie-snap"
+@import "unsemantic-vars";
+@import "unsemantic-ie-snap";
 
-+unsemantic-grid-placeholders
-+unsemantic-grid-base-tablet
+@include unsemantic-grid-placeholders;
+@include unsemantic-grid-base-tablet;
 
-@media screen and (max-width: $media-mobile-max)
-  +unsemantic-grid-placeholders(mobile)
-  +unsemantic-grid-scoped(mobile)
+@media screen and (max-width: $media-mobile-max) {
+  @include unsemantic-grid-placeholders(mobile);
+  @include unsemantic-grid-scoped(mobile);
+}
 
-@media screen and (min-width: $media-tablet-min) and (max-width: $media-tablet-max)
-  +unsemantic-grid-placeholders(tablet)
-  +unsemantic-grid-scoped(tablet)
+@media screen and (min-width: $media-tablet-min) and (max-width: $media-tablet-max) {
+  @include unsemantic-grid-placeholders(tablet);
+  @include unsemantic-grid-scoped(tablet);
+}
 
-@media screen and (min-width: $media-desktop-min)
-  +unsemantic-grid-placeholders(desktop)
-  +unsemantic-grid-scoped(desktop)</pre>
+@media screen and (min-width: $media-desktop-min) {
+  @include unsemantic-grid-placeholders(desktop);
+  @include unsemantic-grid-scoped(desktop);
+}</pre>
 <hr />
 <h2>
   Default Variables
 </h2>
 <p>
-  At the top of the <i>_unsemantic-vars.sass</i> file, there are several variables upon which some of the other Sass files depend. These are provided with initial values, in lieu of a specific value being defined. This is done via the <code>!default</code> keyword.
+  At the top of the <i>_unsemantic-vars.scss</i> file, there are several variables upon which some of the other Sass files depend. These are provided with initial values, in lieu of a specific value being defined. This is done via the <code>!default</code> keyword.
 </p>
-<pre>$unsemantic-ie7-support: true !default
+<pre>$unsemantic-ie7-support: true !default;
 
-$container-max-width: 1200px !default
+$container-max-width: 1200px !default;
 
-$gutter-half: 10px !default
+$gutter-half: 10px !default;
 
-$lang-forward: left !default
+$lang-forward: left !default;
 
-$lang-reverse: right !default</pre>
+$lang-reverse: right !default;</pre>
 <p>
-  Since all of these values are set <i>only</i> if the variables are not already defined, to override them simply create your own <i>_vars.sass</i> partial (or name it whatever you like), and <code>@import</code> it before the any of Unsemantic's Sass files. Anything you set will take precedence, and anything you leave undefined will get a default value. Here is an example&hellip;
+  Since all of these values are set <i>only</i> if the variables are not already defined, to override them simply create your own <i>_vars.scss</i> partial (or name it whatever you like), and <code>@import</code> it before the any of Unsemantic's Sass files. Anything you set will take precedence, and anything you leave undefined will get a default value. Here is an example&hellip;
 </p>
-<pre>// Example application.sass file
+<pre>// Example application.scss file
 
-@import "compass/css3"
-@import "partials/vars"
-@import "partials/reset"
-@import "partials/text"
-@import "partials/site"
-@import "partials/unsemantic-grid-responsive"</pre>
+@import "compass/css3";
+@import "partials/vars";
+@import "partials/reset";
+@import "partials/text";
+@import "partials/site";
+@import "partials/unsemantic-grid-responsive";</pre>
 <p>
   The following is an explanation of what each variable pertains to.
 </p>
@@ -122,13 +127,13 @@ $lang-reverse: right !default</pre>
   Specifically used to patch IE7 deficiencies, <code>expression(&hellip;)</code> code is omitted from the <code>no-ie7</code> version.
 </p>
 <p>
-  If you don't need to support IE7, just set this variable to <code>false</code> at the highest level scope. Be sure it preceeds Unsemantic's <i>*.sass</i> files in <code>@import</code> order. As a result, no CSS specific to IE7 will be generated.
+  If you don't need to support IE7, just set this variable to <code>false</code> at the highest level scope. Be sure it preceeds Unsemantic's <i>*.scss</i> files in <code>@import</code> order. As a result, no CSS specific to IE7 will be generated.
 </p>
 <h3>
   $container-max-width
 </h3>
 <p>
-  This is the widest that <code>grid-container</code> will go, after which it will remain at a "fixed" width. Setting a <code>max-width</code> ensures that line lengths stay within a readable range. If you'd rather this be narrower or wider, you can just create a variable with the same name, in your own <i>_vars.sass</i> file.
+  This is the widest that <code>grid-container</code> will go, after which it will remain at a "fixed" width. Setting a <code>max-width</code> ensures that line lengths stay within a readable range. If you'd rather this be narrower or wider, you can just create a variable with the same name, in your own <i>_vars.scss</i> file.
 </p>
 <h3>
   $gutter-half
@@ -146,12 +151,12 @@ $lang-reverse: right !default</pre>
 // For right-to-left languages.
 // (Hebrew, Arabic, etc.)
 //
-$lang-forward: right
-$lang-reverse: left
+$lang-forward: right;
+$lang-reverse: left;
 
-@import "partials/unsemantic-grid-responsive"</pre>
+@import "partials/unsemantic-grid-responsive";</pre>
 <p>
-  Depicted above are the contents of the <i>unsemantic-grid-base-rtl.sass</i> file. This causes all <code>grid-x</code> units to float to the right, instead of to the left. It also reverses the direction of all <code>prefix-x</code>, <code>suffix-x</code>, <code>push-x</code>, and <code>pull-x</code> classes.
+  Depicted above are the contents of the <i>unsemantic-grid-base-rtl.scss</i> file. This causes all <code>grid-x</code> units to float to the right, instead of to the left. It also reverses the direction of all <code>prefix-x</code>, <code>suffix-x</code>, <code>push-x</code>, and <code>pull-x</code> classes.
 </p>
 <hr />
 <h2>
@@ -163,33 +168,36 @@ $lang-reverse: left
 <p>
   If you want to make these placeholders available in the global scope, that would look like this&hellip;
 </p>
-<pre>@import "unsemantic-vars"
+<pre>@import "unsemantic-vars";
 
-+unsemantic-grid-placeholders
+@include unsemantic-grid-placeholders;
 
 // Your code can now use %grid-container, etc.
 
-.grid-container
-  @extend %grid-container</pre>
+.grid-container {
+  @extend %grid-container;
+}</pre>
 <p>
   If you wanted to make these placeholders available within the scope of <code>@media</code> query, you could do this&hellip;
 </p>
-<pre>@import "unsemantic-vars"
+<pre>@import "unsemantic-vars";
 
-@media screen and (max-width: ...)
-  +unsemantic-grid-placeholders(mobile)
+@media screen and (max-width: 2px) {
+  @include unsemantic-grid-placeholders(mobile);
 
   // Your code can now use %mobile-grid-50, etc.
 
-  .mobile-grid-50
-    @extend %mobile-grid-50</pre>
+  .mobile-grid-50 {
+    @extend %mobile-grid-50;
+  }
+}</pre>
 </pre>
 <hr />
 <h2>
   Placeholders
 </h2>
 <p>
-  Everything revolves around the concept of Sass placeholder selectors (sometimes referred to as <a href="https://speakerdeck.com/anotheruiguy/sass-32-silent-classes">silent classes</a>) generated by invoking the <code>unsemantic-grid-placeholders</code> mixin contained in the <i>_unsemantic-vars.sass</i> file.
+  Everything revolves around the concept of Sass placeholder selectors (sometimes referred to as <a href="https://speakerdeck.com/anotheruiguy/sass-32-silent-classes">silent classes</a>) generated by invoking the <code>unsemantic-grid-placeholders</code> mixin contained in the <i>_unsemantic-vars.scss</i> file.
 </p>
 <h3>
   %grid-container
@@ -197,31 +205,36 @@ $lang-reverse: left
 <p>
   This is used by the <code>grid-container</code> class, and keeps the grid layout centered within the browser viewport if the browser is wider than the <code>$container-max-width</code>. It also has 10px of padding on the left/right by default.
 </p>
-<pre>%#{$scope}grid-container
-  @extend %#{$scope}clearfix
-  margin-left: auto
-  margin-right: auto
+<pre>%#{$scope}grid-container {
+  @extend %#{$scope}clearfix;
+  margin-left: auto;
+  margin-right: auto;
 
-  @if $container-max-width != none
-    max-width: $container-max-width
+  @if $container-max-width != none {
+    max-width: $container-max-width;
+  }
 
   // Set if gutter is non-zero.
-  @if $gutter-half != 0
-    padding-left: $gutter-half
-    padding-right: $gutter-half</pre>
+  @if $gutter-half != 0 {
+    padding-left: $gutter-half;
+    padding-right: $gutter-half;
+  }
+}</pre>
 <h3>
   %grid-columns-all
 </h3>
 <p>
   This is the placeholder extended to add left/right padding to all <code>grid-x</code> units, as well as changing their <code>box-sizing</code> to <code>border-box</code>, allowing us to have a fluid, percentage based width coupled with additional padding on each side (without increasing the overall width).
 </p>
-<pre>%#{$scope}grid-columns-all
-  +box-sizing(border-box)
+<pre>%#{$scope}grid-columns-all {
+  @include box-sizing(border-box);
 
   // Set if gutter is non-zero.
-  @if $gutter-half != 0
-    padding-left: $gutter-half
-    padding-right: $gutter-half</pre>
+  @if $gutter-half != 0 {
+    padding-left: $gutter-half;
+    padding-right: $gutter-half;
+  }
+}</pre>
 <h3>
   %grid-parent
 </h3>
@@ -230,9 +243,10 @@ $lang-reverse: left
 </p>
 <pre>// Remove padding, if it's being used
 // as a parent for other grid columns.
-%#{$scope}grid-parent
-  padding-left: 0
-  padding-right: 0</pre>
+%#{$scope}grid-parent {
+  padding-left: 0;
+  padding-right: 0;
+}</pre>
   <h3>
     %grid-columns-push-pull
   </h3>
@@ -240,14 +254,15 @@ $lang-reverse: left
     This is used by all <code>push-x</code> and <code>pull-x</code> classes, which need to be relatively positioned in order for <code>left</code> and <code>right</code> offsets to have any effect. By default, all <code>grid-x</code> units inherit the browser native <code>static</code> positioning.
   </p>
   <pre>// Allows columns to be offset +/- left.
-%#{$scope}grid-columns-push-pull
-  position: relative</pre>
+%#{$scope}grid-columns-push-pull {
+  position: relative;
+}</pre>
 <hr />
 <h2>
   Sass Loops
 </h2>
 <p>
-  The folowing code is contained in the <codde>_unsemantic-vars.sass</codde> file. It loops through and generates placeholders for <code>%grid-x</code>, <code>%prefix-x</code>, <code>%suffix-x</code>, <code>%push-x</code>, and <code>%pull-x</code> for multiples of 5 up to 100.
+  The folowing code is contained in the <codde>_unsemantic-vars.scss</codde> file. It loops through and generates placeholders for <code>%grid-x</code>, <code>%prefix-x</code>, <code>%suffix-x</code>, <code>%push-x</code>, and <code>%pull-x</code> for multiples of 5 up to 100.
 </p>
 <p>
   These placeholders are used when the <code>unsemantic-grid-scoped</code> mixin is invoked, where the styles are paired with classes by the same name.
@@ -255,62 +270,68 @@ $lang-reverse: left
 <p>
   If called with a scope parameter &mdash; such as <code>mobile</code>, <code>tablet</code>, or <code>desktop</code> &mdash; then the respective placeholders that are generated would look like: <code>%mobile-grid-x</code>, <code>%tablet-grid-x</code>, and <code>%desktop-grid-x</code>.
 </p>
-<pre>//
-// For 5 through 95 percent.
-//
+<pre>// For 5 through 95 percent.
+@for $i from 1 through 19 {
+  $num: $i * 5;
+  $decimal: $num / 100;
+  $percent: $num * 1%;
 
-@for $i from 1 through 19
-  $num: $i * 5
-  $decimal: $num / 100
-  $percent: $num * 1%
+  %#{$scope}grid-#{$num} {
+    float: $lang-forward;
+    width: $percent;
+  }
 
-  %#{$scope}grid-#{$num}
-    float: $lang-forward
-    width: $percent
+  %#{$scope}prefix-#{$num} {
+    margin-#{$lang-forward}: $percent;
+  }
 
-  %#{$scope}prefix-#{$num}
-    margin-#{$lang-forward}: $percent
+  %#{$scope}suffix-#{$num} {
+    margin-#{$lang-reverse}: $percent;
+  }
 
-  %#{$scope}suffix-#{$num}
-    margin-#{$lang-reverse}: $percent
+  %#{$scope}push-#{$num} {
+    #{$lang-forward}: $percent;
+  }
 
-  %#{$scope}push-#{$num}
-    #{$lang-forward}: $percent
-
-  %#{$scope}pull-#{$num}
-    #{$lang-forward}: $percent * -1</pre>
+  %#{$scope}pull-#{$num} {
+    #{$lang-forward}: $percent * -1;
+  }
+}</pre>
 <p>
   This next loop does essentially the same thing as the preceeding code, except it applies to <code>%grid-33</code>, <code>%grid-66</code>, <code>%prefix-33</code>, etc.
 </p>
-<pre>//
-// For one-third and two-thirds.
-//
-
-@for $i from 1 through 2
-  $num: $i * 33
-  $one-third: 1/3
-  $decimal: $i * $one-third
-  $percent: ($num + $decimal) * 1%
+<pre>// For one-third and two-thirds.
+@for $i from 1 through 2 {
+  $num: $i * 33;
+  $one-third: 1 / 3;
+  $decimal: $i * $one-third;
+  $percent: ($num + $decimal) * 1%;
 
   // Percentage based widths.
-  %#{$scope}grid-#{$num}
-    float: $lang-forward
-    width: $percent
+  %#{$scope}grid-#{$num} {
+    float: $lang-forward;
+    width: $percent;
+  }
 
   // Prefix, to add extra columns before.
-  %#{$scope}prefix-#{$num}
-    margin-#{$lang-forward}: $percent
+  %#{$scope}prefix-#{$num} {
+    margin-#{$lang-forward}: $percent;
+  }
 
   // Suffix, to add extra columns after.
-  %#{$scope}suffix-#{$num}
-    margin-#{$lang-reverse}: $percent
+  %#{$scope}suffix-#{$num} {
+    margin-#{$lang-reverse}: $percent;
+  }
 
   // Push &amp; Pull, to rearrange column order (for potential "SEO").
-  %#{$scope}push-#{$num}
-    #{$lang-forward}: $percent
+  %#{$scope}push-#{$num} {
+    #{$lang-forward}: $percent;
+  }
 
-  %#{$scope}pull-#{$num}
-    #{$lang-forward}: $percent * -1</pre>
+  %#{$scope}pull-#{$num} {
+    #{$lang-forward}: $percent * -1;
+  }
+}</pre>
 <hr />
 <h2>
   Extending
@@ -319,34 +340,38 @@ $lang-reverse: left
   For these placeholders to be used, they must be called with <code>@extend</code>. If they are not used, then no code for them is ever generated. While the Unsemantic codebase itself of course makes use of all the placeholders, you could easily mix and match, generating only the CSS you need.
 </p>
 <p>
-  Here's an example of how Unsemantic's class names make use of the various placeholders, in the <i>_unsemantic-vars.sass</i> file.
+  Here's an example of how Unsemantic's class names make use of the various placeholders, in the <i>_unsemantic-vars.scss</i> file.
 </p>
-<pre>//
+<pre>
 // For 5 through 95 percent.
-//
-
-@for $i from 1 through 19
-  $num: $i * 5
+@for $i from 1 through 19 {
+  $num: $i * 5;
 
   // Percentage based widths.
-  .#{$class}grid-#{$num}
-    @extend %#{$scope}grid-#{$num}
+  .#{$class}grid-#{$num} {
+    @extend %#{$scope}grid-#{$num};
+  }
 
   // Prefix, to add extra columns before.
-  .#{$class}prefix-#{$num}
-    @extend %#{$scope}prefix-#{$num}
+  .#{$class}prefix-#{$num} {
+    @extend %#{$scope}prefix-#{$num};
+  }
 
   // Suffix, to add extra columns after.
-  .#{$class}suffix-#{$num}
-    @extend %#{$scope}suffix-#{$num}
+  .#{$class}suffix-#{$num} {
+    @extend %#{$scope}suffix-#{$num};
+  }
 
   // Push, to rearrange column order (for potential "SEO").
-  .#{$class}push-#{$num}
-    @extend %#{$scope}push-#{$num}
+  .#{$class}push-#{$num} {
+    @extend %#{$scope}push-#{$num};
+  }
 
   // Pull, to rearrange column order (for potential "SEO").
-  .#{$class}pull-#{$num}
-    @extend %#{$scope}pull-#{$num}</pre>
+  .#{$class}pull-#{$num} {
+    @extend %#{$scope}pull-#{$num};
+  }
+}</pre>
 <h3>
   Roll Your Own
 </h3>
@@ -364,50 +389,57 @@ $lang-reverse: left
 <p>
   You could generate some custom CSS by putting this in your own Sass file&hellip;
 </p>
-<pre>$media-mobile-max: 767px
-$media-desktop-min: 768px
-$unsemantic-ie7-support: false
+<pre>$media-mobile-max: 767px;
+$media-desktop-min: 768px;
+$unsemantic-ie7-support: false;
 
-@import "compass/css3"
-@import "partials/unsemantic-vars"
-@import "partials/unsemantic-ie-snap"
+@import "compass/css3";
+@import "partials/unsemantic-vars";
+@import "partials/unsemantic-ie-snap";
 
-/*=============*/
+/* =========== */
 /* All screens */
-/*=============*/
+/* =========== */
 
-+unsemantic-grid-placeholders
+@include unsemantic-grid-placeholders;
 
-.layout
-  @extend %grid-container
+.layout {
+  @extend %grid-container;
+}
 
 .main,
-.sidebar
-  @extend %grid-columns-all
+.sidebar {
+  @extend %grid-columns-all;
+}
 
-/*=======================*/
+/* ===================== */
 /* "Mobile" screen width */
-/*=======================*/
+/* ===================== */
 
-@media screen and (max-width: $media-mobile-max)
-  +unsemantic-grid-placeholders(mobile)
+@media screen and (max-width: $media-mobile-max) {
+  @include unsemantic-grid-placeholders(mobile);
 
   .main,
-  .sidebar
-    @extend %mobile-grid-100
+  .sidebar {
+    @extend %mobile-grid-100;
+  }
+}
 
-/*========================*/
+/* ====================== */
 /* "Desktop" screen width */
-/*========================*/
+/* ====================== */
 
-@media screen and (min-width: $media-desktop-min)
-  +unsemantic-grid-placeholders(desktop)
+@media screen and (min-width: $media-desktop-min) {
+  @include unsemantic-grid-placeholders(desktop);
 
-  .main
-    @extend %desktop-grid-75
+  .main {
+    @extend %desktop-grid-75;
+  }
 
-  .sidebar
-    @extend %desktop-grid-25</pre>
+  .sidebar {
+    @extend %desktop-grid-25;
+  }
+}</pre>
 <p>
   That would generate just enough CSS for a mini responsive page layout&hellip;
 </p>
@@ -417,9 +449,9 @@ $unsemantic-ie7-support: false
   }
 }
 
-/*=============*/
+/* =========== */
 /* All screens */
-/*=============*/
+/* =========== */
 
 .layout:before,
 .layout:after {
@@ -454,9 +486,9 @@ $unsemantic-ie7-support: false
   padding-right: 10px;
 }
 
-/*=======================*/
+/* ===================== */
 /* "Mobile" screen width */
-/*=======================*/
+/* ===================== */
 
 @media screen and (max-width: 767px) {
   .main:before,
@@ -485,9 +517,9 @@ $unsemantic-ie7-support: false
   }
 }
 
-/*========================*/
+/* ====================== */
 /* "Desktop" screen width */
-/*========================*/
+/* ====================== */
 
 @media screen and (min-width: 768px) {
   .sidebar,

@@ -1,0 +1,25 @@
+// `Slight tweaks, for desktop
+//----------------------------------------------------------------------------------------------------
+
+nav[role="navigation"] ul {
+  font-size: 13px;
+  line-height: 35px;
+}
+
+nav[role="navigation"] li {
+  border: 0;
+  float: left;
+}
+
+nav[role="navigation"] li a {
+  border-right: 1px solid #999999;
+}
+
+nav[role="navigation"] li:first-child a,
+nav[role="navigation"] li:last-child a {
+  @include round-none;
+}
+
+nav[role="navigation"] li:first-child a {
+  @include round-left;
+}
