@@ -81,6 +81,10 @@ $media-desktop-min: 1025px !default;
 </p>
 <pre>$unsemantic-ie7-support: true !default;
 
+$unsemantic-prefix-suffix-support: true !default;
+
+$unsemantic-push-pull-support: true !default;
+
 $container-max-width: 1200px !default;
 
 $gutter-half: 10px !default;
@@ -91,7 +95,12 @@ $lang-reverse: right !default;</pre>
 <p>
   Since all of these values are set <i>only</i> if the variables are not already defined, to override them simply create your own <i>_vars.scss</i> partial (or name it whatever you like), and <code>@import</code> it before the any of Unsemantic's Sass files. Anything you set will take precedence, and anything you leave undefined will get a default value. Here is an example&hellip;
 </p>
-<pre>// Example application.scss file
+<pre>// ==============================
+// Example application.scss file.
+// ==============================
+
+// Turn off IE7 support.
+$unsemantic-ie7-support: false;
 
 @import "partials/vars";
 @import "partials/reset";

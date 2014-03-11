@@ -1,15 +1,9 @@
-@import "compass/css3";
-@import "partials/vars";
-@import "partials/reset";
-@import "partials/text";
-@import "partials/site";
-@import "partials/site-desktop";
+@import "partials/unsemantic-vars";
 
-@media all {
-  @import "partials/unsemantic-grid-base";
-}
+@include unsemantic-grid-placeholders;
+@include unsemantic-grid-base;
 
-@media screen {
-  @import "partials/unsemantic-grid-desktop";
-  @import "partials/ie";
-}
+@include unsemantic-grid-placeholders(desktop);
+@include unsemantic-grid-scoped(desktop);
+
+@import "partials/ie";

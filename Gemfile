@@ -1,6 +1,6 @@
 source 'https://rubygems.org'
 
-gem 'serve', '1.5.1'
+gem 'serve'
 
 # Use edge instead:
 # gem 'serve', :git => 'git://github.com/jlong/serve.git'
