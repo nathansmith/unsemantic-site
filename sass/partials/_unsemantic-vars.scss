@@ -29,6 +29,8 @@ $container-max-width: 1200px !default;
 
 $gutter-half: 10px !default;
 
+$container-gutter: $gutter-half !default;
+
 $lang-forward: left !default;
 
 $lang-reverse: right !default;
@@ -48,11 +50,13 @@ $lang-reverse: right !default;
 // Push
 //
 @mixin ie7-push($decimal) {
-  $decimal: unquote($decimal);
-
   @if $unsemantic-ie7-support {
+    $str: "expression(Math.floor(#{$decimal} * (this.parentNode.offsetWidth - parseFloat(this.parentNode.currentStyle.paddingLeft) - parseFloat(this.parentNode.currentStyle.paddingRight))) + 'px')";
+
+    $val: unquote($str);
+
     /* <IE7> */
-    *#{$lang-forward}: expression(Math.floor(#{$decimal} * (this.parentNode.offsetWidth - parseFloat(this.parentNode.currentStyle.paddingLeft) - parseFloat(this.parentNode.currentStyle.paddingRight))) + "px");
+    *#{$lang-forward}: $val;
     /* </IE7> */
   }
 }
@@ -61,11 +65,13 @@ $lang-reverse: right !default;
 // Pull
 //
 @mixin ie7-pull($decimal) {
-  $decimal: unquote($decimal);
-
   @if $unsemantic-ie7-support {
+    $str: "expression(Math.floor(#{$decimal * -1} * (this.parentNode.offsetWidth - parseFloat(this.parentNode.currentStyle.paddingLeft) - parseFloat(this.parentNode.currentStyle.paddingRight))) + 'px')";
+
+    $val: unquote($str);
+
     /* <IE7> */
-    *#{$lang-forward}: expression(Math.floor(#{$decimal * -1} * (this.parentNode.offsetWidth - parseFloat(this.parentNode.currentStyle.paddingLeft) - parseFloat(this.parentNode.currentStyle.paddingRight))) + "px");
+    *#{$lang-forward}: $val;
     /* </IE7> */
   }
 }
@@ -74,11 +80,13 @@ $lang-reverse: right !default;
 // Width
 //
 @mixin ie7-width($decimal) {
-  $decimal: unquote($decimal);
-
   @if $unsemantic-ie7-support {
+    $str: "expression(Math.floor(#{$decimal} * (this.parentNode.offsetWidth - parseFloat(this.parentNode.currentStyle.paddingLeft) - parseFloat(this.parentNode.currentStyle.paddingRight))) + 'px')";
+
+    $val: unquote($str);
+
     /* <IE7> */
-    *width: expression(Math.floor(#{$decimal} * (this.parentNode.offsetWidth - parseFloat(this.parentNode.currentStyle.paddingLeft) - parseFloat(this.parentNode.currentStyle.paddingRight))) + "px");
+    *width: $val;
     /* </IE7> */
   }
 }
@@ -87,9 +95,9 @@ $lang-reverse: right !default;
 // Faux gutter
 //
 @mixin ie7-margin($margin) {
-  $margin: unquote($margin);
+  $str: "expression((!this.className.match(/grid-[1-9]/) && this.currentStyle.display === 'block' && this.currentStyle.width === 'auto') && '#{$margin}')";
 
-  $val: expression((!this.className.match(/grid-[1-9]/) && this.currentStyle.display === "block" && this.currentStyle.width === "auto") && "#{$margin}");
+  $val: unquote($str);
 
   @if $unsemantic-ie7-support {
     // [1] Remove padding, since IE7 doesn't
@@ -117,7 +125,6 @@ $lang-reverse: right !default;
 //----------------------------------------------------------------------------------------------------
 
 @mixin unsemantic-grid-placeholders($_SCOPE: null) {
-  $_SCOPE: unquote($_SCOPE);
   $scope: "";
 
   // Scope: mobile, tablet, or desktop.
@@ -180,9 +187,9 @@ $lang-reverse: right !default;
     }
 
     // Set if gutter is non-zero.
-    @if $gutter-half != 0 {
-      padding-left: $gutter-half;
-      padding-right: $gutter-half;
+    @if $container-gutter != 0 {
+      padding-left: $container-gutter;
+      padding-right: $container-gutter;
     }
   }
 
@@ -210,6 +217,17 @@ $lang-reverse: right !default;
   %#{$scope}grid-parent {
     padding-left: 0;
     padding-right: 0;
+  }
+
+  // Offset the left/right margin of an
+  // element that contains grid units.
+  %#{$scope}grid-offset {
+    @extend %#{$scope}clearfix;
+
+    @if $gutter-half != 0 {
+      margin-left: -1 * $gutter-half;
+      margin-right: -1 * $gutter-half;
+    }
   }
 
   // Allow column swapping?
@@ -382,6 +400,12 @@ $lang-reverse: right !default;
   .grid-parent {
     @extend %grid-parent;
   }
+
+  // Offset the left/right margin of an
+  // element that contains grid units.
+  .grid-offset {
+    @extend %grid-offset;
+  }
 }
 
 // `Consume placeholders at global scope. For: mobile, tablet, destkop.
@@ -451,13 +475,18 @@ $lang-reverse: right !default;
   .grid-parent {
     @extend %grid-parent;
   }
+
+  // Offset the left/right margin of an
+  // element that contains grid units.
+  .grid-offset {
+    @extend %grid-offset;
+  }
 }
 
 // `Consume placeholders at breakpoint scope.
 //----------------------------------------------------------------------------------------------------
 
 @mixin unsemantic-grid-scoped($_SCOPE: null) {
-  $_SCOPE: unquote($_SCOPE);
   $scope: "";
   $class: "";
 
