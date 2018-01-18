@@ -5,10 +5,7 @@
   @adapt_js = true
   @page = "adapt_rtl"
 %>
-<div class="grid-20">
-  <%= render "/partials/fusion_ad_mini" %>
-</div>
-<div class="grid-80 align-center">
+<div class="grid-80 push-20 align-center">
   <%= render "/partials/demo_top" %>
   <p>
     <b>View grid CSS&hellip;</b>
@@ -24,5 +21,8 @@
       <a href="https://raw.github.com/nathansmith/unsemantic/master/assets/stylesheets/unsemantic-grid-mobile-rtl.css">unsemantic-grid-mobile-rtl.css</a>
     </li>
   </ul>
+</div>
+<div class="grid-20 pull-80">
+  <%= render "/partials/carbon_ad" %>
 </div>
 <%= render "/partials/demo_grid" %>

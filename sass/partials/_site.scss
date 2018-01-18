@@ -363,90 +363,71 @@ footer[role="contentinfo"] {
   padding-left: 60px;
 }
 
-// `Fusion Ad
+// `Carbon Ad
 //----------------------------------------------------------------------------------------------------
 
-#fusion_ad {
+#carbonads {
   @include round;
-  background: #eeeeee;
+
+  background: #eee;
   border: 1px solid;
-  border-color: #eeeeee #dddddd #cccccc;
-  clear: both;
-  font-size: 11px;
+  border-color: #eee #ddd #ccc;
+
+  overflow: hidden;
+  text-align: center;
+
   margin-bottom: 20px;
-  padding: 25px 10px 10px;
+  padding: 10px;
+
   position: relative;
-  min-height: 100px;
 }
 
-#fusion_ad a {
+.carbon-img img {
+  background: #fff;
+  height: auto !important;
+  max-width: 100% !important;
+}
+
+.carbon-text {
+  display: block;
+  margin: 10px;
+}
+
+.carbon-poweredby {
+  color: #999;
+  display: inline-block;
+  font-size: 9px;
+  line-height: 1;
+  text-transform: uppercase;
+}
+
+#carbonads a {
   text-decoration: none;
 }
 
-.fusionimg {
-  float: left;
-  margin-right: 10px;
+#carbonads a:hover {
+  color: #000;
 }
 
-.fusionentire {
-  display: block;
-  overflow: hidden;
-}
+@media screen and (max-width: 767px) {
+  #carbonads {
+    text-align: left;
+  }
 
-#powered-by-fusion {
-  clear: both;
-  font-size: 10px;
-  line-height: 1;
-  text-align: center;
-  text-transform: uppercase;
-  width: 130px;
-  position: absolute;
-  top: 10px;
-  left: 10px;
-}
+  .carbon-img {
+    float: left;
+    margin-right: 15px;
+  }
 
-#powered-by-fusion a {
-  color: #999999;
-  &:hover {
-    color: #666666;
+  .carbon-text {
+    margin: 0;
   }
-}
 
-//
-// Prevent awkward line wrapping
-//
-@media screen and (min-width: $media-desktop-min) {
-  .fusion_mini {
-    text-align: center;
-  }
-  .fusion_mini .fusionimg {
-    display: block;
-    float: none;
-    margin: 0 auto 10px;
-    width: auto;
-    height: auto;
-  }
-  .fusion_mini #powered-by-fusion {
-    left: 0;
-    right: 0;
-    width: auto;
-  }
-}
-
-@media screen and (min-width: $media-desktop-min) and (max-width: 1100px) {
-  #fusion_ad {
-    text-align: center;
-  }
-  .fusionimg {
-    display: block;
-    float: none;
-    margin: 0 auto 10px;
-    width: auto;
-    height: auto;
-  }
-  #powered-by-fusion {
-    left: 0;
-    right: 0;
-    width: auto;
+  .carbon-poweredby {
+    position: absolute;
+    top: auto;
+    left: auto;
+    right: 10px;
+    bottom: 10px;
   }
 }

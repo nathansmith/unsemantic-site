@@ -109,21 +109,6 @@ var APP = (function($, window, document, undefined) {
 
         toc.innerHTML = html;
         toc.style.display = 'block';
-      },
-      fusion_ad: function() {
-        var fusion;
-        var host = window.location.hostname;
-        var div = document.getElementById('fusion_ad');
-
-        if (!host.match('unsemantic.com') || div.getElementsByTagName('img').length) {
-          // Exit
-          return;
-        }
-
-        fusion = document.createElement('script');
-        fusion.src = window.location.protocol + '//adn.fusionads.net/api/1.0/ad.js?zoneid=222&rand=' + Math.floor(Math.random() * 9999999);
-        fusion.async = true;
-        head.appendChild(fusion);
       }
     }
   };

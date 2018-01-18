@@ -1,3 +1,6 @@
+// Default value.
+$lang-forward: left !default;
+
 // `XHTML, HTML4, HTML5 Reset
 // ----------------------------------------------------------------------------------------------------
 
@@ -162,7 +165,7 @@ td,
 caption {
   font-weight: normal;
   vertical-align: top;
-  text-align: left;
+  text-align: $lang-forward;
 }
 
 q {

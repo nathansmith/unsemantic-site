@@ -4,10 +4,7 @@
   @right_to_left = true
   @page = "responsive_rtl"
 %>
-<div class="grid-20">
-  <%= render "/partials/fusion_ad_mini" %>
-</div>
-<div class="grid-80 align-center">
+<div class="grid-80 push-20 align-center">
   <%= render "/partials/demo_top" %>
   <p>
     <b>View grid CSS&hellip;</b>
@@ -15,5 +12,8 @@
   <p>
     <a href="https://raw.github.com/nathansmith/unsemantic/master/assets/stylesheets/unsemantic-grid-responsive-rtl.css">unsemantic-grid-responsive-rtl.css</a>
   </p>
+</div>
+<div class="grid-20 pull-80">
+  <%= render "/partials/carbon_ad" %>
 </div>
 <%= render "/partials/demo_grid" %>
